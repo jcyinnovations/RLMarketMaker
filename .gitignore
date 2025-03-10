@@ -1,0 +1,13 @@
+.ipynb_checkpoints/
+__pycache__/
+archive/
+*.p
+*.db
+*.zip
+*.log
+data/
+data_v1/
+logs/
+models/
+*.ipynb
+
