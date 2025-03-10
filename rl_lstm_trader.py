@@ -1,12 +1,17 @@
 import pandas as pd
 import gym
+import os 
+from datetime import datetime, timedelta, timezone
 from gym import spaces
 import numpy as np
 import matplotlib.pyplot as plt
+import click
+from getpass import getpass
+
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
-import os 
-from datetime import datetime, timedelta, timezone
+from stable_baselines3.common.callbacks import EvalCallback
+from stable_baselines3.common.monitor import Monitor
 
 # Ensure your DataFrame contains a 'price' column for calculating trade profit.
 # If necessary, adjust the column name in the environment code below.
@@ -78,9 +83,12 @@ class TradingEnv(gym.Env):
 #  LSTM-based Policy for Trading with Stable Baselines 3 (SB3)
 #################################################################
 
-if __name__ == "__main__":
-    iteration = 3
-    total_timesteps = 2000000
+@click.command()
+@click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
+@click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
+def main(timesteps: int, iteration: int):
+    #iteration = 3
+    #total_timesteps = 2000000
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
@@ -103,31 +111,45 @@ if __name__ == "__main__":
     # Remove columns not necessary for inference
     df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
 
-    # Step 3. Instantiate the environment.
-    env = TradingEnv(df, trading_cost=0.1)
-    # Wrap the environment with DummyVecEnv and then VecNormalize.
-    env = DummyVecEnv([lambda: env])
-    env = VecNormalize(env, norm_obs=True, norm_reward=False, clip_obs=10.)
-
-    initial_obs = env.reset()
+    # Step 3. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
+    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1)])
+    train_env = VecNormalize(train_env, norm_obs=True, norm_reward=False, clip_obs=10.)
+    initial_obs = train_env.reset()
     print("\nInitial observation:", initial_obs)
+    # Step 4. Create and train the Recurrent PPO model using an LSTM-based policy.
+    model = RecurrentPPO(
+        "MlpLstmPolicy", 
+        train_env, 
+        verbose=1, 
+        tensorboard_log=logdir
+    )
+
+    # Setup Eval environment similar to training
+    eval_env = TradingEnv(df, trading_cost=0.1)
+    eval_env = Monitor(eval_env)
+    eval_env = DummyVecEnv([lambda: eval_env])
+    eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=True, clip_obs=10.)
+    # Configure the evaluation callback.
+    eval_callback = EvalCallback(
+        eval_env,
+        best_model_save_path=models_dir,
+        log_path=logdir,
+        eval_freq=10000,  # Evaluate every 10,000 steps (adjust as needed)
+        n_eval_episodes=5,
+        deterministic=True,
+    )
 
     print("######################")
     print("#   Training Start.  #")
     print(f"# {datetime.now(timezone.utc)} #")
     print("######################")
-
-    # Step 4. Create and train the Recurrent PPO model using an LSTM-based policy.
-    model = RecurrentPPO(
-        "MlpLstmPolicy", 
-        env, 
-        verbose=1, 
-        tensorboard_log=logdir
+    model.learn(
+        total_timesteps=timesteps, 
+        callback=eval_callback
     )
-    model.learn(total_timesteps=total_timesteps)
     model.save(f"{models_dir}/rppo_trading_model")
     # Save the VecNormalize statistics for the recurrent model.
-    env.save(f"{models_dir}/vec_normalize_env_rnn.pkl")
+    train_env.save(f"{models_dir}/vec_normalize_env_rnn.pkl")
 
     print("######################")
     print("# Training complete. #")
@@ -135,12 +157,12 @@ if __name__ == "__main__":
     print("######################")
 
     # Step 5. Evaluate the trained agent.
-    obs = env.reset()
+    obs = train_env.reset()
     # Recurrent policies require initial state and episode_start flag.
     recurrent_states = None  # initialize hidden states as None
     episode_start = np.array([True])  # marks the beginning of an episode
     rewards = []
-
+    '''
     while True:
         # Pass hidden state and episode_start flag to predict.
         action, recurrent_states = model.predict(
@@ -149,9 +171,9 @@ if __name__ == "__main__":
             episode_start=episode_start, 
             deterministic=True
         )
-        obs, reward, done, _ = env.step(action)
+        obs, reward, done, _ = train_env.step(action)
         rewards.append(reward)
-        env.render()
+        train_env.render()
         # After the first step, episode_start becomes False.
         episode_start = np.array([False])
         if done:
@@ -161,4 +183,9 @@ if __name__ == "__main__":
     print("########################")
     print("# Evaluation complete. #")
     print("########################")
-    env.close()
+    '''
+    train_env.close()
+    eval_env.close()
+
+if __name__ == "__main__":
+    main()
