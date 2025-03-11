@@ -174,6 +174,7 @@ def main(timesteps: int, iteration: int):
         "MlpLstmPolicy", 
         train_env, 
         verbose=1, 
+        target_kl=0.05,
         tensorboard_log=logdir
     )
 
@@ -187,7 +188,7 @@ def main(timesteps: int, iteration: int):
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=100000,  # Evaluate every 100,000 steps (adjust as needed)
+        eval_freq=25000,  # Evaluate every 25,000 steps (adjust as needed)
         n_eval_episodes=5,
         deterministic=True,
     )
