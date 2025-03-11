@@ -35,11 +35,13 @@ class TradingEnv(gym.Env):
         self.max_profit = 0.0
         self.position = 0  # 0: not in a trade, 1: in a trade.
         self.entry_price = 0.0  # Price at which trade is opened.
+        self.prev_price = 0.0  # Previous price for calculating hold returns
         self.trade_start_step = 0  # Step at which trade is opened.
         
     def reset(self):
         self.position = 0
         self.entry_price = 0.0
+        self.prev_price = 0.0
         self.max_profit = 0.0
         self.trade_start_step = 0
         self.current_step = 0
@@ -59,8 +61,23 @@ class TradingEnv(gym.Env):
         
         # Process the action.
         #print(f"Step: {self.current_step:9,}")
-        if action == 1:  # Open trade.
+        if action == 0:  # Hold position.
+            # Action 0 (Hold) gives:
+            # - a small time penalty if not in a trade
+            # - a small reward if in a trade based on current return
+            reward = -0.0001
+            if self.position == 1:
+                # If trade is still open, update nax_profit based on unrealized profit
+                trade_duration = self.current_step - self.trade_start_step + 1
+                unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
+                self.max_profit = max(self.max_profit, unrealized_profit)
+                # Now calculate the hold reward (discounted profit/loss of current step)
+                step_profit = 100 * (current_price - self.prev_price)/self.prev_price
+                reward = step_profit * self.time_penalty(trade_duration) 
+                self.prev_price = current_price
+        elif action == 1:  # Open trade.
             if self.position == 0:
+                reward = 0.0001
                 log_message = {
                     'side': 'open',
                     'current_price': current_price,
@@ -69,6 +86,7 @@ class TradingEnv(gym.Env):
                 print(json.dumps(log_message))
                 self.position = 1
                 self.entry_price = current_price
+                self.prev_price = current_price
                 self.trade_start_step = self.current_step
                 self.max_profit = 0.0
         elif action == 2:  # Close trade.
@@ -93,11 +111,8 @@ class TradingEnv(gym.Env):
                 self.position = 0
                 self.entry_price = 0.0
                 self.max_profit = 0.0
-        elif self.position == 1:
-            # If trade is still open, update nax_profit based on unrealized profit
-            unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
-            self.max_profit = max(self.max_profit, unrealized_profit)
-        # Action 0 (Hold) gives no reward (or could include a small time penalty).
+                self.prev_price = 0.0
+
         self.current_step += 1
         if self.current_step >= len(self.data) - 1:
             print("Done:", self.current_step, len(self.data))
