@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 import os 
+import click
 from datetime import datetime, timedelta, timezone
 from rl_lstm_trader import TradingEnv
 
@@ -17,8 +18,11 @@ from rl_lstm_trader import TradingEnv
 #  LSTM-based Policy for Trading with Stable Baselines 3 (SB3)
 #################################################################
 
-if __name__ == "__main__":
-    iteration = 3
+@click.command()
+@click.option('--iteration', default=4, type=int, show_default=True, help='Current Iteration')
+#@click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
+def main(iteration: int):
+    #iteration = 3
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
 
@@ -41,16 +45,20 @@ if __name__ == "__main__":
     print("\nInitial observation:", initial_obs)
 
     print("Loading Model...")
-    model = RecurrentPPO.load(f"{models_dir}/rppo_trading_model")
+    #model = RecurrentPPO.load(f"{models_dir}/rppo_trading_model")
+    model = RecurrentPPO.load(f"{models_dir}/best_model")
 
     # Step 5. Evaluate the trained agent.
     obs = env_real.reset()
+
     # Recurrent policies require initial state and episode_start flag.
     recurrent_states = None  # initialize hidden states as None
     episode_start = np.array([True])  # marks the beginning of an episode
     rewards = []
     print("Run evals...")
+    rounds = 0
     while True:
+        print(f"Round: {rounds}")
         # Pass hidden state and episode_start flag to predict.
         action, recurrent_states = model.predict(
             obs, 
@@ -63,7 +71,8 @@ if __name__ == "__main__":
         env_real.render()
         # After the first step, episode_start becomes False.
         episode_start = np.array([False])
-        if done:
+        rounds += 1
+        if rounds > 10000 and done:
             break
 
     print(f"\nTotal reward from evaluation:", sum(rewards))
@@ -71,3 +80,6 @@ if __name__ == "__main__":
     print("# Evaluation complete. #")
     print("########################")
     env_real.close()
+
+if __name__ == "__main__":
+    main()

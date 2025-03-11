@@ -1,0 +1,2769 @@
+{"side": "open", "price": 42426.50, "step": 4}
+{"side": "close", "price": 42741.00, "step": 68, "profit": 314.40}
+{"side": "open", "price": 43153.80, "step": 76}
+{"side": "close", "price": 43226.00, "step": 77, "profit": 72.10}
+{"side": "open", "price": 42816.00, "step": 79}
+{"side": "close", "price": 43048.50, "step": 81, "profit": 232.40}
+{"side": "open", "price": 43126.00, "step": 82}
+{"side": "close", "price": 43873.00, "step": 102, "profit": 746.90}
+{"side": "open", "price": 43828.00, "step": 103}
+{"side": "close", "price": 43944.00, "step": 104, "profit": 115.90}
+{"side": "open", "price": 44191.00, "step": 105}
+{"side": "close", "price": 43801.00, "step": 107, "profit": -390.10}
+{"side": "open", "price": 43921.00, "step": 108}
+{"side": "close", "price": 44008.50, "step": 121, "profit": 87.40}
+{"side": "open", "price": 43956.00, "step": 122}
+{"side": "close", "price": 43988.00, "step": 123, "profit": 31.90}
+{"side": "open", "price": 43908.00, "step": 124}
+{"side": "close", "price": 43687.00, "step": 129, "profit": -221.10}
+{"side": "open", "price": 43731.00, "step": 130}
+{"side": "close", "price": 43697.00, "step": 131, "profit": -34.10}
+{"side": "open", "price": 43622.50, "step": 132}
+{"side": "close", "price": 43729.50, "step": 133, "profit": 106.90}
+{"side": "open", "price": 43828.00, "step": 134}
+{"side": "close", "price": 43880.33, "step": 136, "profit": 52.23}
+{"side": "open", "price": 43984.00, "step": 137}
+{"side": "close", "price": 44002.00, "step": 138, "profit": 17.90}
+{"side": "open", "price": 43924.33, "step": 139}
+{"side": "close", "price": 43855.00, "step": 140, "profit": -69.43}
+{"side": "open", "price": 43921.00, "step": 141}
+{"side": "close", "price": 43911.00, "step": 142, "profit": -10.10}
+{"side": "open", "price": 44152.00, "step": 144}
+{"side": "close", "price": 44021.00, "step": 145, "profit": -131.10}
+{"side": "open", "price": 43980.00, "step": 146}
+{"side": "close", "price": 43993.00, "step": 147, "profit": 12.90}
+{"side": "open", "price": 44045.00, "step": 148}
+{"side": "close", "price": 43907.00, "step": 149, "profit": -138.10}
+{"side": "open", "price": 44069.00, "step": 150}
+{"side": "close", "price": 44134.00, "step": 151, "profit": 64.90}
+{"side": "open", "price": 44065.00, "step": 152}
+{"side": "close", "price": 43992.00, "step": 153, "profit": -73.10}
+{"side": "open", "price": 44107.00, "step": 155}
+{"side": "close", "price": 44147.00, "step": 156, "profit": 39.90}
+{"side": "open", "price": 44430.00, "step": 157}
+{"side": "close", "price": 44085.00, "step": 159, "profit": -345.10}
+{"side": "open", "price": 43977.00, "step": 160}
+{"side": "close", "price": 44144.00, "step": 162, "profit": 166.90}
+{"side": "open", "price": 44173.00, "step": 164}
+{"side": "close", "price": 44265.00, "step": 165, "profit": 91.90}
+{"side": "open", "price": 43892.00, "step": 166}
+{"side": "close", "price": 43959.00, "step": 167, "profit": 66.90}
+{"side": "open", "price": 43672.00, "step": 168}
+{"side": "close", "price": 43744.00, "step": 169, "profit": 71.90}
+{"side": "open", "price": 43389.00, "step": 170}
+{"side": "close", "price": 43559.00, "step": 171, "profit": 169.90}
+{"side": "open", "price": 43659.00, "step": 173}
+{"side": "close", "price": 43908.00, "step": 176, "profit": 248.90}
+{"side": "open", "price": 43774.00, "step": 177}
+{"side": "close", "price": 44128.00, "step": 178, "profit": 353.90}
+{"side": "open", "price": 44618.00, "step": 179}
+{"side": "close", "price": 46744.00, "step": 194, "profit": 2125.90}
+{"side": "open", "price": 46714.00, "step": 197}
+{"side": "close", "price": 46792.00, "step": 198, "profit": 77.90}
+{"side": "open", "price": 46549.00, "step": 200}
+{"side": "close", "price": 46448.00, "step": 202, "profit": -101.10}
+{"side": "open", "price": 46648.00, "step": 203}
+{"side": "close", "price": 46621.00, "step": 212, "profit": -27.10}
+{"side": "open", "price": 45403.00, "step": 213}
+{"side": "close", "price": 46021.00, "step": 222, "profit": 617.90}
+{"side": "open", "price": 45805.00, "step": 223}
+{"side": "close", "price": 46390.00, "step": 244, "profit": 584.90}
+{"side": "open", "price": 46070.00, "step": 245}
+{"side": "close", "price": 46256.00, "step": 248, "profit": 185.90}
+{"side": "open", "price": 46187.00, "step": 249}
+{"side": "close", "price": 46333.00, "step": 263, "profit": 145.90}
+{"side": "open", "price": 46290.00, "step": 264}
+{"side": "close", "price": 46008.00, "step": 267, "profit": -282.10}
+{"side": "open", "price": 45920.00, "step": 268}
+{"side": "close", "price": 46102.00, "step": 270, "profit": 181.90}
+{"side": "open", "price": 45974.00, "step": 271}
+{"side": "close", "price": 42549.00, "step": 290, "profit": -3425.10}
+{"side": "open", "price": 42815.00, "step": 292}
+{"side": "close", "price": 43087.00, "step": 295, "profit": 271.90}
+{"side": "open", "price": 43188.00, "step": 296}
+{"side": "close", "price": 42918.00, "step": 297, "profit": -270.10}
+{"side": "open", "price": 42711.00, "step": 298}
+{"side": "close", "price": 43179.00, "step": 303, "profit": 467.90}
+{"side": "open", "price": 42883.50, "step": 304}
+{"side": "close", "price": 42799.00, "step": 306, "profit": -84.60}
+{"side": "open", "price": 42768.00, "step": 314}
+{"side": "close", "price": 42680.00, "step": 315, "profit": -88.10}
+{"side": "open", "price": 42597.00, "step": 316}
+{"side": "close", "price": 42768.00, "step": 317, "profit": 170.90}
+{"side": "open", "price": 43012.00, "step": 319}
+{"side": "close", "price": 42992.00, "step": 320, "profit": -20.10}
+{"side": "open", "price": 42904.25, "step": 322}
+{"side": "close", "price": 42826.75, "step": 323, "profit": -77.60}
+{"side": "open", "price": 42767.00, "step": 324}
+{"side": "close", "price": 42901.00, "step": 325, "profit": 133.90}
+{"side": "open", "price": 42840.00, "step": 326}
+{"side": "close", "price": 42925.00, "step": 327, "profit": 84.90}
+{"side": "open", "price": 42949.00, "step": 328}
+{"side": "close", "price": 42563.00, "step": 339, "profit": -386.10}
+{"side": "open", "price": 42586.67, "step": 340}
+{"side": "close", "price": 42750.00, "step": 341, "profit": 163.23}
+{"side": "open", "price": 42660.00, "step": 342}
+{"side": "close", "price": 42723.50, "step": 343, "profit": 63.40}
+{"side": "open", "price": 42548.00, "step": 346}
+{"side": "close", "price": 42698.00, "step": 347, "profit": 149.90}
+{"side": "open", "price": 42208.00, "step": 350}
+{"side": "close", "price": 42528.00, "step": 352, "profit": 319.90}
+{"side": "open", "price": 42672.00, "step": 374}
+{"side": "close", "price": 43217.00, "step": 376, "profit": 544.90}
+{"side": "open", "price": 42580.00, "step": 398}
+{"side": "close", "price": 42621.50, "step": 402, "profit": 41.40}
+{"side": "open", "price": 42624.00, "step": 403}
+{"side": "close", "price": 42677.00, "step": 404, "profit": 52.90}
+{"side": "open", "price": 42694.00, "step": 405}
+{"side": "close", "price": 42711.00, "step": 406, "profit": 16.90}
+{"side": "open", "price": 41919.00, "step": 424}
+{"side": "close", "price": 41323.00, "step": 431, "profit": -596.10}
+{"side": "open", "price": 41331.00, "step": 432}
+{"side": "close", "price": 41302.00, "step": 433, "profit": -29.10}
+{"side": "open", "price": 41086.00, "step": 435}
+{"side": "close", "price": 41130.00, "step": 436, "profit": 43.90}
+{"side": "open", "price": 41255.00, "step": 437}
+{"side": "close", "price": 41514.00, "step": 442, "profit": 258.90}
+{"side": "open", "price": 41555.00, "step": 443}
+{"side": "close", "price": 41379.00, "step": 444, "profit": -176.10}
+{"side": "open", "price": 41421.00, "step": 445}
+{"side": "close", "price": 41013.00, "step": 446, "profit": -408.10}
+{"side": "open", "price": 40950.00, "step": 447}
+{"side": "close", "price": 41695.00, "step": 460, "profit": 744.90}
+{"side": "open", "price": 41712.00, "step": 461}
+{"side": "close", "price": 41759.00, "step": 462, "profit": 46.90}
+{"side": "open", "price": 41678.00, "step": 464}
+{"side": "close", "price": 41635.00, "step": 466, "profit": -43.10}
+{"side": "open", "price": 41670.00, "step": 467}
+{"side": "close", "price": 41723.00, "step": 469, "profit": 52.90}
+{"side": "open", "price": 41633.00, "step": 470}
+{"side": "close", "price": 41847.00, "step": 478, "profit": 213.90}
+{"side": "open", "price": 41775.00, "step": 479}
+{"side": "close", "price": 41726.00, "step": 485, "profit": -49.10}
+{"side": "open", "price": 41696.00, "step": 486}
+{"side": "close", "price": 41732.00, "step": 500, "profit": 35.90}
+{"side": "open", "price": 41866.00, "step": 501}
+{"side": "close", "price": 41271.00, "step": 510, "profit": -595.10}
+{"side": "open", "price": 41014.00, "step": 512}
+{"side": "close", "price": 39870.00, "step": 529, "profit": -1144.10}
+{"side": "open", "price": 40088.00, "step": 530}
+{"side": "close", "price": 40039.00, "step": 531, "profit": -49.10}
+{"side": "open", "price": 39792.00, "step": 535}
+{"side": "close", "price": 39986.00, "step": 578, "profit": 193.90}
+{"side": "open", "price": 40010.00, "step": 579}
+{"side": "close", "price": 39986.00, "step": 599, "profit": -24.10}
+{"side": "open", "price": 39939.00, "step": 600}
+{"side": "close", "price": 39984.00, "step": 601, "profit": 44.90}
+{"side": "open", "price": 40189.00, "step": 602}
+{"side": "close", "price": 41812.00, "step": 623, "profit": 1622.90}
+{"side": "open", "price": 41838.00, "step": 625}
+{"side": "close", "price": 41851.00, "step": 626, "profit": 12.90}
+{"side": "open", "price": 41819.00, "step": 627}
+{"side": "close", "price": 41853.00, "step": 628, "profit": 33.90}
+{"side": "open", "price": 41714.00, "step": 631}
+{"side": "close", "price": 41471.00, "step": 632, "profit": -243.10}
+{"side": "open", "price": 41673.00, "step": 633}
+{"side": "close", "price": 41754.00, "step": 634, "profit": 80.90}
+{"side": "open", "price": 41760.00, "step": 636}
+{"side": "close", "price": 41743.00, "step": 637, "profit": -17.10}
+{"side": "open", "price": 41770.00, "step": 638}
+{"side": "close", "price": 41816.00, "step": 639, "profit": 45.90}
+{"side": "open", "price": 41819.00, "step": 640}
+{"side": "close", "price": 41790.00, "step": 641, "profit": -29.10}
+{"side": "open", "price": 41921.00, "step": 643}
+{"side": "close", "price": 42056.00, "step": 644, "profit": 134.90}
+{"side": "open", "price": 42149.00, "step": 645}
+{"side": "close", "price": 42126.00, "step": 647, "profit": -23.10}
+{"side": "open", "price": 41978.00, "step": 648}
+{"side": "close", "price": 42103.00, "step": 650, "profit": 124.90}
+{"side": "open", "price": 42692.00, "step": 652}
+{"side": "close", "price": 42387.00, "step": 655, "profit": -305.10}
+{"side": "open", "price": 42601.00, "step": 687}
+{"side": "close", "price": 43033.00, "step": 690, "profit": 431.90}
+{"side": "open", "price": 43179.00, "step": 692}
+{"side": "close", "price": 43206.00, "step": 693, "profit": 26.90}
+{"side": "open", "price": 43442.00, "step": 697}
+{"side": "close", "price": 43505.00, "step": 699, "profit": 62.90}
+{"side": "open", "price": 43344.00, "step": 708}
+{"side": "close", "price": 43429.00, "step": 710, "profit": 84.90}
+{"side": "open", "price": 43359.00, "step": 711}
+{"side": "close", "price": 43494.00, "step": 712, "profit": 134.90}
+{"side": "open", "price": 43415.00, "step": 713}
+{"side": "close", "price": 43531.00, "step": 715, "profit": 115.90}
+{"side": "open", "price": 42956.00, "step": 719}
+{"side": "close", "price": 42924.00, "step": 720, "profit": -32.10}
+{"side": "open", "price": 42898.00, "step": 734}
+{"side": "close", "price": 42442.00, "step": 741, "profit": -456.10}
+{"side": "open", "price": 42665.00, "step": 742}
+{"side": "close", "price": 41973.00, "step": 745, "profit": -692.10}
+{"side": "open", "price": 42151.00, "step": 746}
+{"side": "close", "price": 42012.00, "step": 747, "profit": -139.10}
+{"side": "open", "price": 42073.00, "step": 748}
+{"side": "close", "price": 42143.00, "step": 749, "profit": 69.90}
+{"side": "open", "price": 42137.00, "step": 756}
+{"side": "close", "price": 42238.00, "step": 757, "profit": 100.90}
+{"side": "open", "price": 42600.00, "step": 758}
+{"side": "close", "price": 42664.00, "step": 760, "profit": 63.90}
+{"side": "open", "price": 42926.00, "step": 761}
+{"side": "close", "price": 42951.00, "step": 764, "profit": 24.90}
+{"side": "open", "price": 43102.00, "step": 765}
+{"side": "close", "price": 42932.00, "step": 766, "profit": -170.10}
+{"side": "open", "price": 43088.00, "step": 767}
+{"side": "close", "price": 43187.00, "step": 768, "profit": 98.90}
+{"side": "open", "price": 42989.00, "step": 772}
+{"side": "close", "price": 43123.00, "step": 773, "profit": 133.90}
+{"side": "open", "price": 42649.00, "step": 781}
+{"side": "close", "price": 42808.00, "step": 782, "profit": 158.90}
+{"side": "open", "price": 43226.00, "step": 783}
+{"side": "close", "price": 42921.00, "step": 786, "profit": -305.10}
+{"side": "open", "price": 43066.00, "step": 787}
+{"side": "close", "price": 42996.00, "step": 789, "profit": -70.10}
+{"side": "open", "price": 43180.00, "step": 790}
+{"side": "close", "price": 43201.00, "step": 791, "profit": 20.90}
+{"side": "open", "price": 42886.00, "step": 830}
+{"side": "close", "price": 42953.00, "step": 831, "profit": 66.90}
+{"side": "open", "price": 43147.00, "step": 850}
+{"side": "close", "price": 43188.00, "step": 851, "profit": 40.90}
+{"side": "open", "price": 43431.00, "step": 853}
+{"side": "close", "price": 43181.00, "step": 854, "profit": -250.10}
+{"side": "open", "price": 42621.00, "step": 855}
+{"side": "close", "price": 42686.00, "step": 858, "profit": 64.90}
+{"side": "open", "price": 42394.00, "step": 860}
+{"side": "close", "price": 42488.00, "step": 862, "profit": 93.90}
+{"side": "open", "price": 42707.00, "step": 863}
+{"side": "close", "price": 42603.00, "step": 864, "profit": -104.10}
+{"side": "open", "price": 43068.00, "step": 872}
+{"side": "close", "price": 43002.00, "step": 873, "profit": -66.10}
+{"side": "open", "price": 42796.00, "step": 874}
+{"side": "close", "price": 42830.00, "step": 875, "profit": 33.90}
+{"side": "open", "price": 42771.00, "step": 876}
+{"side": "close", "price": 42861.00, "step": 877, "profit": 89.90}
+{"side": "open", "price": 42942.00, "step": 878}
+{"side": "close", "price": 43229.00, "step": 879, "profit": 286.90}
+{"side": "open", "price": 43159.00, "step": 880}
+{"side": "close", "price": 43187.00, "step": 882, "profit": 27.90}
+{"side": "open", "price": 43173.00, "step": 885}
+{"side": "close", "price": 43194.00, "step": 886, "profit": 20.90}
+{"side": "open", "price": 43148.00, "step": 897}
+{"side": "close", "price": 42883.00, "step": 898, "profit": -265.10}
+{"side": "open", "price": 42930.00, "step": 899}
+{"side": "close", "price": 43084.00, "step": 900, "profit": 153.90}
+{"side": "open", "price": 43163.00, "step": 901}
+{"side": "close", "price": 44463.00, "step": 916, "profit": 1299.90}
+{"side": "open", "price": 44702.00, "step": 920}
+{"side": "close", "price": 44668.00, "step": 921, "profit": -34.10}
+{"side": "open", "price": 44789.00, "step": 922}
+{"side": "close", "price": 44668.00, "step": 924, "profit": -121.10}
+{"side": "open", "price": 44947.00, "step": 925}
+{"side": "close", "price": 45273.00, "step": 931, "profit": 325.90}
+{"side": "open", "price": 46212.00, "step": 938}
+{"side": "close", "price": 45915.00, "step": 940, "profit": -297.10}
+{"side": "open", "price": 46170.00, "step": 943}
+{"side": "close", "price": 46502.00, "step": 945, "profit": 331.90}
+{"side": "open", "price": 46768.00, "step": 946}
+{"side": "close", "price": 47150.00, "step": 959, "profit": 381.90}
+{"side": "open", "price": 47118.00, "step": 960}
+{"side": "close", "price": 47352.00, "step": 961, "profit": 233.90}
+{"side": "open", "price": 47357.00, "step": 962}
+{"side": "close", "price": 47401.00, "step": 963, "profit": 43.90}
+{"side": "open", "price": 47369.00, "step": 965}
+{"side": "close", "price": 47386.00, "step": 966, "profit": 16.90}
+{"side": "open", "price": 47116.00, "step": 968}
+{"side": "close", "price": 47102.00, "step": 969, "profit": -14.10}
+{"side": "open", "price": 46925.00, "step": 970}
+{"side": "close", "price": 47207.00, "step": 971, "profit": 281.90}
+{"side": "open", "price": 47273.00, "step": 972}
+{"side": "close", "price": 47330.00, "step": 973, "profit": 56.90}
+{"side": "open", "price": 47300.00, "step": 974}
+{"side": "close", "price": 47385.00, "step": 975, "profit": 84.90}
+{"side": "open", "price": 47296.00, "step": 976}
+{"side": "close", "price": 47238.00, "step": 977, "profit": -58.10}
+{"side": "open", "price": 47554.00, "step": 979}
+{"side": "close", "price": 47832.00, "step": 982, "profit": 277.90}
+{"side": "open", "price": 48480.00, "step": 987}
+{"side": "close", "price": 48241.00, "step": 990, "profit": -239.10}
+{"side": "open", "price": 48333.00, "step": 996}
+{"side": "close", "price": 48094.00, "step": 997, "profit": -239.10}
+{"side": "open", "price": 48274.00, "step": 998}
+{"side": "close", "price": 48194.00, "step": 999, "profit": -80.10}
+{"side": "open", "price": 48130.00, "step": 1000}
+{"side": "close", "price": 48312.00, "step": 1002, "profit": 181.90}
+{"side": "open", "price": 48326.00, "step": 1003}
+{"side": "close", "price": 48088.00, "step": 1004, "profit": -238.10}
+{"side": "open", "price": 48141.00, "step": 1005}
+{"side": "close", "price": 48171.00, "step": 1006, "profit": 29.90}
+{"side": "open", "price": 48635.00, "step": 1008}
+{"side": "close", "price": 48197.00, "step": 1010, "profit": -438.10}
+{"side": "open", "price": 48183.00, "step": 1011}
+{"side": "close", "price": 48103.00, "step": 1013, "profit": -80.10}
+{"side": "open", "price": 48163.00, "step": 1014}
+{"side": "close", "price": 50025.00, "step": 1030, "profit": 1861.90}
+{"side": "open", "price": 49947.00, "step": 1031}
+{"side": "close", "price": 50102.00, "step": 1032, "profit": 154.90}
+{"side": "open", "price": 50128.00, "step": 1033}
+{"side": "close", "price": 49973.00, "step": 1034, "profit": -155.10}
+{"side": "open", "price": 49809.00, "step": 1035}
+{"side": "close", "price": 49939.00, "step": 1036, "profit": 129.90}
+{"side": "open", "price": 50252.00, "step": 1041}
+{"side": "close", "price": 49885.00, "step": 1042, "profit": -367.10}
+{"side": "open", "price": 50009.00, "step": 1043}
+{"side": "close", "price": 49919.00, "step": 1044, "profit": -90.10}
+{"side": "open", "price": 49582.00, "step": 1045}
+{"side": "close", "price": 49777.00, "step": 1055, "profit": 194.90}
+{"side": "open", "price": 50680.00, "step": 1064}
+{"side": "close", "price": 51676.00, "step": 1075, "profit": 995.90}
+{"side": "open", "price": 51650.00, "step": 1076}
+{"side": "close", "price": 51800.00, "step": 1078, "profit": 149.90}
+{"side": "open", "price": 51770.00, "step": 1079}
+{"side": "close", "price": 51944.00, "step": 1085, "profit": 173.90}
+{"side": "open", "price": 51771.00, "step": 1087}
+{"side": "close", "price": 51938.00, "step": 1098, "profit": 166.90}
+{"side": "open", "price": 51974.00, "step": 1099}
+{"side": "close", "price": 51891.00, "step": 1103, "profit": -83.10}
+{"side": "open", "price": 51883.00, "step": 1104}
+{"side": "close", "price": 52097.00, "step": 1106, "profit": 213.90}
+{"side": "open", "price": 52237.00, "step": 1107}
+{"side": "close", "price": 52098.00, "step": 1108, "profit": -139.10}
+{"side": "open", "price": 52015.00, "step": 1109}
+{"side": "close", "price": 51736.00, "step": 1111, "profit": -279.10}
+{"side": "open", "price": 51838.00, "step": 1112}
+{"side": "close", "price": 51805.00, "step": 1113, "profit": -33.10}
+{"side": "open", "price": 52238.00, "step": 1114}
+{"side": "close", "price": 51971.00, "step": 1125, "profit": -267.10}
+{"side": "open", "price": 51981.00, "step": 1126}
+{"side": "close", "price": 52130.00, "step": 1127, "profit": 148.90}
+{"side": "open", "price": 52011.00, "step": 1128}
+{"side": "close", "price": 51942.00, "step": 1130, "profit": -69.10}
+{"side": "open", "price": 51976.00, "step": 1131}
+{"side": "close", "price": 52024.00, "step": 1132, "profit": 47.90}
+{"side": "open", "price": 51914.00, "step": 1134}
+{"side": "close", "price": 51897.00, "step": 1135, "profit": -17.10}
+{"side": "open", "price": 51733.00, "step": 1136}
+{"side": "close", "price": 51677.00, "step": 1137, "profit": -56.10}
+{"side": "open", "price": 51712.00, "step": 1138}
+{"side": "close", "price": 51700.00, "step": 1140, "profit": -12.10}
+{"side": "open", "price": 51161.00, "step": 1141}
+{"side": "close", "price": 51195.00, "step": 1145, "profit": 33.90}
+{"side": "open", "price": 51278.00, "step": 1146}
+{"side": "close", "price": 51661.00, "step": 1152, "profit": 382.90}
+{"side": "open", "price": 51474.00, "step": 1153}
+{"side": "close", "price": 51258.00, "step": 1154, "profit": -216.10}
+{"side": "open", "price": 51550.00, "step": 1156}
+{"side": "close", "price": 51492.00, "step": 1158, "profit": -58.10}
+{"side": "open", "price": 51643.00, "step": 1159}
+{"side": "close", "price": 51836.00, "step": 1162, "profit": 192.90}
+{"side": "open", "price": 51839.00, "step": 1163}
+{"side": "close", "price": 51577.00, "step": 1164, "profit": -262.10}
+{"side": "open", "price": 51650.00, "step": 1165}
+{"side": "close", "price": 51886.00, "step": 1166, "profit": 235.90}
+{"side": "open", "price": 51869.00, "step": 1168}
+{"side": "close", "price": 51854.00, "step": 1169, "profit": -15.10}
+{"side": "open", "price": 51824.00, "step": 1170}
+{"side": "close", "price": 51789.00, "step": 1171, "profit": -35.10}
+{"side": "open", "price": 51776.00, "step": 1172}
+{"side": "close", "price": 52129.00, "step": 1178, "profit": 352.90}
+{"side": "open", "price": 52045.00, "step": 1179}
+{"side": "close", "price": 52062.00, "step": 1180, "profit": 16.90}
+{"side": "open", "price": 52104.00, "step": 1181}
+{"side": "close", "price": 52127.00, "step": 1189, "profit": 22.90}
+{"side": "open", "price": 52085.00, "step": 1190}
+{"side": "close", "price": 51806.00, "step": 1197, "profit": -279.10}
+{"side": "open", "price": 51863.00, "step": 1198}
+{"side": "close", "price": 51722.00, "step": 1199, "profit": -141.10}
+{"side": "open", "price": 51590.00, "step": 1200}
+{"side": "close", "price": 51608.00, "step": 1201, "profit": 17.90}
+{"side": "open", "price": 51666.00, "step": 1202}
+{"side": "close", "price": 51555.00, "step": 1203, "profit": -111.10}
+{"side": "open", "price": 51868.00, "step": 1205}
+{"side": "close", "price": 51750.00, "step": 1208, "profit": -118.10}
+{"side": "open", "price": 51764.00, "step": 1209}
+{"side": "close", "price": 52088.00, "step": 1224, "profit": 323.90}
+{"side": "open", "price": 51916.00, "step": 1227}
+{"side": "close", "price": 51869.00, "step": 1228, "profit": -47.10}
+{"side": "open", "price": 51709.00, "step": 1230}
+{"side": "close", "price": 51604.00, "step": 1232, "profit": -105.10}
+{"side": "open", "price": 51069.00, "step": 1233}
+{"side": "close", "price": 51119.00, "step": 1239, "profit": 49.90}
+{"side": "open", "price": 50920.00, "step": 1241}
+{"side": "close", "price": 51508.00, "step": 1246, "profit": 587.90}
+{"side": "open", "price": 51859.00, "step": 1247}
+{"side": "close", "price": 51249.00, "step": 1249, "profit": -610.10}
+{"side": "open", "price": 51415.00, "step": 1250}
+{"side": "close", "price": 51601.00, "step": 1251, "profit": 185.90}
+{"side": "open", "price": 51435.00, "step": 1252}
+{"side": "close", "price": 51504.00, "step": 1253, "profit": 68.90}
+{"side": "open", "price": 51721.00, "step": 1254}
+{"side": "close", "price": 51453.00, "step": 1272, "profit": -268.10}
+{"side": "open", "price": 51111.00, "step": 1274}
+{"side": "close", "price": 51105.00, "step": 1275, "profit": -6.10}
+{"side": "open", "price": 51225.00, "step": 1276}
+{"side": "close", "price": 51238.00, "step": 1277, "profit": 12.90}
+{"side": "open", "price": 50940.00, "step": 1280}
+{"side": "close", "price": 50985.00, "step": 1281, "profit": 44.90}
+{"side": "open", "price": 51218.00, "step": 1283}
+{"side": "close", "price": 51038.00, "step": 1288, "profit": -180.10}
+{"side": "open", "price": 50775.00, "step": 1298}
+{"side": "close", "price": 50836.00, "step": 1299, "profit": 60.90}
+{"side": "open", "price": 50928.00, "step": 1300}
+{"side": "close", "price": 51073.00, "step": 1303, "profit": 144.90}
+{"side": "open", "price": 51001.00, "step": 1304}
+{"side": "close", "price": 51082.00, "step": 1305, "profit": 80.90}
+{"side": "open", "price": 51093.00, "step": 1306}
+{"side": "close", "price": 51109.00, "step": 1307, "profit": 15.90}
+{"side": "open", "price": 51144.00, "step": 1310}
+{"side": "close", "price": 51112.00, "step": 1311, "profit": -32.10}
+{"side": "open", "price": 51226.00, "step": 1312}
+{"side": "close", "price": 51615.00, "step": 1315, "profit": 388.90}
+{"side": "open", "price": 51572.00, "step": 1320}
+{"side": "close", "price": 51740.00, "step": 1321, "profit": 167.90}
+{"side": "open", "price": 51666.00, "step": 1322}
+{"side": "close", "price": 51659.00, "step": 1324, "profit": -7.10}
+{"side": "open", "price": 51674.00, "step": 1329}
+{"side": "close", "price": 51600.00, "step": 1330, "profit": -74.10}
+{"side": "open", "price": 51682.00, "step": 1332}
+{"side": "close", "price": 51635.00, "step": 1333, "profit": -47.10}
+{"side": "open", "price": 51770.00, "step": 1334}
+{"side": "close", "price": 51563.00, "step": 1337, "profit": -207.10}
+{"side": "open", "price": 51563.00, "step": 1338}
+{"side": "close", "price": 51693.00, "step": 1342, "profit": 129.90}
+{"side": "open", "price": 51715.00, "step": 1343}
+{"side": "close", "price": 51667.00, "step": 1344, "profit": -48.10}
+{"side": "open", "price": 51505.00, "step": 1345}
+{"side": "close", "price": 51466.00, "step": 1346, "profit": -39.10}
+{"side": "open", "price": 50928.00, "step": 1353}
+{"side": "close", "price": 51099.00, "step": 1355, "profit": 170.90}
+{"side": "open", "price": 51206.00, "step": 1356}
+{"side": "close", "price": 51257.00, "step": 1357, "profit": 50.90}
+{"side": "open", "price": 51676.00, "step": 1358}
+{"side": "close", "price": 56622.00, "step": 1389, "profit": 4945.90}
+{"side": "open", "price": 56715.00, "step": 1393}
+{"side": "close", "price": 56882.00, "step": 1394, "profit": 166.90}
+{"side": "open", "price": 58176.00, "step": 1399}
+{"side": "close", "price": 62456.00, "step": 1421, "profit": 4279.90}
+{"side": "open", "price": 62960.00, "step": 1422}
+{"side": "close", "price": 61143.00, "step": 1439, "profit": -1817.10}
+{"side": "open", "price": 60976.00, "step": 1442}
+{"side": "close", "price": 62348.00, "step": 1463, "profit": 1371.90}
+{"side": "open", "price": 62258.00, "step": 1467}
+{"side": "close", "price": 61992.00, "step": 1468, "profit": -266.10}
+{"side": "open", "price": 62017.00, "step": 1469}
+{"side": "close", "price": 62013.00, "step": 1471, "profit": -4.10}
+{"side": "open", "price": 61943.00, "step": 1472}
+{"side": "close", "price": 61835.00, "step": 1475, "profit": -108.10}
+{"side": "open", "price": 62070.00, "step": 1476}
+{"side": "close", "price": 61814.00, "step": 1477, "profit": -256.10}
+{"side": "open", "price": 61826.00, "step": 1478}
+{"side": "close", "price": 61953.00, "step": 1482, "profit": 126.90}
+{"side": "open", "price": 62066.00, "step": 1483}
+{"side": "close", "price": 61703.00, "step": 1486, "profit": -363.10}
+{"side": "open", "price": 61962.00, "step": 1487}
+{"side": "close", "price": 61707.00, "step": 1488, "profit": -255.10}
+{"side": "open", "price": 61760.00, "step": 1489}
+{"side": "close", "price": 61911.00, "step": 1491, "profit": 150.90}
+{"side": "open", "price": 61996.00, "step": 1492}
+{"side": "close", "price": 61885.00, "step": 1493, "profit": -111.10}
+{"side": "open", "price": 61861.00, "step": 1494}
+{"side": "close", "price": 61659.00, "step": 1498, "profit": -202.10}
+{"side": "open", "price": 61804.00, "step": 1499}
+{"side": "close", "price": 62192.00, "step": 1503, "profit": 387.90}
+{"side": "open", "price": 62915.00, "step": 1504}
+{"side": "close", "price": 62801.00, "step": 1508, "profit": -114.10}
+{"side": "open", "price": 62864.00, "step": 1509}
+{"side": "close", "price": 63648.00, "step": 1516, "profit": 783.90}
+{"side": "open", "price": 63370.00, "step": 1517}
+{"side": "close", "price": 65147.00, "step": 1524, "profit": 1776.90}
+{"side": "open", "price": 65125.00, "step": 1525}
+{"side": "close", "price": 66968.00, "step": 1580, "profit": 1842.90}
+{"side": "open", "price": 65903.00, "step": 1582}
+{"side": "close", "price": 66073.00, "step": 1583, "profit": 169.90}
+{"side": "open", "price": 66192.00, "step": 1584}
+{"side": "close", "price": 66381.00, "step": 1585, "profit": 188.90}
+{"side": "open", "price": 66099.00, "step": 1586}
+{"side": "close", "price": 65883.00, "step": 1587, "profit": -216.10}
+{"side": "open", "price": 65870.00, "step": 1590}
+{"side": "close", "price": 68117.00, "step": 1637, "profit": 2246.90}
+{"side": "open", "price": 68302.00, "step": 1638}
+{"side": "close", "price": 69000.00, "step": 1659, "profit": 697.90}
+{"side": "open", "price": 69300.00, "step": 1660}
+{"side": "close", "price": 69300.00, "step": 1663, "profit": -0.10}
+{"side": "open", "price": 69594.00, "step": 1664}
+{"side": "close", "price": 69141.00, "step": 1671, "profit": -453.10}
+{"side": "open", "price": 69377.00, "step": 1672}
+{"side": "close", "price": 69351.00, "step": 1673, "profit": -26.10}
+{"side": "open", "price": 69182.00, "step": 1674}
+{"side": "close", "price": 69334.00, "step": 1675, "profit": 151.90}
+{"side": "open", "price": 69236.00, "step": 1676}
+{"side": "close", "price": 72883.00, "step": 1750, "profit": 3646.90}
+{"side": "open", "price": 72998.00, "step": 1751}
+{"side": "close", "price": 72774.00, "step": 1752, "profit": -224.10}
+{"side": "open", "price": 72920.00, "step": 1754}
+{"side": "close", "price": 73149.00, "step": 1755, "profit": 228.90}
+{"side": "open", "price": 72730.00, "step": 1756}
+{"side": "close", "price": 73235.00, "step": 1761, "profit": 504.90}
+{"side": "open", "price": 72742.00, "step": 1763}
+{"side": "close", "price": 71353.00, "step": 1775, "profit": -1389.10}
+{"side": "open", "price": 71879.00, "step": 1776}
+{"side": "close", "price": 69112.00, "step": 1802, "profit": -2767.10}
+{"side": "open", "price": 68947.00, "step": 1804}
+{"side": "close", "price": 69157.00, "step": 1806, "profit": 209.90}
+{"side": "open", "price": 69439.00, "step": 1807}
+{"side": "close", "price": 68945.00, "step": 1809, "profit": -494.10}
+{"side": "open", "price": 68318.00, "step": 1810}
+{"side": "close", "price": 68224.00, "step": 1845, "profit": -94.10}
+{"side": "open", "price": 68263.00, "step": 1846}
+{"side": "close", "price": 68504.00, "step": 1854, "profit": 240.90}
+{"side": "open", "price": 68231.00, "step": 1855}
+{"side": "close", "price": 67887.00, "step": 1857, "profit": -344.10}
+{"side": "open", "price": 68124.00, "step": 1858}
+{"side": "close", "price": 68265.00, "step": 1859, "profit": 140.90}
+{"side": "open", "price": 68535.00, "step": 1860}
+{"side": "close", "price": 67111.00, "step": 1872, "profit": -1424.10}
+{"side": "open", "price": 65873.00, "step": 1873}
+{"side": "close", "price": 65577.00, "step": 1943, "profit": -296.10}
+{"side": "open", "price": 65887.00, "step": 1944}
+{"side": "close", "price": 65336.00, "step": 1945, "profit": -551.10}
+{"side": "open", "price": 65716.00, "step": 1946}
+{"side": "close", "price": 66261.00, "step": 1948, "profit": 544.90}
+{"side": "open", "price": 66515.00, "step": 1949}
+{"side": "close", "price": 66267.00, "step": 1951, "profit": -248.10}
+{"side": "open", "price": 65917.00, "step": 1952}
+{"side": "close", "price": 63513.00, "step": 1964, "profit": -2404.10}
+{"side": "open", "price": 62971.00, "step": 1965}
+{"side": "close", "price": 63607.00, "step": 1971, "profit": 635.90}
+{"side": "open", "price": 63944.00, "step": 1972}
+{"side": "close", "price": 64128.00, "step": 1973, "profit": 183.90}
+{"side": "open", "price": 64212.00, "step": 1974}
+{"side": "close", "price": 64496.00, "step": 1977, "profit": 283.90}
+{"side": "open", "price": 64349.00, "step": 1978}
+{"side": "close", "price": 64665.00, "step": 1979, "profit": 315.90}
+{"side": "open", "price": 64757.00, "step": 1980}
+{"side": "close", "price": 64646.00, "step": 1981, "profit": -111.10}
+{"side": "open", "price": 65322.00, "step": 1982}
+{"side": "close", "price": 65014.00, "step": 1988, "profit": -308.10}
+{"side": "open", "price": 64971.00, "step": 1989}
+{"side": "close", "price": 64781.00, "step": 1990, "profit": -190.10}
+{"side": "open", "price": 64034.00, "step": 1991}
+{"side": "close", "price": 64520.00, "step": 1993, "profit": 485.90}
+{"side": "open", "price": 63996.00, "step": 1995}
+{"side": "close", "price": 64351.00, "step": 1997, "profit": 354.90}
+{"side": "open", "price": 64261.00, "step": 1998}
+{"side": "close", "price": 64626.00, "step": 1999, "profit": 364.90}
+{"side": "open", "price": 65274.00, "step": 2000}
+{"side": "close", "price": 65380.00, "step": 2003, "profit": 105.90}
+{"side": "open", "price": 65709.00, "step": 2004}
+{"side": "close", "price": 65728.00, "step": 2007, "profit": 18.90}
+{"side": "open", "price": 65391.00, "step": 2009}
+{"side": "close", "price": 65879.00, "step": 2011, "profit": 487.90}
+{"side": "open", "price": 66227.00, "step": 2012}
+{"side": "close", "price": 70229.00, "step": 2038, "profit": 4001.90}
+{"side": "open", "price": 70412.00, "step": 2042}
+{"side": "close", "price": 70557.00, "step": 2044, "profit": 144.90}
+{"side": "open", "price": 70254.00, "step": 2045}
+{"side": "close", "price": 70558.00, "step": 2046, "profit": 303.90}
+{"side": "open", "price": 70461.00, "step": 2047}
+{"side": "close", "price": 71089.00, "step": 2052, "profit": 627.90}
+{"side": "open", "price": 70373.00, "step": 2053}
+{"side": "close", "price": 70263.00, "step": 2055, "profit": -110.10}
+{"side": "open", "price": 70046.00, "step": 2057}
+{"side": "close", "price": 69958.00, "step": 2058, "profit": -88.10}
+{"side": "open", "price": 69500.00, "step": 2059}
+{"side": "close", "price": 69832.00, "step": 2060, "profit": 331.90}
+{"side": "open", "price": 70254.00, "step": 2062}
+{"side": "close", "price": 69985.00, "step": 2063, "profit": -269.10}
+{"side": "open", "price": 70634.00, "step": 2064}
+{"side": "close", "price": 70344.00, "step": 2065, "profit": -290.10}
+{"side": "open", "price": 70584.00, "step": 2066}
+{"side": "close", "price": 70395.00, "step": 2067, "profit": -189.10}
+{"side": "open", "price": 69751.00, "step": 2071}
+{"side": "close", "price": 69553.00, "step": 2072, "profit": -198.10}
+{"side": "open", "price": 69856.00, "step": 2077}
+{"side": "close", "price": 69466.00, "step": 2089, "profit": -390.10}
+{"side": "open", "price": 69133.00, "step": 2090}
+{"side": "close", "price": 70812.00, "step": 2098, "profit": 1678.90}
+{"side": "open", "price": 70640.00, "step": 2099}
+{"side": "close", "price": 70826.00, "step": 2100, "profit": 185.90}
+{"side": "open", "price": 70896.00, "step": 2101}
+{"side": "close", "price": 70798.00, "step": 2105, "profit": -98.10}
+{"side": "open", "price": 70739.00, "step": 2108}
+{"side": "close", "price": 70841.00, "step": 2109, "profit": 101.90}
+{"side": "open", "price": 70450.00, "step": 2115}
+{"side": "close", "price": 70358.00, "step": 2116, "profit": -92.10}
+{"side": "open", "price": 70470.00, "step": 2118}
+{"side": "close", "price": 70131.00, "step": 2122, "profit": -339.10}
+{"side": "open", "price": 70201.00, "step": 2123}
+{"side": "close", "price": 69639.00, "step": 2131, "profit": -562.10}
+{"side": "open", "price": 69623.00, "step": 2132}
+{"side": "close", "price": 69437.00, "step": 2133, "profit": -186.10}
+{"side": "open", "price": 69835.31, "step": 2136}
+{"side": "close", "price": 69859.00, "step": 2137, "profit": 23.59}
+{"side": "open", "price": 69809.00, "step": 2139}
+{"side": "close", "price": 70080.00, "step": 2140, "profit": 270.90}
+{"side": "open", "price": 70228.00, "step": 2148}
+{"side": "close", "price": 70221.00, "step": 2149, "profit": -7.10}
+{"side": "open", "price": 70107.00, "step": 2150}
+{"side": "close", "price": 70057.00, "step": 2151, "profit": -50.10}
+{"side": "open", "price": 70248.00, "step": 2152}
+{"side": "close", "price": 70128.00, "step": 2153, "profit": -120.10}
+{"side": "open", "price": 69966.00, "step": 2155}
+{"side": "close", "price": 69888.00, "step": 2156, "profit": -78.10}
+{"side": "open", "price": 70611.50, "step": 2172}
+{"side": "close", "price": 70635.00, "step": 2174, "profit": 23.40}
+{"side": "open", "price": 70632.00, "step": 2177}
+{"side": "close", "price": 70974.00, "step": 2180, "profit": 341.90}
+{"side": "open", "price": 70575.00, "step": 2188}
+{"side": "close", "price": 69473.00, "step": 2192, "profit": -1102.10}
+{"side": "open", "price": 69001.00, "step": 2198}
+{"side": "close", "price": 69751.00, "step": 2206, "profit": 749.90}
+{"side": "open", "price": 69316.00, "step": 2208}
+{"side": "close", "price": 69409.00, "step": 2209, "profit": 92.90}
+{"side": "open", "price": 67042.00, "step": 2210}
+{"side": "close", "price": 66443.00, "step": 2215, "profit": -599.10}
+{"side": "open", "price": 66207.00, "step": 2216}
+{"side": "close", "price": 65831.00, "step": 2226, "profit": -376.10}
+{"side": "open", "price": 65392.00, "step": 2232}
+{"side": "close", "price": 66367.00, "step": 2236, "profit": 974.90}
+{"side": "open", "price": 66381.00, "step": 2238}
+{"side": "close", "price": 66138.00, "step": 2239, "profit": -243.10}
+{"side": "open", "price": 66512.00, "step": 2240}
+{"side": "close", "price": 66496.00, "step": 2241, "profit": -16.10}
+{"side": "open", "price": 66167.00, "step": 2242}
+{"side": "close", "price": 65959.00, "step": 2244, "profit": -208.10}
+{"side": "open", "price": 65954.00, "step": 2245}
+{"side": "close", "price": 66202.00, "step": 2248, "profit": 247.90}
+{"side": "open", "price": 66014.00, "step": 2250}
+{"side": "close", "price": 65741.00, "step": 2252, "profit": -273.10}
+{"side": "open", "price": 65722.00, "step": 2258}
+{"side": "close", "price": 65605.62, "step": 2259, "profit": -116.47}
+{"side": "open", "price": 65760.00, "step": 2262}
+{"side": "close", "price": 66065.00, "step": 2263, "profit": 304.90}
+{"side": "open", "price": 66192.00, "step": 2264}
+{"side": "close", "price": 66225.00, "step": 2266, "profit": 32.90}
+{"side": "open", "price": 66274.00, "step": 2267}
+{"side": "close", "price": 67622.00, "step": 2284, "profit": 1347.90}
+{"side": "open", "price": 66894.00, "step": 2285}
+{"side": "close", "price": 67045.00, "step": 2290, "profit": 150.90}
+{"side": "open", "price": 66501.00, "step": 2291}
+{"side": "close", "price": 67598.00, "step": 2298, "profit": 1096.90}
+{"side": "open", "price": 67422.00, "step": 2299}
+{"side": "close", "price": 67653.00, "step": 2300, "profit": 230.90}
+{"side": "open", "price": 67627.50, "step": 2302}
+{"side": "close", "price": 67819.00, "step": 2303, "profit": 191.40}
+{"side": "open", "price": 67707.00, "step": 2305}
+{"side": "close", "price": 67602.00, "step": 2306, "profit": -105.10}
+{"side": "open", "price": 68048.00, "step": 2309}
+{"side": "close", "price": 68122.00, "step": 2310, "profit": 73.90}
+{"side": "open", "price": 68031.00, "step": 2311}
+{"side": "close", "price": 68060.00, "step": 2312, "profit": 28.90}
+{"side": "open", "price": 67806.00, "step": 2313}
+{"side": "close", "price": 67842.00, "step": 2314, "profit": 35.90}
+{"side": "open", "price": 67633.00, "step": 2315}
+{"side": "close", "price": 67695.50, "step": 2317, "profit": 62.40}
+{"side": "open", "price": 67994.00, "step": 2318}
+{"side": "close", "price": 68098.00, "step": 2319, "profit": 103.90}
+{"side": "open", "price": 68297.00, "step": 2321}
+{"side": "close", "price": 68293.00, "step": 2322, "profit": -4.10}
+{"side": "open", "price": 68373.00, "step": 2324}
+{"side": "close", "price": 68300.00, "step": 2325, "profit": -73.10}
+{"side": "open", "price": 69038.00, "step": 2326}
+{"side": "close", "price": 69008.00, "step": 2328, "profit": -30.10}
+{"side": "open", "price": 69310.00, "step": 2330}
+{"side": "close", "price": 69418.50, "step": 2331, "profit": 108.40}
+{"side": "open", "price": 69229.00, "step": 2334}
+{"side": "close", "price": 69352.75, "step": 2335, "profit": 123.65}
+{"side": "open", "price": 69503.00, "step": 2336}
+{"side": "close", "price": 69277.00, "step": 2337, "profit": -226.10}
+{"side": "open", "price": 69293.00, "step": 2338}
+{"side": "close", "price": 69333.00, "step": 2339, "profit": 39.90}
+{"side": "open", "price": 69548.50, "step": 2342}
+{"side": "close", "price": 69522.00, "step": 2343, "profit": -26.60}
+{"side": "open", "price": 70048.00, "step": 2344}
+{"side": "close", "price": 69769.00, "step": 2345, "profit": -279.10}
+{"side": "open", "price": 69027.00, "step": 2347}
+{"side": "close", "price": 69282.33, "step": 2348, "profit": 255.23}
+{"side": "open", "price": 69797.00, "step": 2358}
+{"side": "close", "price": 71855.00, "step": 2367, "profit": 2057.90}
+{"side": "open", "price": 71422.00, "step": 2376}
+{"side": "close", "price": 71302.00, "step": 2379, "profit": -120.10}
+{"side": "open", "price": 71185.00, "step": 2380}
+{"side": "close", "price": 70764.00, "step": 2388, "profit": -421.10}
+{"side": "open", "price": 69942.00, "step": 2389}
+{"side": "close", "price": 69346.75, "step": 2398, "profit": -595.35}
+{"side": "open", "price": 69165.00, "step": 2399}
+{"side": "close", "price": 69111.00, "step": 2400, "profit": -54.10}
+{"side": "open", "price": 68684.00, "step": 2402}
+{"side": "close", "price": 69142.00, "step": 2403, "profit": 457.90}
+{"side": "open", "price": 69071.00, "step": 2408}
+{"side": "close", "price": 69162.00, "step": 2409, "profit": 90.90}
+{"side": "open", "price": 68049.00, "step": 2412}
+{"side": "close", "price": 69890.00, "step": 2420, "profit": 1840.90}
+{"side": "open", "price": 70629.00, "step": 2422}
+{"side": "close", "price": 70629.00, "step": 2424, "profit": -0.10}
+{"side": "open", "price": 70619.00, "step": 2428}
+{"side": "close", "price": 70618.50, "step": 2429, "profit": -0.60}
+{"side": "open", "price": 70750.00, "step": 2430}
+{"side": "close", "price": 70027.00, "step": 2435, "profit": -723.10}
+{"side": "open", "price": 70926.00, "step": 2436}
+{"side": "close", "price": 69661.00, "step": 2438, "profit": -1265.10}
+{"side": "open", "price": 70099.00, "step": 2439}
+{"side": "close", "price": 70119.00, "step": 2440, "profit": 19.90}
+{"side": "open", "price": 70529.00, "step": 2443}
+{"side": "close", "price": 70257.00, "step": 2446, "profit": -272.10}
+{"side": "open", "price": 70344.40, "step": 2448}
+{"side": "close", "price": 70337.00, "step": 2449, "profit": -7.50}
+{"side": "open", "price": 70740.00, "step": 2450}
+{"side": "close", "price": 71065.00, "step": 2451, "profit": 324.90}
+{"side": "open", "price": 71205.50, "step": 2452}
+{"side": "close", "price": 71033.00, "step": 2453, "profit": -172.60}
+{"side": "open", "price": 70892.00, "step": 2455}
+{"side": "close", "price": 70717.00, "step": 2457, "profit": -175.10}
+{"side": "open", "price": 70634.00, "step": 2460}
+{"side": "close", "price": 69408.00, "step": 2463, "profit": -1226.10}
+{"side": "open", "price": 68886.00, "step": 2464}
+{"side": "close", "price": 67114.00, "step": 2475, "profit": -1772.10}
+{"side": "open", "price": 67560.00, "step": 2476}
+{"side": "close", "price": 67358.00, "step": 2479, "profit": -202.10}
+{"side": "open", "price": 67140.00, "step": 2480}
+{"side": "close", "price": 67458.50, "step": 2482, "profit": 318.40}
+{"side": "open", "price": 67363.00, "step": 2483}
+{"side": "close", "price": 67546.00, "step": 2484, "profit": 182.90}
+{"side": "open", "price": 67541.00, "step": 2485}
+{"side": "close", "price": 67535.00, "step": 2486, "profit": -6.10}
+{"side": "open", "price": 66699.00, "step": 2489}
+{"side": "close", "price": 64529.00, "step": 2503, "profit": -2170.10}
+{"side": "open", "price": 64608.00, "step": 2504}
+{"side": "close", "price": 64223.00, "step": 2505, "profit": -385.10}
+{"side": "open", "price": 64256.50, "step": 2507}
+{"side": "close", "price": 63798.00, "step": 2517, "profit": -458.60}
+{"side": "open", "price": 65387.00, "step": 2518}
+{"side": "close", "price": 65589.00, "step": 2520, "profit": 201.90}
+{"side": "open", "price": 66641.00, "step": 2526}
+{"side": "close", "price": 66378.00, "step": 2528, "profit": -263.10}
+{"side": "open", "price": 66705.00, "step": 2529}
+{"side": "close", "price": 66555.00, "step": 2530, "profit": -150.10}
+{"side": "open", "price": 65950.00, "step": 2531}
+{"side": "close", "price": 66085.00, "step": 2532, "profit": 134.90}
+{"side": "open", "price": 64291.00, "step": 2534}
+{"side": "close", "price": 63334.00, "step": 2544, "profit": -957.10}
+{"side": "open", "price": 63239.00, "step": 2545}
+{"side": "close", "price": 63454.33, "step": 2546, "profit": 215.23}
+{"side": "open", "price": 62546.00, "step": 2548}
+{"side": "close", "price": 63315.00, "step": 2550, "profit": 768.90}
+{"side": "open", "price": 63639.00, "step": 2551}
+{"side": "close", "price": 63392.00, "step": 2552, "profit": -247.10}
+{"side": "open", "price": 62674.00, "step": 2554}
+{"side": "close", "price": 63099.00, "step": 2556, "profit": 424.90}
+{"side": "open", "price": 62763.00, "step": 2557}
+{"side": "close", "price": 62177.00, "step": 2558, "profit": -586.10}
+{"side": "open", "price": 61846.00, "step": 2559}
+{"side": "close", "price": 63058.00, "step": 2562, "profit": 1211.90}
+{"side": "open", "price": 62792.00, "step": 2563}
+{"side": "close", "price": 63874.00, "step": 2567, "profit": 1081.90}
+{"side": "open", "price": 63402.00, "step": 2577}
+{"side": "close", "price": 62962.00, "step": 2578, "profit": -440.10}
+{"side": "open", "price": 62653.00, "step": 2579}
+{"side": "close", "price": 62699.00, "step": 2581, "profit": 45.90}
+{"side": "open", "price": 61318.00, "step": 2582}
+{"side": "close", "price": 61400.00, "step": 2589, "profit": 81.90}
+{"side": "open", "price": 61716.00, "step": 2593}
+{"side": "close", "price": 61761.00, "step": 2594, "profit": 44.90}
+{"side": "open", "price": 62095.00, "step": 2595}
+{"side": "close", "price": 61170.00, "step": 2597, "profit": -925.10}
+{"side": "open", "price": 61206.00, "step": 2598}
+{"side": "close", "price": 61269.00, "step": 2599, "profit": 62.90}
+{"side": "open", "price": 61430.00, "step": 2600}
+{"side": "close", "price": 61912.00, "step": 2602, "profit": 481.90}
+{"side": "open", "price": 62699.00, "step": 2603}
+{"side": "close", "price": 63525.00, "step": 2612, "profit": 825.90}
+{"side": "open", "price": 63511.00, "step": 2613}
+{"side": "close", "price": 64765.00, "step": 2626, "profit": 1253.90}
+{"side": "open", "price": 64947.50, "step": 2627}
+{"side": "close", "price": 65038.00, "step": 2628, "profit": 90.40}
+{"side": "open", "price": 64483.00, "step": 2630}
+{"side": "close", "price": 64473.00, "step": 2631, "profit": -10.10}
+{"side": "open", "price": 64010.00, "step": 2632}
+{"side": "close", "price": 64714.00, "step": 2633, "profit": 703.90}
+{"side": "open", "price": 63867.00, "step": 2639}
+{"side": "close", "price": 63758.00, "step": 2641, "profit": -109.10}
+{"side": "open", "price": 64278.00, "step": 2645}
+{"side": "close", "price": 64171.00, "step": 2646, "profit": -107.10}
+{"side": "open", "price": 64049.00, "step": 2647}
+{"side": "close", "price": 63816.00, "step": 2648, "profit": -233.10}
+{"side": "open", "price": 63702.00, "step": 2649}
+{"side": "close", "price": 63922.00, "step": 2652, "profit": 219.90}
+{"side": "open", "price": 63959.00, "step": 2653}
+{"side": "close", "price": 64034.00, "step": 2654, "profit": 74.90}
+{"side": "open", "price": 64891.00, "step": 2655}
+{"side": "close", "price": 64896.00, "step": 2659, "profit": 4.90}
+{"side": "open", "price": 64802.00, "step": 2660}
+{"side": "close", "price": 64725.50, "step": 2661, "profit": -76.60}
+{"side": "open", "price": 64823.00, "step": 2664}
+{"side": "close", "price": 65047.50, "step": 2665, "profit": 224.40}
+{"side": "open", "price": 65220.50, "step": 2667}
+{"side": "close", "price": 65160.50, "step": 2668, "profit": -60.10}
+{"side": "open", "price": 65193.00, "step": 2671}
+{"side": "close", "price": 65023.00, "step": 2672, "profit": -170.10}
+{"side": "open", "price": 64954.00, "step": 2673}
+{"side": "close", "price": 65017.00, "step": 2674, "profit": 62.90}
+{"side": "open", "price": 65325.00, "step": 2675}
+{"side": "close", "price": 65068.00, "step": 2676, "profit": -257.10}
+{"side": "open", "price": 64905.00, "step": 2677}
+{"side": "close", "price": 64938.00, "step": 2678, "profit": 32.90}
+{"side": "open", "price": 64637.00, "step": 2680}
+{"side": "close", "price": 64811.00, "step": 2682, "profit": 173.90}
+{"side": "open", "price": 64597.00, "step": 2683}
+{"side": "close", "price": 64742.00, "step": 2685, "profit": 144.90}
+{"side": "open", "price": 65119.00, "step": 2686}
+{"side": "close", "price": 65011.00, "step": 2687, "profit": -108.10}
+{"side": "open", "price": 64977.00, "step": 2688}
+{"side": "close", "price": 64866.50, "step": 2690, "profit": -110.60}
+{"side": "open", "price": 65761.00, "step": 2691}
+{"side": "close", "price": 66042.00, "step": 2696, "profit": 280.90}
+{"side": "open", "price": 66022.00, "step": 2697}
+{"side": "close", "price": 65953.00, "step": 2699, "profit": -69.10}
+{"side": "open", "price": 66050.00, "step": 2700}
+{"side": "close", "price": 66250.00, "step": 2701, "profit": 199.90}
+{"side": "open", "price": 66119.00, "step": 2702}
+{"side": "close", "price": 66204.00, "step": 2704, "profit": 84.90}
+{"side": "open", "price": 66644.00, "step": 2705}
+{"side": "close", "price": 66409.00, "step": 2706, "profit": -235.10}
+{"side": "open", "price": 66602.00, "step": 2707}
+{"side": "close", "price": 66556.00, "step": 2708, "profit": -46.10}
+{"side": "open", "price": 67129.00, "step": 2710}
+{"side": "close", "price": 67089.00, "step": 2712, "profit": -40.10}
+{"side": "open", "price": 67022.00, "step": 2726}
+{"side": "close", "price": 66489.00, "step": 2727, "profit": -533.10}
+{"side": "open", "price": 66529.00, "step": 2731}
+{"side": "close", "price": 66408.00, "step": 2732, "profit": -121.10}
+{"side": "open", "price": 66400.00, "step": 2734}
+{"side": "close", "price": 66494.00, "step": 2735, "profit": 93.90}
+{"side": "open", "price": 66851.00, "step": 2737}
+{"side": "close", "price": 66628.00, "step": 2738, "profit": -223.10}
+{"side": "open", "price": 66693.00, "step": 2739}
+{"side": "close", "price": 67114.00, "step": 2740, "profit": 420.90}
+{"side": "open", "price": 66857.00, "step": 2741}
+{"side": "close", "price": 66857.00, "step": 2742, "profit": -0.10}
+{"side": "open", "price": 66608.00, "step": 2744}
+{"side": "close", "price": 66430.60, "step": 2745, "profit": -177.50}
+{"side": "open", "price": 66442.00, "step": 2748}
+{"side": "close", "price": 64887.00, "step": 2753, "profit": -1555.10}
+{"side": "open", "price": 64165.00, "step": 2754}
+{"side": "close", "price": 64156.00, "step": 2756, "profit": -9.10}
+{"side": "open", "price": 63514.00, "step": 2770}
+{"side": "close", "price": 63908.00, "step": 2771, "profit": 393.90}
+{"side": "open", "price": 63465.00, "step": 2772}
+{"side": "close", "price": 64196.00, "step": 2775, "profit": 730.90}
+{"side": "open", "price": 64763.00, "step": 2777}
+{"side": "close", "price": 64754.00, "step": 2778, "profit": -9.10}
+{"side": "open", "price": 63532.00, "step": 2799}
+{"side": "close", "price": 63747.00, "step": 2800, "profit": 214.90}
+{"side": "open", "price": 64085.00, "step": 2801}
+{"side": "close", "price": 64135.00, "step": 2802, "profit": 49.90}
+{"side": "open", "price": 63230.00, "step": 2808}
+{"side": "close", "price": 63007.00, "step": 2810, "profit": -223.10}
+{"side": "open", "price": 63121.00, "step": 2812}
+{"side": "close", "price": 63088.00, "step": 2813, "profit": -33.10}
+{"side": "open", "price": 63067.00, "step": 2815}
+{"side": "close", "price": 63120.00, "step": 2816, "profit": 52.90}
+{"side": "open", "price": 63076.00, "step": 2817}
+{"side": "close", "price": 62874.00, "step": 2818, "profit": -202.10}
+{"side": "open", "price": 62957.00, "step": 2819}
+{"side": "close", "price": 63128.00, "step": 2820, "profit": 170.90}
+{"side": "open", "price": 63315.00, "step": 2821}
+{"side": "close", "price": 63476.00, "step": 2827, "profit": 160.90}
+{"side": "open", "price": 63378.00, "step": 2828}
+{"side": "close", "price": 63403.00, "step": 2829, "profit": 24.90}
+{"side": "open", "price": 63375.00, "step": 2830}
+{"side": "close", "price": 63574.00, "step": 2831, "profit": 198.90}
+{"side": "open", "price": 62366.00, "step": 2859}
+{"side": "close", "price": 62628.00, "step": 2860, "profit": 261.90}
+{"side": "open", "price": 62547.00, "step": 2861}
+{"side": "close", "price": 62519.00, "step": 2863, "profit": -28.10}
+{"side": "open", "price": 62538.00, "step": 2864}
+{"side": "close", "price": 62656.00, "step": 2865, "profit": 117.90}
+{"side": "open", "price": 62512.00, "step": 2866}
+{"side": "close", "price": 62384.00, "step": 2867, "profit": -128.10}
+{"side": "open", "price": 62749.00, "step": 2868}
+{"side": "close", "price": 62957.00, "step": 2870, "profit": 207.90}
+{"side": "open", "price": 63160.00, "step": 2871}
+{"side": "close", "price": 62889.00, "step": 2872, "profit": -271.10}
+{"side": "open", "price": 63255.00, "step": 2887}
+{"side": "close", "price": 60836.00, "step": 2903, "profit": -2419.10}
+{"side": "open", "price": 60388.00, "step": 2904}
+{"side": "close", "price": 60298.00, "step": 2905, "profit": -90.10}
+{"side": "open", "price": 60113.00, "step": 2906}
+{"side": "close", "price": 60438.00, "step": 2907, "profit": 324.90}
+{"side": "open", "price": 60512.00, "step": 2908}
+{"side": "close", "price": 60238.00, "step": 2909, "profit": -274.10}
+{"side": "open", "price": 59816.00, "step": 2910}
+{"side": "close", "price": 57991.00, "step": 2926, "profit": -1825.10}
+{"side": "open", "price": 58441.00, "step": 2927}
+{"side": "close", "price": 57220.00, "step": 2929, "profit": -1221.10}
+{"side": "open", "price": 57575.00, "step": 2930}
+{"side": "close", "price": 57552.00, "step": 2931, "profit": -23.10}
+{"side": "open", "price": 57499.00, "step": 2932}
+{"side": "close", "price": 57621.00, "step": 2933, "profit": 121.90}
+{"side": "open", "price": 57771.00, "step": 2934}
+{"side": "close", "price": 61958.00, "step": 2969, "profit": 4186.90}
+{"side": "open", "price": 63652.00, "step": 3000}
+{"side": "close", "price": 63292.00, "step": 3002, "profit": -360.10}
+{"side": "open", "price": 63848.26, "step": 3010}
+{"side": "close", "price": 64268.00, "step": 3014, "profit": 419.64}
+{"side": "open", "price": 64449.00, "step": 3016}
+{"side": "close", "price": 64044.00, "step": 3019, "profit": -405.10}
+{"side": "open", "price": 64294.00, "step": 3025}
+{"side": "close", "price": 64007.00, "step": 3026, "profit": -287.10}
+{"side": "open", "price": 64348.00, "step": 3029}
+{"side": "close", "price": 64383.00, "step": 3030, "profit": 34.90}
+{"side": "open", "price": 64650.00, "step": 3031}
+{"side": "close", "price": 63715.50, "step": 3039, "profit": -934.60}
+{"side": "open", "price": 63289.00, "step": 3040}
+{"side": "close", "price": 63419.00, "step": 3044, "profit": 129.90}
+{"side": "open", "price": 62641.00, "step": 3078}
+{"side": "close", "price": 62351.00, "step": 3079, "profit": -290.10}
+{"side": "open", "price": 61698.00, "step": 3092}
+{"side": "close", "price": 61348.00, "step": 3094, "profit": -350.10}
+{"side": "open", "price": 61319.00, "step": 3095}
+{"side": "close", "price": 61535.00, "step": 3096, "profit": 215.90}
+{"side": "open", "price": 61299.00, "step": 3109}
+{"side": "close", "price": 61667.00, "step": 3110, "profit": 367.90}
+{"side": "open", "price": 62106.00, "step": 3113}
+{"side": "close", "price": 62376.00, "step": 3114, "profit": 269.90}
+{"side": "open", "price": 63122.00, "step": 3132}
+{"side": "close", "price": 63144.00, "step": 3133, "profit": 21.90}
+{"side": "open", "price": 61162.00, "step": 3134}
+{"side": "close", "price": 60833.00, "step": 3148, "profit": -329.10}
+{"side": "open", "price": 60981.00, "step": 3149}
+{"side": "close", "price": 61027.00, "step": 3150, "profit": 45.90}
+{"side": "open", "price": 60969.00, "step": 3153}
+{"side": "close", "price": 60844.00, "step": 3154, "profit": -125.10}
+{"side": "open", "price": 60772.00, "step": 3155}
+{"side": "close", "price": 60811.00, "step": 3156, "profit": 38.90}
+{"side": "open", "price": 61072.00, "step": 3157}
+{"side": "close", "price": 60957.00, "step": 3158, "profit": -115.10}
+{"side": "open", "price": 61267.00, "step": 3159}
+{"side": "close", "price": 61274.00, "step": 3160, "profit": 6.90}
+{"side": "open", "price": 61339.00, "step": 3162}
+{"side": "close", "price": 61234.33, "step": 3163, "profit": -104.77}
+{"side": "open", "price": 61048.67, "step": 3165}
+{"side": "close", "price": 61026.00, "step": 3166, "profit": -22.77}
+{"side": "open", "price": 60929.00, "step": 3167}
+{"side": "close", "price": 61110.60, "step": 3168, "profit": 181.50}
+{"side": "open", "price": 61017.75, "step": 3170}
+{"side": "close", "price": 61046.00, "step": 3171, "profit": 28.15}
+{"side": "open", "price": 61057.00, "step": 3174}
+{"side": "close", "price": 60899.00, "step": 3175, "profit": -158.10}
+{"side": "open", "price": 61154.00, "step": 3176}
+{"side": "close", "price": 61114.00, "step": 3177, "profit": -40.10}
+{"side": "open", "price": 61278.00, "step": 3178}
+{"side": "close", "price": 61272.00, "step": 3179, "profit": -6.10}
+{"side": "open", "price": 61282.00, "step": 3180}
+{"side": "close", "price": 61324.00, "step": 3181, "profit": 41.90}
+{"side": "open", "price": 61304.50, "step": 3182}
+{"side": "close", "price": 61537.00, "step": 3183, "profit": 232.40}
+{"side": "open", "price": 61504.00, "step": 3184}
+{"side": "close", "price": 61782.00, "step": 3185, "profit": 277.90}
+{"side": "open", "price": 61510.00, "step": 3186}
+{"side": "close", "price": 61530.00, "step": 3187, "profit": 19.90}
+{"side": "open", "price": 61433.00, "step": 3188}
+{"side": "close", "price": 61372.00, "step": 3189, "profit": -61.10}
+{"side": "open", "price": 61463.00, "step": 3190}
+{"side": "close", "price": 61612.00, "step": 3191, "profit": 148.90}
+{"side": "open", "price": 61642.50, "step": 3192}
+{"side": "close", "price": 61540.00, "step": 3193, "profit": -102.60}
+{"side": "open", "price": 61160.00, "step": 3194}
+{"side": "close", "price": 61286.00, "step": 3195, "profit": 125.90}
+{"side": "open", "price": 61101.00, "step": 3196}
+{"side": "close", "price": 60997.00, "step": 3197, "profit": -104.10}
+{"side": "open", "price": 62133.00, "step": 3222}
+{"side": "close", "price": 61960.00, "step": 3224, "profit": -173.10}
+{"side": "open", "price": 61901.00, "step": 3225}
+{"side": "close", "price": 61849.00, "step": 3226, "profit": -52.10}
+{"side": "open", "price": 61912.00, "step": 3227}
+{"side": "close", "price": 61819.00, "step": 3229, "profit": -93.10}
+{"side": "open", "price": 61878.00, "step": 3230}
+{"side": "close", "price": 61519.00, "step": 3232, "profit": -359.10}
+{"side": "open", "price": 61390.00, "step": 3233}
+{"side": "close", "price": 61497.00, "step": 3234, "profit": 106.90}
+{"side": "open", "price": 61690.00, "step": 3235}
+{"side": "close", "price": 61692.00, "step": 3236, "profit": 1.90}
+{"side": "open", "price": 61776.00, "step": 3237}
+{"side": "close", "price": 61781.00, "step": 3238, "profit": 4.90}
+{"side": "open", "price": 61668.00, "step": 3239}
+{"side": "close", "price": 61785.00, "step": 3241, "profit": 116.90}
+{"side": "open", "price": 61875.00, "step": 3242}
+{"side": "close", "price": 62037.00, "step": 3243, "profit": 161.90}
+{"side": "open", "price": 61974.00, "step": 3244}
+{"side": "close", "price": 62024.00, "step": 3245, "profit": 49.90}
+{"side": "open", "price": 62061.00, "step": 3246}
+{"side": "close", "price": 62242.00, "step": 3248, "profit": 180.90}
+{"side": "open", "price": 62768.00, "step": 3249}
+{"side": "close", "price": 62557.00, "step": 3251, "profit": -211.10}
+{"side": "open", "price": 63816.00, "step": 3252}
+{"side": "close", "price": 65176.00, "step": 3257, "profit": 1359.90}
+{"side": "open", "price": 65800.00, "step": 3258}
+{"side": "close", "price": 66241.00, "step": 3262, "profit": 440.90}
+{"side": "open", "price": 66360.80, "step": 3263}
+{"side": "close", "price": 66042.00, "step": 3265, "profit": -318.90}
+{"side": "open", "price": 65992.50, "step": 3266}
+{"side": "close", "price": 66046.50, "step": 3267, "profit": 53.90}
+{"side": "open", "price": 65912.00, "step": 3268}
+{"side": "close", "price": 65867.00, "step": 3269, "profit": -45.10}
+{"side": "open", "price": 66010.00, "step": 3270}
+{"side": "close", "price": 66465.00, "step": 3273, "profit": 454.90}
+{"side": "open", "price": 66129.00, "step": 3276}
+{"side": "close", "price": 66422.00, "step": 3277, "profit": 292.90}
+{"side": "open", "price": 65216.00, "step": 3280}
+{"side": "close", "price": 65116.00, "step": 3281, "profit": -100.10}
+{"side": "open", "price": 66635.00, "step": 3298}
+{"side": "close", "price": 66341.00, "step": 3299, "profit": -294.10}
+{"side": "open", "price": 66095.00, "step": 3301}
+{"side": "close", "price": 67045.00, "step": 3304, "profit": 949.90}
+{"side": "open", "price": 66930.00, "step": 3306}
+{"side": "close", "price": 66954.00, "step": 3309, "profit": 23.90}
+{"side": "open", "price": 67006.60, "step": 3312}
+{"side": "close", "price": 67086.33, "step": 3313, "profit": 79.63}
+{"side": "open", "price": 67328.00, "step": 3346}
+{"side": "close", "price": 67427.00, "step": 3347, "profit": 98.90}
+{"side": "open", "price": 66913.00, "step": 3348}
+{"side": "close", "price": 67110.00, "step": 3349, "profit": 196.90}
+{"side": "open", "price": 66750.00, "step": 3352}
+{"side": "close", "price": 66789.67, "step": 3353, "profit": 39.57}
+{"side": "open", "price": 66101.00, "step": 3355}
+{"side": "close", "price": 66216.75, "step": 3356, "profit": 115.65}
+{"side": "open", "price": 67209.00, "step": 3365}
+{"side": "close", "price": 66498.00, "step": 3366, "profit": -711.10}
+{"side": "open", "price": 67211.00, "step": 3370}
+{"side": "close", "price": 67086.00, "step": 3371, "profit": -125.10}
+{"side": "open", "price": 67501.00, "step": 3375}
+{"side": "close", "price": 71271.00, "step": 3386, "profit": 3769.90}
+{"side": "open", "price": 70894.00, "step": 3392}
+{"side": "close", "price": 70985.00, "step": 3393, "profit": 90.90}
+{"side": "open", "price": 71335.00, "step": 3396}
+{"side": "close", "price": 69744.00, "step": 3404, "profit": -1591.10}
+{"side": "open", "price": 70220.00, "step": 3406}
+{"side": "close", "price": 70148.00, "step": 3407, "profit": -72.10}
+{"side": "open", "price": 70156.00, "step": 3408}
+{"side": "close", "price": 70162.00, "step": 3409, "profit": 5.90}
+{"side": "open", "price": 70052.00, "step": 3410}
+{"side": "close", "price": 69985.75, "step": 3411, "profit": -66.35}
+{"side": "open", "price": 69599.50, "step": 3412}
+{"side": "close", "price": 69901.00, "step": 3413, "profit": 301.40}
+{"side": "open", "price": 69845.00, "step": 3414}
+{"side": "close", "price": 69732.00, "step": 3415, "profit": -113.10}
+{"side": "open", "price": 70061.00, "step": 3416}
+{"side": "close", "price": 70015.00, "step": 3417, "profit": -46.10}
+{"side": "open", "price": 69811.00, "step": 3419}
+{"side": "close", "price": 69891.00, "step": 3425, "profit": 79.90}
+{"side": "open", "price": 69607.00, "step": 3426}
+{"side": "close", "price": 69616.00, "step": 3427, "profit": 8.90}
+{"side": "open", "price": 69475.50, "step": 3428}
+{"side": "close", "price": 69144.33, "step": 3430, "profit": -331.27}
+{"side": "open", "price": 69544.00, "step": 3432}
+{"side": "close", "price": 69543.00, "step": 3433, "profit": -1.10}
+{"side": "open", "price": 69522.00, "step": 3434}
+{"side": "close", "price": 69480.00, "step": 3435, "profit": -42.10}
+{"side": "open", "price": 69497.00, "step": 3437}
+{"side": "close", "price": 69620.00, "step": 3438, "profit": 122.90}
+{"side": "open", "price": 69778.00, "step": 3439}
+{"side": "close", "price": 69707.00, "step": 3440, "profit": -71.10}
+{"side": "open", "price": 69681.00, "step": 3441}
+{"side": "close", "price": 69569.00, "step": 3442, "profit": -112.10}
+{"side": "open", "price": 70003.00, "step": 3443}
+{"side": "close", "price": 67711.00, "step": 3449, "profit": -2292.10}
+{"side": "open", "price": 67438.00, "step": 3450}
+{"side": "close", "price": 67953.00, "step": 3456, "profit": 514.90}
+{"side": "open", "price": 67831.00, "step": 3457}
+{"side": "close", "price": 67943.00, "step": 3459, "profit": 111.90}
+{"side": "open", "price": 67350.50, "step": 3461}
+{"side": "close", "price": 66965.00, "step": 3462, "profit": -385.60}
+{"side": "open", "price": 67221.50, "step": 3463}
+{"side": "close", "price": 67444.00, "step": 3465, "profit": 222.40}
+{"side": "open", "price": 67450.00, "step": 3466}
+{"side": "close", "price": 67462.00, "step": 3467, "profit": 11.90}
+{"side": "open", "price": 67188.00, "step": 3469}
+{"side": "close", "price": 68469.00, "step": 3472, "profit": 1280.90}
+{"side": "open", "price": 68989.00, "step": 3473}
+{"side": "close", "price": 69230.00, "step": 3475, "profit": 240.90}
+{"side": "open", "price": 68951.00, "step": 3476}
+{"side": "close", "price": 68942.67, "step": 3477, "profit": -8.43}
+{"side": "open", "price": 68774.50, "step": 3486}
+{"side": "close", "price": 68829.00, "step": 3487, "profit": 54.40}
+{"side": "open", "price": 69463.00, "step": 3490}
+{"side": "close", "price": 69079.00, "step": 3494, "profit": -384.10}
+{"side": "open", "price": 68959.50, "step": 3506}
+{"side": "close", "price": 69116.00, "step": 3507, "profit": 156.40}
+{"side": "open", "price": 69171.00, "step": 3510}
+{"side": "close", "price": 69409.00, "step": 3511, "profit": 237.90}
+{"side": "open", "price": 69220.50, "step": 3512}
+{"side": "close", "price": 69142.00, "step": 3513, "profit": -78.60}
+{"side": "open", "price": 69211.50, "step": 3515}
+{"side": "close", "price": 69189.00, "step": 3517, "profit": -22.60}
+{"side": "open", "price": 68912.00, "step": 3519}
+{"side": "close", "price": 68814.33, "step": 3521, "profit": -97.77}
+{"side": "open", "price": 68910.00, "step": 3523}
+{"side": "close", "price": 68774.00, "step": 3524, "profit": -136.10}
+{"side": "open", "price": 68501.00, "step": 3525}
+{"side": "close", "price": 68563.00, "step": 3527, "profit": 61.90}
+{"side": "open", "price": 69132.00, "step": 3529}
+{"side": "close", "price": 69141.00, "step": 3530, "profit": 8.90}
+{"side": "open", "price": 68912.00, "step": 3531}
+{"side": "close", "price": 68820.00, "step": 3532, "profit": -92.10}
+{"side": "open", "price": 68542.00, "step": 3533}
+{"side": "close", "price": 68638.00, "step": 3536, "profit": 95.90}
+{"side": "open", "price": 68611.00, "step": 3537}
+{"side": "close", "price": 68599.00, "step": 3538, "profit": -12.10}
+{"side": "open", "price": 68457.00, "step": 3539}
+{"side": "close", "price": 68648.50, "step": 3540, "profit": 191.40}
+{"side": "open", "price": 68958.00, "step": 3541}
+{"side": "close", "price": 69719.00, "step": 3548, "profit": 760.90}
+{"side": "open", "price": 69855.00, "step": 3549}
+{"side": "close", "price": 69626.33, "step": 3550, "profit": -228.77}
+{"side": "open", "price": 69477.33, "step": 3551}
+{"side": "close", "price": 69388.00, "step": 3552, "profit": -89.43}
+{"side": "open", "price": 68649.00, "step": 3553}
+{"side": "close", "price": 68060.00, "step": 3557, "profit": -589.10}
+{"side": "open", "price": 67988.00, "step": 3558}
+{"side": "close", "price": 67707.50, "step": 3559, "profit": -280.60}
+{"side": "open", "price": 68196.00, "step": 3560}
+{"side": "close", "price": 68365.00, "step": 3561, "profit": 168.90}
+{"side": "open", "price": 68618.00, "step": 3562}
+{"side": "close", "price": 68247.00, "step": 3564, "profit": -371.10}
+{"side": "open", "price": 67788.00, "step": 3565}
+{"side": "close", "price": 67812.00, "step": 3568, "profit": 23.90}
+{"side": "open", "price": 67837.00, "step": 3569}
+{"side": "close", "price": 68359.00, "step": 3572, "profit": 521.90}
+{"side": "open", "price": 68499.50, "step": 3573}
+{"side": "close", "price": 68676.00, "step": 3574, "profit": 176.40}
+{"side": "open", "price": 68626.00, "step": 3577}
+{"side": "close", "price": 68879.00, "step": 3579, "profit": 252.90}
+{"side": "open", "price": 68671.00, "step": 3581}
+{"side": "close", "price": 68571.00, "step": 3582, "profit": -100.10}
+{"side": "open", "price": 68050.00, "step": 3583}
+{"side": "close", "price": 68048.00, "step": 3586, "profit": -2.10}
+{"side": "open", "price": 67876.50, "step": 3587}
+{"side": "close", "price": 67707.00, "step": 3590, "profit": -169.60}
+{"side": "open", "price": 67452.00, "step": 3591}
+{"side": "close", "price": 67635.00, "step": 3592, "profit": 182.90}
+{"side": "open", "price": 67680.00, "step": 3593}
+{"side": "close", "price": 67421.00, "step": 3594, "profit": -259.10}
+{"side": "open", "price": 67524.00, "step": 3596}
+{"side": "close", "price": 67743.00, "step": 3597, "profit": 218.90}
+{"side": "open", "price": 67766.00, "step": 3598}
+{"side": "close", "price": 67720.00, "step": 3599, "profit": -46.10}
+{"side": "open", "price": 67633.00, "step": 3600}
+{"side": "close", "price": 67842.20, "step": 3601, "profit": 209.10}
+{"side": "open", "price": 68011.00, "step": 3602}
+{"side": "close", "price": 68175.00, "step": 3603, "profit": 163.90}
+{"side": "open", "price": 68225.00, "step": 3604}
+{"side": "close", "price": 68205.00, "step": 3605, "profit": -20.10}
+{"side": "open", "price": 67917.00, "step": 3606}
+{"side": "close", "price": 67651.00, "step": 3607, "profit": -266.10}
+{"side": "open", "price": 67746.00, "step": 3608}
+{"side": "close", "price": 67801.00, "step": 3609, "profit": 54.90}
+{"side": "open", "price": 68007.00, "step": 3610}
+{"side": "close", "price": 67896.00, "step": 3611, "profit": -111.10}
+{"side": "open", "price": 68220.33, "step": 3612}
+{"side": "close", "price": 68712.00, "step": 3616, "profit": 491.57}
+{"side": "open", "price": 69380.00, "step": 3617}
+{"side": "close", "price": 69382.00, "step": 3618, "profit": 1.90}
+{"side": "open", "price": 68703.00, "step": 3619}
+{"side": "close", "price": 68500.00, "step": 3620, "profit": -203.10}
+{"side": "open", "price": 68452.00, "step": 3621}
+{"side": "close", "price": 68332.20, "step": 3622, "profit": -119.90}
+{"side": "open", "price": 67509.00, "step": 3638}
+{"side": "close", "price": 67423.00, "step": 3642, "profit": -86.10}
+{"side": "open", "price": 67867.00, "step": 3665}
+{"side": "close", "price": 67771.67, "step": 3666, "profit": -95.43}
+{"side": "open", "price": 68427.00, "step": 3698}
+{"side": "close", "price": 68425.00, "step": 3699, "profit": -2.10}
+{"side": "open", "price": 69051.00, "step": 3702}
+{"side": "close", "price": 68916.00, "step": 3703, "profit": -135.10}
+{"side": "open", "price": 69777.00, "step": 3708}
+{"side": "close", "price": 69629.00, "step": 3711, "profit": -148.10}
+{"side": "open", "price": 69716.00, "step": 3734}
+{"side": "close", "price": 70588.00, "step": 3737, "profit": 871.90}
+{"side": "open", "price": 71589.00, "step": 3759}
+{"side": "close", "price": 71328.00, "step": 3760, "profit": -261.10}
+{"side": "open", "price": 70799.50, "step": 3789}
+{"side": "close", "price": 70929.00, "step": 3790, "profit": 129.40}
+{"side": "open", "price": 71274.00, "step": 3804}
+{"side": "close", "price": 71443.00, "step": 3806, "profit": 168.90}
+{"side": "open", "price": 69842.00, "step": 3809}
+{"side": "close", "price": 69297.00, "step": 3813, "profit": -545.10}
+{"side": "open", "price": 69397.00, "step": 3827}
+{"side": "close", "price": 69371.00, "step": 3828, "profit": -26.10}
+{"side": "open", "price": 69478.00, "step": 3830}
+{"side": "close", "price": 69463.00, "step": 3831, "profit": -15.10}
+{"side": "open", "price": 69466.75, "step": 3834}
+{"side": "close", "price": 69493.00, "step": 3835, "profit": 26.15}
+{"side": "open", "price": 69205.00, "step": 3842}
+{"side": "close", "price": 69294.00, "step": 3843, "profit": 88.90}
+{"side": "open", "price": 69746.50, "step": 3852}
+{"side": "close", "price": 69466.00, "step": 3853, "profit": -280.60}
+{"side": "open", "price": 69722.00, "step": 3858}
+{"side": "close", "price": 69722.00, "step": 3861, "profit": -0.10}
+{"side": "open", "price": 69716.00, "step": 3866}
+{"side": "close", "price": 69618.00, "step": 3867, "profit": -98.10}
+{"side": "open", "price": 69445.00, "step": 3870}
+{"side": "close", "price": 69295.00, "step": 3871, "profit": -150.10}
+{"side": "open", "price": 69447.00, "step": 3875}
+{"side": "close", "price": 69348.00, "step": 3876, "profit": -99.10}
+{"side": "open", "price": 68665.00, "step": 3889}
+{"side": "close", "price": 68021.00, "step": 3892, "profit": -644.10}
+{"side": "open", "price": 67078.00, "step": 3897}
+{"side": "close", "price": 66856.00, "step": 3899, "profit": -222.10}
+{"side": "open", "price": 66974.00, "step": 3900}
+{"side": "close", "price": 66813.00, "step": 3901, "profit": -161.10}
+{"side": "open", "price": 66204.00, "step": 3903}
+{"side": "close", "price": 67404.00, "step": 3907, "profit": 1199.90}
+{"side": "open", "price": 69328.00, "step": 3924}
+{"side": "close", "price": 69340.00, "step": 3925, "profit": 11.90}
+{"side": "open", "price": 69980.00, "step": 3926}
+{"side": "close", "price": 69646.00, "step": 3928, "profit": -334.10}
+{"side": "open", "price": 69819.00, "step": 3929}
+{"side": "close", "price": 68830.00, "step": 3930, "profit": -989.10}
+{"side": "open", "price": 67611.00, "step": 3931}
+{"side": "close", "price": 68113.50, "step": 3932, "profit": 502.40}
+{"side": "open", "price": 66447.00, "step": 3951}
+{"side": "close", "price": 66937.00, "step": 3952, "profit": 489.90}
+{"side": "open", "price": 66977.50, "step": 3974}
+{"side": "close", "price": 66370.00, "step": 3975, "profit": -607.60}
+{"side": "open", "price": 65303.00, "step": 3976}
+{"side": "close", "price": 65499.00, "step": 3978, "profit": 195.90}
+{"side": "open", "price": 66190.00, "step": 3981}
+{"side": "close", "price": 65992.00, "step": 3982, "profit": -198.10}
+{"side": "open", "price": 66756.00, "step": 4021}
+{"side": "close", "price": 66522.00, "step": 4022, "profit": -234.10}
+{"side": "open", "price": 67099.00, "step": 4050}
+{"side": "close", "price": 66479.00, "step": 4052, "profit": -620.10}
+{"side": "open", "price": 65190.00, "step": 4057}
+{"side": "close", "price": 65549.00, "step": 4058, "profit": 358.90}
+{"side": "open", "price": 65670.00, "step": 4060}
+{"side": "close", "price": 65710.00, "step": 4061, "profit": 39.90}
+{"side": "open", "price": 65609.00, "step": 4066}
+{"side": "close", "price": 65341.00, "step": 4068, "profit": -268.10}
+{"side": "open", "price": 64911.00, "step": 4069}
+{"side": "close", "price": 64790.00, "step": 4072, "profit": -121.10}
+{"side": "open", "price": 64502.00, "step": 4075}
+{"side": "close", "price": 65025.00, "step": 4076, "profit": 522.90}
+{"side": "open", "price": 65316.00, "step": 4077}
+{"side": "close", "price": 65359.00, "step": 4078, "profit": 42.90}
+{"side": "open", "price": 65253.00, "step": 4079}
+{"side": "close", "price": 65247.00, "step": 4080, "profit": -6.10}
+{"side": "open", "price": 65096.00, "step": 4081}
+{"side": "close", "price": 65428.00, "step": 4082, "profit": 331.90}
+{"side": "open", "price": 65484.00, "step": 4083}
+{"side": "close", "price": 65527.00, "step": 4084, "profit": 42.90}
+{"side": "open", "price": 65683.00, "step": 4086}
+{"side": "close", "price": 65424.00, "step": 4087, "profit": -259.10}
+{"side": "open", "price": 65298.00, "step": 4106}
+{"side": "close", "price": 65303.00, "step": 4107, "profit": 4.90}
+{"side": "open", "price": 65620.00, "step": 4109}
+{"side": "close", "price": 65568.00, "step": 4110, "profit": -52.10}
+{"side": "open", "price": 65986.00, "step": 4111}
+{"side": "close", "price": 65839.00, "step": 4113, "profit": -147.10}
+{"side": "open", "price": 66336.00, "step": 4114}
+{"side": "close", "price": 66302.00, "step": 4115, "profit": -34.10}
+{"side": "open", "price": 66079.00, "step": 4116}
+{"side": "close", "price": 65050.00, "step": 4121, "profit": -1029.10}
+{"side": "open", "price": 63757.00, "step": 4136}
+{"side": "close", "price": 64023.00, "step": 4138, "profit": 265.90}
+{"side": "open", "price": 63713.00, "step": 4141}
+{"side": "close", "price": 64281.00, "step": 4142, "profit": 567.90}
+{"side": "open", "price": 63292.00, "step": 4199}
+{"side": "close", "price": 63414.00, "step": 4201, "profit": 121.90}
+{"side": "open", "price": 62995.00, "step": 4202}
+{"side": "close", "price": 62973.00, "step": 4203, "profit": -22.10}
+{"side": "open", "price": 62441.00, "step": 4205}
+{"side": "close", "price": 62519.00, "step": 4206, "profit": 77.90}
+{"side": "open", "price": 61448.00, "step": 4209}
+{"side": "close", "price": 60124.00, "step": 4222, "profit": -1324.10}
+{"side": "open", "price": 61460.00, "step": 4228}
+{"side": "close", "price": 61115.00, "step": 4229, "profit": -345.10}
+{"side": "open", "price": 61845.00, "step": 4238}
+{"side": "close", "price": 62085.00, "step": 4243, "profit": 239.90}
+{"side": "open", "price": 61431.00, "step": 4284}
+{"side": "close", "price": 61854.00, "step": 4288, "profit": 422.90}
+{"side": "open", "price": 61000.00, "step": 4336}
+{"side": "close", "price": 61094.00, "step": 4337, "profit": 93.90}
+{"side": "open", "price": 60930.50, "step": 4346}
+{"side": "close", "price": 61026.00, "step": 4347, "profit": 95.40}
+{"side": "open", "price": 60903.00, "step": 4348}
+{"side": "close", "price": 60919.00, "step": 4349, "profit": 15.90}
+{"side": "open", "price": 61103.00, "step": 4350}
+{"side": "close", "price": 61643.00, "step": 4352, "profit": 539.90}
+{"side": "open", "price": 61615.00, "step": 4353}
+{"side": "close", "price": 61612.00, "step": 4354, "profit": -3.10}
+{"side": "open", "price": 61795.00, "step": 4359}
+{"side": "close", "price": 61698.00, "step": 4360, "profit": -97.10}
+{"side": "open", "price": 62118.00, "step": 4363}
+{"side": "close", "price": 62060.50, "step": 4365, "profit": -57.60}
+{"side": "open", "price": 62991.00, "step": 4366}
+{"side": "close", "price": 62867.00, "step": 4367, "profit": -124.10}
+{"side": "open", "price": 63006.00, "step": 4368}
+{"side": "close", "price": 63342.00, "step": 4372, "profit": 335.90}
+{"side": "open", "price": 63466.67, "step": 4374}
+{"side": "close", "price": 63348.00, "step": 4375, "profit": -118.77}
+{"side": "open", "price": 63016.00, "step": 4376}
+{"side": "close", "price": 62982.00, "step": 4377, "profit": -34.10}
+{"side": "open", "price": 62731.25, "step": 4379}
+{"side": "close", "price": 62966.00, "step": 4380, "profit": 234.65}
+{"side": "open", "price": 63725.00, "step": 4385}
+{"side": "close", "price": 63704.00, "step": 4386, "profit": -21.10}
+{"side": "open", "price": 62125.00, "step": 4406}
+{"side": "close", "price": 62005.00, "step": 4407, "profit": -120.10}
+{"side": "open", "price": 61984.00, "step": 4408}
+{"side": "close", "price": 62206.00, "step": 4409, "profit": 221.90}
+{"side": "open", "price": 61037.00, "step": 4419}
+{"side": "close", "price": 60974.00, "step": 4420, "profit": -63.10}
+{"side": "open", "price": 60540.00, "step": 4424}
+{"side": "close", "price": 60698.71, "step": 4425, "profit": 158.61}
+{"side": "open", "price": 60455.00, "step": 4426}
+{"side": "close", "price": 60458.00, "step": 4427, "profit": 2.90}
+{"side": "open", "price": 59640.00, "step": 4436}
+{"side": "close", "price": 60337.00, "step": 4437, "profit": 696.90}
+{"side": "open", "price": 58653.00, "step": 4441}
+{"side": "close", "price": 59190.00, "step": 4443, "profit": 536.90}
+{"side": "open", "price": 58279.00, "step": 4447}
+{"side": "close", "price": 58230.00, "step": 4458, "profit": -49.10}
+{"side": "open", "price": 58352.00, "step": 4459}
+{"side": "close", "price": 58409.00, "step": 4460, "profit": 56.90}
+{"side": "open", "price": 58112.00, "step": 4462}
+{"side": "close", "price": 55837.00, "step": 4478, "profit": -2275.10}
+{"side": "open", "price": 56729.00, "step": 4479}
+{"side": "close", "price": 56630.00, "step": 4482, "profit": -99.10}
+{"side": "open", "price": 56554.00, "step": 4483}
+{"side": "close", "price": 56457.00, "step": 4484, "profit": -97.10}
+{"side": "open", "price": 57146.00, "step": 4501}
+{"side": "close", "price": 57190.00, "step": 4502, "profit": 43.90}
+{"side": "open", "price": 57424.00, "step": 4503}
+{"side": "close", "price": 57950.00, "step": 4504, "profit": 525.90}
+{"side": "open", "price": 58043.00, "step": 4505}
+{"side": "close", "price": 57942.00, "step": 4509, "profit": -101.10}
+{"side": "open", "price": 55293.00, "step": 4536}
+{"side": "close", "price": 55587.00, "step": 4538, "profit": 293.90}
+{"side": "open", "price": 55374.00, "step": 4539}
+{"side": "close", "price": 55726.00, "step": 4540, "profit": 351.90}
+{"side": "open", "price": 55691.00, "step": 4541}
+{"side": "close", "price": 56873.00, "step": 4559, "profit": 1181.90}
+{"side": "open", "price": 56689.00, "step": 4560}
+{"side": "close", "price": 57473.00, "step": 4564, "profit": 783.90}
+{"side": "open", "price": 57468.00, "step": 4565}
+{"side": "close", "price": 57652.00, "step": 4566, "profit": 183.90}
+{"side": "open", "price": 57281.00, "step": 4567}
+{"side": "close", "price": 57750.00, "step": 4569, "profit": 468.90}
+{"side": "open", "price": 57591.00, "step": 4570}
+{"side": "close", "price": 57614.00, "step": 4571, "profit": 22.90}
+{"side": "open", "price": 57525.00, "step": 4572}
+{"side": "close", "price": 57488.00, "step": 4573, "profit": -37.10}
+{"side": "open", "price": 57245.00, "step": 4574}
+{"side": "close", "price": 58074.00, "step": 4580, "profit": 828.90}
+{"side": "open", "price": 57966.00, "step": 4581}
+{"side": "close", "price": 58106.00, "step": 4582, "profit": 139.90}
+{"side": "open", "price": 57674.00, "step": 4584}
+{"side": "close", "price": 57999.00, "step": 4585, "profit": 324.90}
+{"side": "open", "price": 59464.00, "step": 4588}
+{"side": "close", "price": 59125.00, "step": 4589, "profit": -339.10}
+{"side": "open", "price": 58862.00, "step": 4592}
+{"side": "close", "price": 58618.00, "step": 4593, "profit": -244.10}
+{"side": "open", "price": 58775.00, "step": 4594}
+{"side": "close", "price": 58585.00, "step": 4595, "profit": -190.10}
+{"side": "open", "price": 58255.00, "step": 4596}
+{"side": "close", "price": 57886.00, "step": 4597, "profit": -369.10}
+{"side": "open", "price": 57873.00, "step": 4598}
+{"side": "close", "price": 57868.00, "step": 4599, "profit": -5.10}
+{"side": "open", "price": 57874.00, "step": 4600}
+{"side": "close", "price": 57799.00, "step": 4601, "profit": -75.10}
+{"side": "open", "price": 57821.00, "step": 4602}
+{"side": "close", "price": 57575.00, "step": 4603, "profit": -246.10}
+{"side": "open", "price": 57605.00, "step": 4605}
+{"side": "close", "price": 58184.00, "step": 4613, "profit": 578.90}
+{"side": "open", "price": 58176.00, "step": 4614}
+{"side": "close", "price": 58333.00, "step": 4616, "profit": 156.90}
+{"side": "open", "price": 58452.00, "step": 4617}
+{"side": "close", "price": 58567.00, "step": 4618, "profit": 114.90}
+{"side": "open", "price": 58910.00, "step": 4619}
+{"side": "close", "price": 57944.00, "step": 4625, "profit": -966.10}
+{"side": "open", "price": 58007.00, "step": 4626}
+{"side": "close", "price": 57688.00, "step": 4628, "profit": -319.10}
+{"side": "open", "price": 57605.00, "step": 4629}
+{"side": "close", "price": 57483.00, "step": 4634, "profit": -122.10}
+{"side": "open", "price": 57052.00, "step": 4635}
+{"side": "close", "price": 57157.00, "step": 4636, "profit": 104.90}
+{"side": "open", "price": 57187.00, "step": 4637}
+{"side": "close", "price": 57355.00, "step": 4638, "profit": 167.90}
+{"side": "open", "price": 57255.00, "step": 4639}
+{"side": "close", "price": 57472.00, "step": 4640, "profit": 216.90}
+{"side": "open", "price": 57085.00, "step": 4641}
+{"side": "close", "price": 57336.00, "step": 4642, "profit": 250.90}
+{"side": "open", "price": 57352.00, "step": 4643}
+{"side": "close", "price": 57964.00, "step": 4646, "profit": 611.90}
+{"side": "open", "price": 57740.00, "step": 4651}
+{"side": "close", "price": 57766.00, "step": 4653, "profit": 25.90}
+{"side": "open", "price": 58800.00, "step": 4665}
+{"side": "close", "price": 58617.00, "step": 4666, "profit": -183.10}
+{"side": "open", "price": 59624.00, "step": 4678}
+{"side": "close", "price": 59907.00, "step": 4680, "profit": 282.90}
+{"side": "open", "price": 60404.00, "step": 4688}
+{"side": "close", "price": 60113.00, "step": 4690, "profit": -291.10}
+{"side": "open", "price": 59760.00, "step": 4692}
+{"side": "close", "price": 59858.00, "step": 4693, "profit": 97.90}
+{"side": "open", "price": 60256.00, "step": 4696}
+{"side": "close", "price": 60172.00, "step": 4697, "profit": -84.10}
+{"side": "open", "price": 60265.00, "step": 4700}
+{"side": "close", "price": 61387.00, "step": 4704, "profit": 1121.90}
+{"side": "open", "price": 62717.00, "step": 4706}
+{"side": "close", "price": 62829.00, "step": 4707, "profit": 111.90}
+{"side": "open", "price": 62983.00, "step": 4711}
+{"side": "close", "price": 62763.00, "step": 4713, "profit": -220.10}
+{"side": "open", "price": 63046.00, "step": 4717}
+{"side": "close", "price": 63336.00, "step": 4718, "profit": 289.90}
+{"side": "open", "price": 63150.00, "step": 4719}
+{"side": "close", "price": 64975.00, "step": 4729, "profit": 1824.90}
+{"side": "open", "price": 64953.33, "step": 4730}
+{"side": "close", "price": 64885.00, "step": 4731, "profit": -68.43}
+{"side": "open", "price": 64637.00, "step": 4732}
+{"side": "close", "price": 63004.00, "step": 4734, "profit": -1633.10}
+{"side": "open", "price": 63029.00, "step": 4735}
+{"side": "close", "price": 62933.00, "step": 4736, "profit": -96.10}
+{"side": "open", "price": 64638.00, "step": 4744}
+{"side": "close", "price": 64706.00, "step": 4745, "profit": 67.90}
+{"side": "open", "price": 64357.00, "step": 4768}
+{"side": "close", "price": 64383.00, "step": 4769, "profit": 25.90}
+{"side": "open", "price": 64578.00, "step": 4770}
+{"side": "close", "price": 64663.00, "step": 4771, "profit": 84.90}
+{"side": "open", "price": 64417.00, "step": 4773}
+{"side": "close", "price": 64354.00, "step": 4774, "profit": -63.10}
+{"side": "open", "price": 64543.00, "step": 4776}
+{"side": "close", "price": 64739.00, "step": 4777, "profit": 195.90}
+{"side": "open", "price": 64784.50, "step": 4778}
+{"side": "close", "price": 64954.00, "step": 4779, "profit": 169.40}
+{"side": "open", "price": 65086.00, "step": 4782}
+{"side": "close", "price": 64766.00, "step": 4783, "profit": -320.10}
+{"side": "open", "price": 64685.00, "step": 4786}
+{"side": "close", "price": 64820.00, "step": 4787, "profit": 134.90}
+{"side": "open", "price": 64962.00, "step": 4788}
+{"side": "close", "price": 64698.00, "step": 4789, "profit": -264.10}
+{"side": "open", "price": 64094.00, "step": 4790}
+{"side": "close", "price": 63988.00, "step": 4792, "profit": -106.10}
+{"side": "open", "price": 63621.00, "step": 4794}
+{"side": "close", "price": 63903.50, "step": 4797, "profit": 282.40}
+{"side": "open", "price": 64049.50, "step": 4799}
+{"side": "close", "price": 63658.00, "step": 4800, "profit": -391.60}
+{"side": "open", "price": 64233.00, "step": 4804}
+{"side": "close", "price": 64261.50, "step": 4805, "profit": 28.40}
+{"side": "open", "price": 63799.00, "step": 4807}
+{"side": "close", "price": 63889.67, "step": 4808, "profit": 90.57}
+{"side": "open", "price": 64076.00, "step": 4810}
+{"side": "close", "price": 64194.00, "step": 4811, "profit": 117.90}
+{"side": "open", "price": 65249.00, "step": 4813}
+{"side": "close", "price": 67295.00, "step": 4819, "profit": 2045.90}
+{"side": "open", "price": 67042.00, "step": 4820}
+{"side": "close", "price": 67015.00, "step": 4821, "profit": -27.10}
+{"side": "open", "price": 67488.00, "step": 4841}
+{"side": "close", "price": 67582.00, "step": 4842, "profit": 93.90}
+{"side": "open", "price": 66795.00, "step": 4855}
+{"side": "close", "price": 66907.00, "step": 4856, "profit": 111.90}
+{"side": "open", "price": 66917.00, "step": 4861}
+{"side": "close", "price": 67423.00, "step": 4862, "profit": 505.90}
+{"side": "open", "price": 67661.00, "step": 4864}
+{"side": "close", "price": 67546.00, "step": 4867, "profit": -115.10}
+{"side": "open", "price": 67839.00, "step": 4868}
+{"side": "close", "price": 68265.00, "step": 4871, "profit": 425.90}
+{"side": "open", "price": 68293.00, "step": 4872}
+{"side": "close", "price": 67942.00, "step": 4873, "profit": -351.10}
+{"side": "open", "price": 67691.00, "step": 4877}
+{"side": "close", "price": 67330.00, "step": 4879, "profit": -361.10}
+{"side": "open", "price": 67228.00, "step": 4885}
+{"side": "close", "price": 66797.00, "step": 4886, "profit": -431.10}
+{"side": "open", "price": 67171.00, "step": 4887}
+{"side": "close", "price": 67136.00, "step": 4888, "profit": -35.10}
+{"side": "open", "price": 67582.00, "step": 4890}
+{"side": "close", "price": 67952.00, "step": 4893, "profit": 369.90}
+{"side": "open", "price": 67795.50, "step": 4894}
+{"side": "close", "price": 67674.00, "step": 4896, "profit": -121.60}
+{"side": "open", "price": 67555.00, "step": 4897}
+{"side": "close", "price": 67772.33, "step": 4898, "profit": 217.23}
+{"side": "open", "price": 67079.00, "step": 4900}
+{"side": "close", "price": 66563.00, "step": 4901, "profit": -516.10}
+{"side": "open", "price": 66675.00, "step": 4903}
+{"side": "close", "price": 66983.00, "step": 4904, "profit": 307.90}
+{"side": "open", "price": 67111.00, "step": 4905}
+{"side": "close", "price": 67034.00, "step": 4906, "profit": -77.10}
+{"side": "open", "price": 66502.00, "step": 4933}
+{"side": "close", "price": 66945.00, "step": 4934, "profit": 442.90}
+{"side": "open", "price": 66525.00, "step": 4936}
+{"side": "close", "price": 66785.00, "step": 4937, "profit": 259.90}
+{"side": "open", "price": 65936.00, "step": 4938}
+{"side": "close", "price": 65824.00, "step": 4939, "profit": -112.10}
+{"side": "open", "price": 65780.00, "step": 4941}
+{"side": "close", "price": 65482.00, "step": 4943, "profit": -298.10}
+{"side": "open", "price": 64552.00, "step": 4945}
+{"side": "close", "price": 64221.00, "step": 4947, "profit": -331.10}
+{"side": "open", "price": 64342.00, "step": 4948}
+{"side": "close", "price": 64374.00, "step": 4949, "profit": 31.90}
+{"side": "open", "price": 64400.00, "step": 4950}
+{"side": "close", "price": 64365.00, "step": 4953, "profit": -35.10}
+{"side": "open", "price": 64263.80, "step": 4954}
+{"side": "close", "price": 64213.00, "step": 4955, "profit": -50.90}
+{"side": "open", "price": 64174.00, "step": 4956}
+{"side": "close", "price": 64848.00, "step": 4959, "profit": 673.90}
+{"side": "open", "price": 65001.00, "step": 4960}
+{"side": "close", "price": 64791.00, "step": 4963, "profit": -210.10}
+{"side": "open", "price": 65400.00, "step": 4964}
+{"side": "close", "price": 65934.00, "step": 4965, "profit": 533.90}
+{"side": "open", "price": 65752.00, "step": 4966}
+{"side": "close", "price": 65916.33, "step": 4967, "profit": 164.23}
+{"side": "open", "price": 66518.00, "step": 4968}
+{"side": "close", "price": 66554.00, "step": 4969, "profit": 35.90}
+{"side": "open", "price": 67091.00, "step": 4970}
+{"side": "close", "price": 67125.00, "step": 4971, "profit": 33.90}
+{"side": "open", "price": 67449.00, "step": 4980}
+{"side": "close", "price": 67700.00, "step": 4983, "profit": 250.90}
+{"side": "open", "price": 69413.00, "step": 5005}
+{"side": "close", "price": 69142.00, "step": 5006, "profit": -271.10}
+{"side": "open", "price": 69004.00, "step": 5007}
+{"side": "close", "price": 68843.50, "step": 5008, "profit": -160.60}
+{"side": "open", "price": 68419.00, "step": 5011}
+{"side": "close", "price": 68767.00, "step": 5014, "profit": 347.90}
+{"side": "open", "price": 68890.00, "step": 5040}
+{"side": "close", "price": 68755.00, "step": 5041, "profit": -135.10}
+{"side": "open", "price": 69942.00, "step": 5052}
+{"side": "close", "price": 67419.00, "step": 5059, "profit": -2523.10}
+{"side": "open", "price": 66694.00, "step": 5064}
+{"side": "close", "price": 66514.00, "step": 5066, "profit": -180.10}
+{"side": "open", "price": 65937.00, "step": 5082}
+{"side": "close", "price": 65946.00, "step": 5083, "profit": 8.90}
+{"side": "open", "price": 66311.00, "step": 5084}
+{"side": "close", "price": 66452.67, "step": 5085, "profit": 141.57}
+{"side": "open", "price": 65356.00, "step": 5107}
+{"side": "close", "price": 64666.00, "step": 5108, "profit": -690.10}
+{"side": "open", "price": 64728.00, "step": 5112}
+{"side": "close", "price": 64272.00, "step": 5113, "profit": -456.10}
+{"side": "open", "price": 64163.00, "step": 5114}
+{"side": "close", "price": 63765.00, "step": 5116, "profit": -398.10}
+{"side": "open", "price": 64631.00, "step": 5121}
+{"side": "close", "price": 64714.00, "step": 5122, "profit": 82.90}
+{"side": "open", "price": 65021.00, "step": 5124}
+{"side": "close", "price": 64894.00, "step": 5125, "profit": -127.10}
+{"side": "open", "price": 64084.00, "step": 5126}
+{"side": "close", "price": 63543.00, "step": 5131, "profit": -541.10}
+{"side": "open", "price": 64848.00, "step": 5132}
+{"side": "close", "price": 65465.00, "step": 5135, "profit": 616.90}
+{"side": "open", "price": 65015.00, "step": 5136}
+{"side": "close", "price": 64776.00, "step": 5137, "profit": -239.10}
+{"side": "open", "price": 64439.00, "step": 5138}
+{"side": "close", "price": 64714.00, "step": 5139, "profit": 274.90}
+{"side": "open", "price": 64604.00, "step": 5142}
+{"side": "close", "price": 64288.00, "step": 5143, "profit": -316.10}
+{"side": "open", "price": 64679.00, "step": 5144}
+{"side": "close", "price": 64622.50, "step": 5145, "profit": -56.60}
+{"side": "open", "price": 64758.50, "step": 5147}
+{"side": "close", "price": 64927.00, "step": 5148, "profit": 168.40}
+{"side": "open", "price": 65277.00, "step": 5149}
+{"side": "close", "price": 63408.00, "step": 5152, "profit": -1869.10}
+{"side": "open", "price": 62685.00, "step": 5156}
+{"side": "close", "price": 61554.00, "step": 5159, "profit": -1131.10}
+{"side": "open", "price": 61174.00, "step": 5160}
+{"side": "close", "price": 61510.00, "step": 5162, "profit": 335.90}
+{"side": "open", "price": 61000.00, "step": 5175}
+{"side": "close", "price": 60679.00, "step": 5177, "profit": -321.10}
+{"side": "open", "price": 58748.00, "step": 5200}
+{"side": "close", "price": 59351.00, "step": 5203, "profit": 602.90}
+{"side": "open", "price": 56230.00, "step": 5208}
+{"side": "close", "price": 54558.00, "step": 5229, "profit": -1672.10}
+{"side": "open", "price": 55118.00, "step": 5240}
+{"side": "close", "price": 55331.00, "step": 5241, "profit": 212.90}
+{"side": "open", "price": 55353.00, "step": 5245}
+{"side": "close", "price": 56940.00, "step": 5248, "profit": 1586.90}
+{"side": "open", "price": 56819.00, "step": 5258}
+{"side": "close", "price": 57001.00, "step": 5259, "profit": 181.90}
+{"side": "open", "price": 54880.00, "step": 5274}
+{"side": "close", "price": 54854.00, "step": 5275, "profit": -26.10}
+{"side": "open", "price": 56991.00, "step": 5281}
+{"side": "close", "price": 56889.00, "step": 5284, "profit": -102.10}
+{"side": "open", "price": 57091.00, "step": 5285}
+{"side": "close", "price": 57347.00, "step": 5286, "profit": 255.90}
+{"side": "open", "price": 57992.00, "step": 5292}
+{"side": "close", "price": 59541.00, "step": 5297, "profit": 1548.90}
+{"side": "open", "price": 61207.00, "step": 5301}
+{"side": "close", "price": 61469.00, "step": 5305, "profit": 261.90}
+{"side": "open", "price": 60631.00, "step": 5343}
+{"side": "close", "price": 60761.00, "step": 5344, "profit": 129.90}
+{"side": "open", "price": 61051.00, "step": 5346}
+{"side": "close", "price": 61091.00, "step": 5347, "profit": 39.90}
+{"side": "open", "price": 61193.67, "step": 5352}
+{"side": "close", "price": 61227.00, "step": 5353, "profit": 33.23}
+{"side": "open", "price": 60998.67, "step": 5356}
+{"side": "close", "price": 61217.00, "step": 5357, "profit": 218.23}
+{"side": "open", "price": 61355.33, "step": 5360}
+{"side": "close", "price": 61186.00, "step": 5361, "profit": -169.43}
+{"side": "open", "price": 60770.00, "step": 5363}
+{"side": "close", "price": 60584.00, "step": 5364, "profit": -186.10}
+{"side": "open", "price": 60545.00, "step": 5365}
+{"side": "close", "price": 60420.00, "step": 5366, "profit": -125.10}
+{"side": "open", "price": 58588.00, "step": 5372}
+{"side": "close", "price": 59107.00, "step": 5373, "profit": 518.90}
+{"side": "open", "price": 59097.00, "step": 5374}
+{"side": "close", "price": 58801.00, "step": 5375, "profit": -296.10}
+{"side": "open", "price": 59800.00, "step": 5388}
+{"side": "close", "price": 60373.00, "step": 5390, "profit": 572.90}
+{"side": "open", "price": 60300.00, "step": 5391}
+{"side": "close", "price": 59418.00, "step": 5393, "profit": -882.10}
+{"side": "open", "price": 59722.00, "step": 5414}
+{"side": "close", "price": 59599.00, "step": 5415, "profit": -123.10}
+{"side": "open", "price": 61238.00, "step": 5416}
+{"side": "close", "price": 60904.00, "step": 5418, "profit": -334.10}
+{"side": "open", "price": 60931.00, "step": 5419}
+{"side": "close", "price": 60683.00, "step": 5420, "profit": -248.10}
+{"side": "open", "price": 59757.00, "step": 5437}
+{"side": "close", "price": 59245.00, "step": 5440, "profit": -512.10}
+{"side": "open", "price": 57960.00, "step": 5466}
+{"side": "close", "price": 57709.00, "step": 5470, "profit": -251.10}
+{"side": "open", "price": 59370.00, "step": 5504}
+{"side": "close", "price": 59411.00, "step": 5505, "profit": 40.90}
+{"side": "open", "price": 59356.00, "step": 5508}
+{"side": "close", "price": 59436.00, "step": 5509, "profit": 79.90}
+{"side": "open", "price": 60246.00, "step": 5522}
+{"side": "close", "price": 59451.00, "step": 5523, "profit": -795.10}
+{"side": "open", "price": 60019.00, "step": 5530}
+{"side": "close", "price": 60132.00, "step": 5531, "profit": 112.90}
+{"side": "open", "price": 59934.50, "step": 5534}
+{"side": "close", "price": 59986.50, "step": 5535, "profit": 51.90}
+{"side": "open", "price": 59640.00, "step": 5537}
+{"side": "close", "price": 59734.00, "step": 5538, "profit": 93.90}
+{"side": "open", "price": 59820.00, "step": 5539}
+{"side": "close", "price": 59936.00, "step": 5540, "profit": 115.90}
+{"side": "open", "price": 59478.00, "step": 5542}
+{"side": "close", "price": 58655.50, "step": 5545, "profit": -822.60}
+{"side": "open", "price": 58683.83, "step": 5548}
+{"side": "close", "price": 58571.00, "step": 5549, "profit": -112.93}
+{"side": "open", "price": 58147.00, "step": 5553}
+{"side": "close", "price": 58178.00, "step": 5554, "profit": 30.90}
+{"side": "open", "price": 58511.00, "step": 5555}
+{"side": "close", "price": 58531.00, "step": 5556, "profit": 19.90}
+{"side": "open", "price": 58310.00, "step": 5557}
+{"side": "close", "price": 58715.00, "step": 5558, "profit": 404.90}
+{"side": "open", "price": 58671.00, "step": 5559}
+{"side": "close", "price": 58796.00, "step": 5560, "profit": 124.90}
+{"side": "open", "price": 59129.00, "step": 5561}
+{"side": "close", "price": 59138.00, "step": 5562, "profit": 8.90}
+{"side": "open", "price": 59222.00, "step": 5564}
+{"side": "close", "price": 59080.00, "step": 5565, "profit": -142.10}
+{"side": "open", "price": 59588.00, "step": 5567}
+{"side": "close", "price": 60616.00, "step": 5570, "profit": 1027.90}
+{"side": "open", "price": 60986.00, "step": 5572}
+{"side": "close", "price": 61037.00, "step": 5574, "profit": 50.90}
+{"side": "open", "price": 60800.00, "step": 5578}
+{"side": "close", "price": 60610.33, "step": 5579, "profit": -189.77}
+{"side": "open", "price": 59554.00, "step": 5582}
+{"side": "close", "price": 59330.00, "step": 5586, "profit": -224.10}
+{"side": "open", "price": 59136.00, "step": 5592}
+{"side": "close", "price": 59415.00, "step": 5593, "profit": 278.90}
+{"side": "open", "price": 59510.00, "step": 5596}
+{"side": "close", "price": 59521.00, "step": 5597, "profit": 10.90}
+{"side": "open", "price": 59730.00, "step": 5598}
+{"side": "close", "price": 59363.00, "step": 5601, "profit": -367.10}
+{"side": "open", "price": 60032.00, "step": 5605}
+{"side": "close", "price": 59506.00, "step": 5606, "profit": -526.10}
+{"side": "open", "price": 60896.00, "step": 5610}
+{"side": "close", "price": 61304.00, "step": 5613, "profit": 407.90}
+{"side": "open", "price": 61411.00, "step": 5627}
+{"side": "close", "price": 60954.00, "step": 5628, "profit": -457.10}
+{"side": "open", "price": 60942.00, "step": 5629}
+{"side": "close", "price": 60613.00, "step": 5630, "profit": -329.10}
+{"side": "open", "price": 60523.00, "step": 5631}
+{"side": "close", "price": 60411.00, "step": 5632, "profit": -112.10}
+{"side": "open", "price": 60752.00, "step": 5636}
+{"side": "close", "price": 60668.00, "step": 5637, "profit": -84.10}
+{"side": "open", "price": 61080.00, "step": 5654}
+{"side": "close", "price": 61638.00, "step": 5655, "profit": 557.90}
+{"side": "open", "price": 64197.00, "step": 5662}
+{"side": "close", "price": 64151.00, "step": 5663, "profit": -46.10}
+{"side": "open", "price": 63586.00, "step": 5726}
+{"side": "close", "price": 63655.00, "step": 5727, "profit": 68.90}
+{"side": "open", "price": 62458.00, "step": 5746}
+{"side": "close", "price": 62552.00, "step": 5747, "profit": 93.90}
+{"side": "open", "price": 62551.00, "step": 5748}
+{"side": "close", "price": 61700.00, "step": 5752, "profit": -851.10}
+{"side": "open", "price": 62061.00, "step": 5753}
+{"side": "close", "price": 62269.00, "step": 5754, "profit": 207.90}
+{"side": "open", "price": 62271.00, "step": 5755}
+{"side": "close", "price": 62036.00, "step": 5756, "profit": -235.10}
+{"side": "open", "price": 60506.00, "step": 5757}
+{"side": "close", "price": 59489.00, "step": 5761, "profit": -1017.10}
+{"side": "open", "price": 59524.00, "step": 5762}
+{"side": "close", "price": 59777.00, "step": 5763, "profit": 252.90}
+{"side": "open", "price": 59508.00, "step": 5764}
+{"side": "close", "price": 59462.00, "step": 5765, "profit": -46.10}
+{"side": "open", "price": 59345.00, "step": 5766}
+{"side": "close", "price": 59402.00, "step": 5768, "profit": 56.90}
+{"side": "open", "price": 60323.00, "step": 5769}
+{"side": "close", "price": 59878.33, "step": 5770, "profit": -444.77}
+{"side": "open", "price": 60094.00, "step": 5771}
+{"side": "close", "price": 60112.50, "step": 5772, "profit": 18.40}
+{"side": "open", "price": 59471.00, "step": 5773}
+{"side": "close", "price": 59333.00, "step": 5774, "profit": -138.10}
+{"side": "open", "price": 59137.00, "step": 5775}
+{"side": "close", "price": 59666.00, "step": 5778, "profit": 528.90}
+{"side": "open", "price": 59504.00, "step": 5780}
+{"side": "close", "price": 59276.00, "step": 5781, "profit": -228.10}
+{"side": "open", "price": 59369.00, "step": 5788}
+{"side": "close", "price": 59611.00, "step": 5789, "profit": 241.90}
+{"side": "open", "price": 60251.00, "step": 5795}
+{"side": "close", "price": 60478.00, "step": 5796, "profit": 226.90}
+{"side": "open", "price": 60948.00, "step": 5798}
+{"side": "close", "price": 60936.00, "step": 5799, "profit": -12.10}
+{"side": "open", "price": 58666.00, "step": 5822}
+{"side": "close", "price": 58891.00, "step": 5827, "profit": 224.90}
+{"side": "open", "price": 58640.00, "step": 5858}
+{"side": "close", "price": 58579.00, "step": 5860, "profit": -61.10}
+{"side": "open", "price": 58418.00, "step": 5867}
+{"side": "close", "price": 58163.00, "step": 5868, "profit": -255.10}
+{"side": "open", "price": 58343.00, "step": 5869}
+{"side": "close", "price": 58289.00, "step": 5873, "profit": -54.10}
+{"side": "open", "price": 58716.00, "step": 5874}
+{"side": "close", "price": 58689.00, "step": 5875, "profit": -27.10}
+{"side": "open", "price": 58605.00, "step": 5876}
+{"side": "close", "price": 57596.00, "step": 5881, "profit": -1009.10}
+{"side": "open", "price": 57707.00, "step": 5882}
+{"side": "close", "price": 57650.00, "step": 5884, "profit": -57.10}
+{"side": "open", "price": 57984.00, "step": 5885}
+{"side": "close", "price": 57881.00, "step": 5886, "profit": -103.10}
+{"side": "open", "price": 58682.00, "step": 5890}
+{"side": "close", "price": 58570.00, "step": 5891, "profit": -112.10}
+{"side": "open", "price": 58944.00, "step": 5912}
+{"side": "close", "price": 59041.00, "step": 5913, "profit": 96.90}
+{"side": "open", "price": 59248.00, "step": 5914}
+{"side": "close", "price": 59215.00, "step": 5915, "profit": -33.10}
+{"side": "open", "price": 59279.00, "step": 5916}
+{"side": "close", "price": 58533.00, "step": 5917, "profit": -746.10}
+{"side": "open", "price": 57818.00, "step": 5918}
+{"side": "close", "price": 57852.00, "step": 5920, "profit": 33.90}
+{"side": "open", "price": 58089.00, "step": 5922}
+{"side": "close", "price": 58193.00, "step": 5923, "profit": 103.90}
+{"side": "open", "price": 57319.00, "step": 5928}
+{"side": "close", "price": 56875.00, "step": 5932, "profit": -444.10}
+{"side": "open", "price": 56449.00, "step": 5933}
+{"side": "close", "price": 56480.00, "step": 5934, "profit": 30.90}
+{"side": "open", "price": 56593.00, "step": 5941}
+{"side": "close", "price": 57825.00, "step": 5946, "profit": 1231.90}
+{"side": "open", "price": 57291.00, "step": 5955}
+{"side": "close", "price": 57089.00, "step": 5958, "profit": -202.10}
+{"side": "open", "price": 57079.00, "step": 5960}
+{"side": "close", "price": 56816.00, "step": 5963, "profit": -263.10}
+{"side": "open", "price": 56101.00, "step": 5967}
+{"side": "close", "price": 56464.00, "step": 5968, "profit": 362.90}
+{"side": "open", "price": 55925.00, "step": 5983}
+{"side": "close", "price": 55895.00, "step": 5984, "profit": -30.10}
+{"side": "open", "price": 56038.00, "step": 5989}
+{"side": "close", "price": 53806.00, "step": 5998, "profit": -2232.10}
+{"side": "open", "price": 53987.00, "step": 6003}
+{"side": "close", "price": 54225.00, "step": 6004, "profit": 237.90}
+{"side": "open", "price": 54361.00, "step": 6005}
+{"side": "close", "price": 54466.00, "step": 6009, "profit": 104.90}
+{"side": "open", "price": 54538.00, "step": 6010}
+{"side": "close", "price": 54513.00, "step": 6011, "profit": -25.10}
+{"side": "open", "price": 54742.00, "step": 6012}
+{"side": "close", "price": 54700.00, "step": 6013, "profit": -42.10}
+{"side": "open", "price": 54794.00, "step": 6014}
+{"side": "close", "price": 54971.00, "step": 6015, "profit": 176.90}
+{"side": "open", "price": 54664.00, "step": 6016}
+{"side": "close", "price": 54325.00, "step": 6017, "profit": -339.10}
+{"side": "open", "price": 54443.00, "step": 6018}
+{"side": "close", "price": 54331.00, "step": 6020, "profit": -112.10}
+{"side": "open", "price": 54052.00, "step": 6021}
+{"side": "close", "price": 54111.00, "step": 6022, "profit": 58.90}
+{"side": "open", "price": 54309.00, "step": 6023}
+{"side": "close", "price": 54293.00, "step": 6024, "profit": -16.10}
+{"side": "open", "price": 54410.00, "step": 6025}
+{"side": "close", "price": 54479.00, "step": 6026, "profit": 68.90}
+{"side": "open", "price": 54550.00, "step": 6027}
+{"side": "close", "price": 54634.00, "step": 6028, "profit": 83.90}
+{"side": "open", "price": 54498.00, "step": 6029}
+{"side": "close", "price": 54455.00, "step": 6030, "profit": -43.10}
+{"side": "open", "price": 54600.00, "step": 6031}
+{"side": "close", "price": 54620.00, "step": 6032, "profit": 19.90}
+{"side": "open", "price": 54615.00, "step": 6033}
+{"side": "close", "price": 54756.00, "step": 6034, "profit": 140.90}
+{"side": "open", "price": 54710.00, "step": 6035}
+{"side": "close", "price": 54533.00, "step": 6037, "profit": -177.10}
+{"side": "open", "price": 54292.00, "step": 6038}
+{"side": "close", "price": 54570.00, "step": 6042, "profit": 277.90}
+{"side": "open", "price": 54492.00, "step": 6043}
+{"side": "close", "price": 54523.00, "step": 6044, "profit": 30.90}
+{"side": "open", "price": 54603.00, "step": 6045}
+{"side": "close", "price": 55213.00, "step": 6048, "profit": 609.90}
+{"side": "open", "price": 55259.00, "step": 6049}
+{"side": "close", "price": 55269.00, "step": 6050, "profit": 9.90}
+{"side": "open", "price": 55263.00, "step": 6051}
+{"side": "close", "price": 55001.00, "step": 6052, "profit": -262.10}
+{"side": "open", "price": 55319.00, "step": 6057}
+{"side": "close", "price": 55524.00, "step": 6058, "profit": 204.90}
+{"side": "open", "price": 55822.00, "step": 6061}
+{"side": "close", "price": 57066.00, "step": 6068, "profit": 1243.90}
+{"side": "open", "price": 56616.00, "step": 6100}
+{"side": "close", "price": 56557.00, "step": 6102, "profit": -59.10}
+{"side": "open", "price": 55886.00, "step": 6109}
+{"side": "close", "price": 57447.00, "step": 6112, "profit": 1560.90}
+{"side": "open", "price": 57711.00, "step": 6134}
+{"side": "close", "price": 58192.00, "step": 6136, "profit": 480.90}
+{"side": "open", "price": 58321.00, "step": 6138}
+{"side": "close", "price": 58289.00, "step": 6142, "profit": -32.10}
+{"side": "open", "price": 57988.00, "step": 6148}
+{"side": "close", "price": 58076.00, "step": 6149, "profit": 87.90}
+{"side": "open", "price": 58472.00, "step": 6154}
+{"side": "close", "price": 57987.00, "step": 6155, "profit": -485.10}
+{"side": "open", "price": 58033.00, "step": 6156}
+{"side": "close", "price": 58217.00, "step": 6157, "profit": 183.90}
+{"side": "open", "price": 58550.00, "step": 6158}
+{"side": "close", "price": 59831.00, "step": 6163, "profit": 1280.90}
+{"side": "open", "price": 60724.00, "step": 6166}
+{"side": "close", "price": 60645.00, "step": 6167, "profit": -79.10}
+{"side": "open", "price": 59943.00, "step": 6186}
+{"side": "close", "price": 59956.00, "step": 6187, "profit": 12.90}
+{"side": "open", "price": 60400.00, "step": 6193}
+{"side": "close", "price": 60283.25, "step": 6195, "profit": -116.85}
+{"side": "open", "price": 60181.00, "step": 6201}
+{"side": "close", "price": 60156.12, "step": 6203, "profit": -24.98}
+{"side": "open", "price": 59601.00, "step": 6214}
+{"side": "close", "price": 58824.00, "step": 6216, "profit": -777.10}
+{"side": "open", "price": 58664.00, "step": 6229}
+{"side": "close", "price": 58034.00, "step": 6231, "profit": -630.10}
+{"side": "open", "price": 60413.00, "step": 6254}
+{"side": "close", "price": 60697.00, "step": 6258, "profit": 283.90}
+{"side": "open", "price": 60117.00, "step": 6259}
+{"side": "close", "price": 60276.00, "step": 6260, "profit": 158.90}
+{"side": "open", "price": 59792.00, "step": 6273}
+{"side": "close", "price": 59956.00, "step": 6275, "profit": 163.90}
+{"side": "open", "price": 59608.00, "step": 6277}
+{"side": "close", "price": 59582.00, "step": 6278, "profit": -26.10}
+{"side": "open", "price": 59546.00, "step": 6279}
+{"side": "close", "price": 60045.00, "step": 6280, "profit": 498.90}
+{"side": "open", "price": 60134.00, "step": 6281}
+{"side": "close", "price": 60352.00, "step": 6285, "profit": 217.90}
+{"side": "open", "price": 61853.00, "step": 6287}
+{"side": "close", "price": 62227.00, "step": 6291, "profit": 373.90}
+{"side": "open", "price": 62126.00, "step": 6293}
+{"side": "close", "price": 62130.00, "step": 6294, "profit": 3.90}
+{"side": "open", "price": 62079.50, "step": 6296}
+{"side": "close", "price": 62391.00, "step": 6297, "profit": 311.40}
+{"side": "open", "price": 62469.00, "step": 6298}
+{"side": "close", "price": 62800.50, "step": 6299, "profit": 331.40}
+{"side": "open", "price": 63032.00, "step": 6300}
+{"side": "close", "price": 63091.00, "step": 6302, "profit": 58.90}
+{"side": "open", "price": 63309.00, "step": 6303}
+{"side": "close", "price": 63717.00, "step": 6306, "profit": 407.90}
+{"side": "open", "price": 63354.00, "step": 6307}
+{"side": "close", "price": 63108.00, "step": 6308, "profit": -246.10}
+{"side": "open", "price": 63300.75, "step": 6358}
+{"side": "close", "price": 63415.00, "step": 6359, "profit": 114.15}
+{"side": "open", "price": 63311.00, "step": 6360}
+{"side": "close", "price": 63215.00, "step": 6364, "profit": -96.10}
+{"side": "open", "price": 62789.00, "step": 6369}
+{"side": "close", "price": 62720.00, "step": 6370, "profit": -69.10}
+{"side": "open", "price": 62721.00, "step": 6373}
+{"side": "close", "price": 62755.00, "step": 6374, "profit": 33.90}
+{"side": "open", "price": 63913.00, "step": 6385}
+{"side": "close", "price": 64058.00, "step": 6386, "profit": 144.90}
+{"side": "open", "price": 64430.00, "step": 6387}
+{"side": "close", "price": 64026.00, "step": 6388, "profit": -404.10}
+{"side": "open", "price": 63783.00, "step": 6390}
+{"side": "close", "price": 63626.00, "step": 6392, "profit": -157.10}
+{"side": "open", "price": 63537.00, "step": 6395}
+{"side": "close", "price": 63462.00, "step": 6396, "profit": -75.10}
+{"side": "open", "price": 63314.00, "step": 6397}
+{"side": "close", "price": 63748.00, "step": 6399, "profit": 433.90}
+{"side": "open", "price": 63365.00, "step": 6400}
+{"side": "close", "price": 63443.00, "step": 6401, "profit": 77.90}
+{"side": "open", "price": 63483.00, "step": 6405}
+{"side": "close", "price": 63373.50, "step": 6406, "profit": -109.60}
+{"side": "open", "price": 63059.00, "step": 6408}
+{"side": "close", "price": 63102.00, "step": 6409, "profit": 42.90}
+{"side": "open", "price": 63241.00, "step": 6410}
+{"side": "close", "price": 63267.50, "step": 6411, "profit": 26.40}
+{"side": "open", "price": 63672.00, "step": 6415}
+{"side": "close", "price": 63640.00, "step": 6417, "profit": -32.10}
+{"side": "open", "price": 63310.00, "step": 6422}
+{"side": "close", "price": 63277.00, "step": 6423, "profit": -33.10}
+{"side": "open", "price": 64079.00, "step": 6446}
+{"side": "close", "price": 63600.00, "step": 6447, "profit": -479.10}
+{"side": "open", "price": 63255.00, "step": 6455}
+{"side": "close", "price": 63075.00, "step": 6456, "profit": -180.10}
+{"side": "open", "price": 64525.00, "step": 6466}
+{"side": "close", "price": 64543.50, "step": 6467, "profit": 18.40}
+{"side": "open", "price": 64628.00, "step": 6468}
+{"side": "close", "price": 64559.00, "step": 6469, "profit": -69.10}
+{"side": "open", "price": 64564.00, "step": 6470}
+{"side": "close", "price": 64816.00, "step": 6476, "profit": 251.90}
+{"side": "open", "price": 65889.00, "step": 6489}
+{"side": "close", "price": 65603.00, "step": 6490, "profit": -286.10}
+{"side": "open", "price": 65775.00, "step": 6493}
+{"side": "close", "price": 66165.00, "step": 6495, "profit": 389.90}
+{"side": "open", "price": 66433.00, "step": 6496}
+{"side": "close", "price": 66062.00, "step": 6497, "profit": -371.10}
+{"side": "open", "price": 66027.67, "step": 6498}
+{"side": "close", "price": 65795.00, "step": 6499, "profit": -232.77}
+{"side": "open", "price": 65974.67, "step": 6501}
+{"side": "close", "price": 66025.00, "step": 6502, "profit": 50.23}
+{"side": "open", "price": 65940.00, "step": 6503}
+{"side": "close", "price": 66041.50, "step": 6504, "profit": 101.40}
+{"side": "open", "price": 64905.00, "step": 6553}
+{"side": "close", "price": 64600.00, "step": 6556, "profit": -305.10}
+{"side": "open", "price": 64438.75, "step": 6560}
+{"side": "close", "price": 63949.00, "step": 6563, "profit": -489.85}
+{"side": "open", "price": 64030.00, "step": 6565}
+{"side": "close", "price": 63693.00, "step": 6567, "profit": -337.10}
+{"side": "open", "price": 63466.00, "step": 6570}
+{"side": "close", "price": 63582.00, "step": 6571, "profit": 115.90}
+{"side": "open", "price": 63468.00, "step": 6575}
+{"side": "close", "price": 63625.50, "step": 6576, "profit": 157.40}
+{"side": "open", "price": 62968.00, "step": 6589}
+{"side": "close", "price": 61826.00, "step": 6595, "profit": -1142.10}
+{"side": "open", "price": 60929.00, "step": 6596}
+{"side": "close", "price": 60899.00, "step": 6598, "profit": -30.10}
+{"side": "open", "price": 61158.67, "step": 6600}
+{"side": "close", "price": 61633.00, "step": 6601, "profit": 474.23}
+{"side": "open", "price": 61917.00, "step": 6602}
+{"side": "close", "price": 61890.00, "step": 6603, "profit": -27.10}
+{"side": "open", "price": 61842.00, "step": 6606}
+{"side": "close", "price": 61857.00, "step": 6607, "profit": 14.90}
+{"side": "open", "price": 61364.00, "step": 6609}
+{"side": "close", "price": 61309.00, "step": 6610, "profit": -55.10}
+{"side": "open", "price": 61322.00, "step": 6611}
+{"side": "close", "price": 61487.00, "step": 6613, "profit": 164.90}
+{"side": "open", "price": 61223.00, "step": 6614}
+{"side": "close", "price": 61982.00, "step": 6615, "profit": 758.90}
+{"side": "open", "price": 60788.00, "step": 6623}
+{"side": "close", "price": 61113.00, "step": 6624, "profit": 324.90}
+{"side": "open", "price": 61359.00, "step": 6662}
+{"side": "close", "price": 61979.00, "step": 6663, "profit": 619.90}
+{"side": "open", "price": 64075.00, "step": 6734}
+{"side": "close", "price": 63748.00, "step": 6735, "profit": -327.10}
+{"side": "open", "price": 62927.00, "step": 6738}
+{"side": "close", "price": 63454.00, "step": 6739, "profit": 526.90}
+{"side": "open", "price": 63421.00, "step": 6741}
+{"side": "close", "price": 62257.00, "step": 6743, "profit": -1164.10}
+{"side": "open", "price": 62564.00, "step": 6744}
+{"side": "close", "price": 62678.00, "step": 6745, "profit": 113.90}
+{"side": "open", "price": 62810.00, "step": 6746}
+{"side": "close", "price": 62645.00, "step": 6747, "profit": -165.10}
+{"side": "open", "price": 62554.00, "step": 6749}
+{"side": "close", "price": 62517.67, "step": 6750, "profit": -36.43}
+{"side": "open", "price": 62334.00, "step": 6751}
+{"side": "close", "price": 62444.00, "step": 6752, "profit": 109.90}
+{"side": "open", "price": 63079.00, "step": 6757}
+{"side": "close", "price": 62341.00, "step": 6759, "profit": -738.10}
+{"side": "open", "price": 62625.00, "step": 6760}
+{"side": "close", "price": 62426.00, "step": 6761, "profit": -199.10}
+{"side": "open", "price": 62321.00, "step": 6763}
+{"side": "close", "price": 62445.00, "step": 6764, "profit": 123.90}
+{"side": "open", "price": 62178.00, "step": 6768}
+{"side": "close", "price": 62490.00, "step": 6769, "profit": 311.90}
+{"side": "open", "price": 62407.00, "step": 6772}
+{"side": "close", "price": 62585.00, "step": 6773, "profit": 177.90}
+{"side": "open", "price": 59611.00, "step": 6809}
+{"side": "close", "price": 59708.00, "step": 6811, "profit": 96.90}
+{"side": "open", "price": 62305.00, "step": 6832}
+{"side": "close", "price": 62964.00, "step": 6833, "profit": 658.90}
+{"side": "open", "price": 63067.00, "step": 6858}
+{"side": "close", "price": 63134.00, "step": 6859, "profit": 66.90}
+{"side": "open", "price": 63008.00, "step": 6865}
+{"side": "close", "price": 62819.00, "step": 6867, "profit": -189.10}
+{"side": "open", "price": 62929.60, "step": 6868}
+{"side": "close", "price": 62969.33, "step": 6869, "profit": 39.63}
+{"side": "open", "price": 62949.00, "step": 6871}
+{"side": "close", "price": 62929.67, "step": 6872, "profit": -19.43}
+{"side": "open", "price": 62672.50, "step": 6875}
+{"side": "close", "price": 62792.71, "step": 6876, "profit": 120.11}
+{"side": "open", "price": 62369.00, "step": 6878}
+{"side": "close", "price": 62625.00, "step": 6881, "profit": 255.90}
+{"side": "open", "price": 62540.00, "step": 6882}
+{"side": "close", "price": 62817.00, "step": 6883, "profit": 276.90}
+{"side": "open", "price": 63036.00, "step": 6885}
+{"side": "close", "price": 62940.00, "step": 6886, "profit": -96.10}
+{"side": "open", "price": 62987.00, "step": 6887}
+{"side": "close", "price": 62660.00, "step": 6888, "profit": -327.10}
+{"side": "open", "price": 64397.00, "step": 6891}
+{"side": "close", "price": 64008.00, "step": 6893, "profit": -389.10}
+{"side": "open", "price": 67634.00, "step": 6925}
+{"side": "close", "price": 66976.00, "step": 6930, "profit": -658.10}
+{"side": "open", "price": 67026.00, "step": 6943}
+{"side": "close", "price": 67212.00, "step": 6944, "profit": 185.90}
+{"side": "open", "price": 67848.00, "step": 6946}
+{"side": "close", "price": 67755.00, "step": 6951, "profit": -93.10}
+{"side": "open", "price": 68001.00, "step": 6953}
+{"side": "close", "price": 67863.00, "step": 6954, "profit": -138.10}
+{"side": "open", "price": 67756.00, "step": 6955}
+{"side": "close", "price": 67672.00, "step": 6956, "profit": -84.10}
+{"side": "open", "price": 67745.00, "step": 6960}
+{"side": "close", "price": 67909.00, "step": 6961, "profit": 163.90}
+{"side": "open", "price": 67311.00, "step": 6964}
+{"side": "close", "price": 67389.00, "step": 6965, "profit": 77.90}
+{"side": "open", "price": 67315.50, "step": 6967}
+{"side": "close", "price": 67480.00, "step": 6968, "profit": 164.40}
+{"side": "open", "price": 67266.00, "step": 6970}
+{"side": "close", "price": 66879.00, "step": 6971, "profit": -387.10}
+{"side": "open", "price": 67189.00, "step": 6972}
+{"side": "close", "price": 67023.00, "step": 6973, "profit": -166.10}
+{"side": "open", "price": 67161.00, "step": 6974}
+{"side": "close", "price": 67417.00, "step": 6976, "profit": 255.90}
+{"side": "open", "price": 66987.00, "step": 6978}
+{"side": "close", "price": 66840.00, "step": 6979, "profit": -147.10}
+{"side": "open", "price": 66988.00, "step": 6980}
+{"side": "close", "price": 67124.00, "step": 6981, "profit": 135.90}
+{"side": "open", "price": 67462.33, "step": 6982}
+{"side": "close", "price": 67454.00, "step": 6983, "profit": -8.43}
+{"side": "open", "price": 68122.00, "step": 6985}
+{"side": "close", "price": 68160.00, "step": 6986, "profit": 37.90}
+{"side": "open", "price": 67769.00, "step": 6988}
+{"side": "close", "price": 68056.00, "step": 6989, "profit": 286.90}
+{"side": "open", "price": 68147.00, "step": 6990}
+{"side": "close", "price": 68009.00, "step": 6991, "profit": -138.10}
+{"side": "open", "price": 67831.50, "step": 6993}
+{"side": "close", "price": 67903.00, "step": 6994, "profit": 71.40}
+{"side": "open", "price": 68195.00, "step": 6997}
+{"side": "close", "price": 68386.00, "step": 7004, "profit": 190.90}
+{"side": "open", "price": 68337.00, "step": 7005}
+{"side": "close", "price": 68168.00, "step": 7006, "profit": -169.10}
+{"side": "open", "price": 68281.33, "step": 7009}
+{"side": "close", "price": 68394.00, "step": 7010, "profit": 112.57}
+{"side": "open", "price": 68336.00, "step": 7012}
+{"side": "close", "price": 68364.33, "step": 7013, "profit": 28.23}
+{"side": "open", "price": 68308.00, "step": 7017}
+{"side": "close", "price": 68200.00, "step": 7018, "profit": -108.10}
+{"side": "open", "price": 68074.00, "step": 7019}
+{"side": "close", "price": 68174.00, "step": 7020, "profit": 99.90}
+{"side": "open", "price": 68142.00, "step": 7034}
+{"side": "close", "price": 68168.67, "step": 7035, "profit": 26.57}
+{"side": "open", "price": 68198.33, "step": 7037}
+{"side": "close", "price": 68389.00, "step": 7038, "profit": 190.57}
+{"side": "open", "price": 68647.50, "step": 7047}
+{"side": "close", "price": 68519.50, "step": 7048, "profit": -128.10}
+{"side": "open", "price": 68808.00, "step": 7052}
+{"side": "close", "price": 68806.00, "step": 7053, "profit": -2.10}
+{"side": "open", "price": 69160.00, "step": 7054}
+{"side": "close", "price": 69248.00, "step": 7057, "profit": 87.90}
+{"side": "open", "price": 68329.00, "step": 7064}
+{"side": "close", "price": 68398.00, "step": 7065, "profit": 68.90}
+{"side": "open", "price": 67372.00, "step": 7069}
+{"side": "close", "price": 67391.00, "step": 7072, "profit": 18.90}
+{"side": "open", "price": 67624.00, "step": 7073}
+{"side": "close", "price": 67430.00, "step": 7074, "profit": -194.10}
+{"side": "open", "price": 67804.00, "step": 7075}
+{"side": "close", "price": 67798.00, "step": 7076, "profit": -6.10}
+{"side": "open", "price": 67687.67, "step": 7078}
+{"side": "close", "price": 67425.00, "step": 7079, "profit": -262.77}
+{"side": "open", "price": 67197.00, "step": 7080}
+{"side": "close", "price": 67531.00, "step": 7081, "profit": 333.90}
+{"side": "open", "price": 66020.00, "step": 7122}
+{"side": "close", "price": 66407.00, "step": 7123, "profit": 386.90}
+{"side": "open", "price": 68354.00, "step": 7165}
+{"side": "close", "price": 68336.00, "step": 7166, "profit": -18.10}
+{"side": "open", "price": 67722.00, "step": 7167}
+{"side": "close", "price": 67680.00, "step": 7168, "profit": -42.10}
+{"side": "open", "price": 66826.00, "step": 7169}
+{"side": "close", "price": 66901.00, "step": 7172, "profit": 74.90}
+{"side": "open", "price": 66734.00, "step": 7175}
+{"side": "close", "price": 66738.00, "step": 7176, "profit": 3.90}
+{"side": "open", "price": 67030.00, "step": 7188}
+{"side": "close", "price": 66924.00, "step": 7189, "profit": -106.10}
+{"side": "open", "price": 66787.00, "step": 7190}
+{"side": "close", "price": 66888.00, "step": 7191, "profit": 100.90}
+{"side": "open", "price": 67058.00, "step": 7193}
+{"side": "close", "price": 67031.00, "step": 7194, "profit": -27.10}
+{"side": "open", "price": 67229.00, "step": 7196}
+{"side": "close", "price": 67166.00, "step": 7197, "profit": -63.10}
+{"side": "open", "price": 67175.33, "step": 7205}
+{"side": "close", "price": 67156.12, "step": 7206, "profit": -19.31}
+{"side": "open", "price": 67109.33, "step": 7211}
+{"side": "close", "price": 67382.00, "step": 7212, "profit": 272.57}
+{"side": "open", "price": 67598.00, "step": 7213}
+{"side": "close", "price": 67689.00, "step": 7214, "profit": 90.90}
+{"side": "open", "price": 67786.00, "step": 7220}
+{"side": "close", "price": 67928.00, "step": 7221, "profit": 141.90}
+{"side": "open", "price": 68466.00, "step": 7231}
+{"side": "close", "price": 68380.00, "step": 7232, "profit": -86.10}
+{"side": "open", "price": 68583.00, "step": 7233}
+{"side": "close", "price": 68677.00, "step": 7234, "profit": 93.90}
+{"side": "open", "price": 68953.00, "step": 7236}
+{"side": "close", "price": 68902.00, "step": 7238, "profit": -51.10}
+{"side": "open", "price": 68537.00, "step": 7239}
+{"side": "close", "price": 68760.00, "step": 7240, "profit": 222.90}
+{"side": "open", "price": 69014.00, "step": 7241}
+{"side": "close", "price": 69258.00, "step": 7242, "profit": 243.90}
+{"side": "open", "price": 69668.00, "step": 7243}
+{"side": "close", "price": 69845.50, "step": 7245, "profit": 177.40}
+{"side": "open", "price": 69946.00, "step": 7246}
+{"side": "close", "price": 69991.50, "step": 7248, "profit": 45.40}
+{"side": "open", "price": 70317.00, "step": 7249}
+{"side": "close", "price": 71068.00, "step": 7253, "profit": 750.90}
+{"side": "open", "price": 71285.00, "step": 7254}
+{"side": "close", "price": 71019.00, "step": 7255, "profit": -266.10}
+{"side": "open", "price": 71304.00, "step": 7257}
+{"side": "close", "price": 71235.00, "step": 7258, "profit": -69.10}
+{"side": "open", "price": 71518.00, "step": 7259}
+{"side": "close", "price": 71173.00, "step": 7260, "profit": -345.10}
+{"side": "open", "price": 71783.00, "step": 7261}
+{"side": "close", "price": 72253.00, "step": 7269, "profit": 469.90}
+{"side": "open", "price": 72889.00, "step": 7292}
+{"side": "close", "price": 72449.00, "step": 7293, "profit": -440.10}
+{"side": "open", "price": 70730.00, "step": 7310}
+{"side": "close", "price": 70609.00, "step": 7311, "profit": -121.10}
+{"side": "open", "price": 69371.00, "step": 7335}
+{"side": "close", "price": 69588.00, "step": 7337, "profit": 216.90}
+{"side": "open", "price": 69194.00, "step": 7338}
+{"side": "close", "price": 69274.00, "step": 7340, "profit": 79.90}
+{"side": "open", "price": 69229.00, "step": 7358}
+{"side": "close", "price": 69555.00, "step": 7360, "profit": 325.90}
+{"side": "open", "price": 69321.00, "step": 7367}
+{"side": "close", "price": 69157.00, "step": 7368, "profit": -164.10}
+{"side": "open", "price": 68209.00, "step": 7370}
+{"side": "close", "price": 68596.00, "step": 7372, "profit": 386.90}
+{"side": "open", "price": 68251.00, "step": 7377}
+{"side": "close", "price": 68462.00, "step": 7378, "profit": 210.90}
+{"side": "open", "price": 68134.00, "step": 7381}
+{"side": "close", "price": 68196.00, "step": 7384, "profit": 61.90}
+{"side": "open", "price": 67711.33, "step": 7410}
+{"side": "close", "price": 67905.00, "step": 7411, "profit": 193.57}
+{"side": "open", "price": 69661.00, "step": 7431}
+{"side": "close", "price": 70231.00, "step": 7432, "profit": 569.90}
+{"side": "open", "price": 69070.00, "step": 7435}
+{"side": "close", "price": 69210.00, "step": 7437, "profit": 139.90}
+{"side": "open", "price": 71186.00, "step": 7440}
+{"side": "close", "price": 71280.00, "step": 7441, "profit": 93.90}
+{"side": "open", "price": 73123.00, "step": 7442}
+{"side": "close", "price": 73886.00, "step": 7450, "profit": 762.90}
+{"side": "open", "price": 74504.00, "step": 7457}
+{"side": "close", "price": 75603.00, "step": 7462, "profit": 1098.90}
+{"side": "open", "price": 74776.00, "step": 7468}
+{"side": "close", "price": 74707.00, "step": 7469, "profit": -69.10}
+{"side": "open", "price": 74931.00, "step": 7473}
+{"side": "close", "price": 75011.00, "step": 7474, "profit": 79.90}
+{"side": "open", "price": 74736.00, "step": 7475}
+{"side": "close", "price": 74996.00, "step": 7476, "profit": 259.90}
+{"side": "open", "price": 74688.50, "step": 7477}
+{"side": "close", "price": 74861.00, "step": 7478, "profit": 172.40}
+{"side": "open", "price": 76075.00, "step": 7479}
+{"side": "close", "price": 75959.00, "step": 7480, "profit": -116.10}
+{"side": "open", "price": 76227.00, "step": 7481}
+{"side": "close", "price": 75825.00, "step": 7486, "profit": -402.10}
+{"side": "open", "price": 75864.00, "step": 7487}
+{"side": "close", "price": 76010.00, "step": 7488, "profit": 145.90}
+{"side": "open", "price": 75972.00, "step": 7489}
+{"side": "close", "price": 75687.50, "step": 7490, "profit": -284.60}
+{"side": "open", "price": 75845.00, "step": 7492}
+{"side": "close", "price": 76000.00, "step": 7493, "profit": 154.90}
+{"side": "open", "price": 76182.00, "step": 7495}
+{"side": "close", "price": 75820.00, "step": 7496, "profit": -362.10}
+{"side": "open", "price": 75980.00, "step": 7499}
+{"side": "close", "price": 75809.00, "step": 7502, "profit": -171.10}
+{"side": "open", "price": 76465.00, "step": 7503}
+{"side": "close", "price": 76391.00, "step": 7505, "profit": -74.10}
+{"side": "open", "price": 76817.00, "step": 7506}
+{"side": "close", "price": 76348.00, "step": 7510, "profit": -469.10}
+{"side": "open", "price": 76213.00, "step": 7529}
+{"side": "close", "price": 76320.00, "step": 7530, "profit": 106.90}
+{"side": "open", "price": 76177.00, "step": 7531}
+{"side": "close", "price": 76311.00, "step": 7532, "profit": 133.90}
+{"side": "open", "price": 76566.00, "step": 7534}
+{"side": "close", "price": 76703.00, "step": 7535, "profit": 136.90}
+{"side": "open", "price": 76878.00, "step": 7536}
+{"side": "close", "price": 76697.00, "step": 7537, "profit": -181.10}
+{"side": "open", "price": 77000.00, "step": 7538}
+{"side": "close", "price": 81451.00, "step": 7562, "profit": 4450.90}
+{"side": "open", "price": 81629.00, "step": 7563}
+{"side": "close", "price": 81453.00, "step": 7564, "profit": -176.10}
+{"side": "open", "price": 80717.00, "step": 7565}
+{"side": "close", "price": 81143.00, "step": 7567, "profit": 425.90}
+{"side": "open", "price": 81267.00, "step": 7568}
+{"side": "close", "price": 81745.00, "step": 7569, "profit": 477.90}
+{"side": "open", "price": 82013.00, "step": 7570}
+{"side": "close", "price": 87700.00, "step": 7586, "profit": 5686.90}
+{"side": "open", "price": 89584.00, "step": 7590}
+{"side": "close", "price": 89318.00, "step": 7592, "profit": -266.10}
+{"side": "open", "price": 86856.00, "step": 7594}
+{"side": "close", "price": 88134.00, "step": 7608, "profit": 1277.90}
+{"side": "open", "price": 88274.00, "step": 7609}
+{"side": "close", "price": 87909.00, "step": 7610, "profit": -365.10}
+{"side": "open", "price": 87665.50, "step": 7619}
+{"side": "close", "price": 87660.00, "step": 7620, "profit": -5.60}
+{"side": "open", "price": 89169.00, "step": 7621}
+{"side": "close", "price": 89728.00, "step": 7630, "profit": 558.90}
+{"side": "open", "price": 90084.00, "step": 7636}
+{"side": "close", "price": 89951.00, "step": 7637, "profit": -133.10}
+{"side": "open", "price": 90846.00, "step": 7639}
+{"side": "close", "price": 90591.00, "step": 7640, "profit": -255.10}
+{"side": "open", "price": 91253.00, "step": 7644}
+{"side": "close", "price": 90748.00, "step": 7645, "profit": -505.10}
+{"side": "open", "price": 88671.00, "step": 7646}
+{"side": "close", "price": 89117.00, "step": 7650, "profit": 445.90}
+{"side": "open", "price": 89412.00, "step": 7651}
+{"side": "close", "price": 88128.50, "step": 7657, "profit": -1283.60}
+{"side": "open", "price": 87767.00, "step": 7661}
+{"side": "close", "price": 88214.00, "step": 7662, "profit": 446.90}
+{"side": "open", "price": 87673.00, "step": 7663}
+{"side": "close", "price": 88145.00, "step": 7664, "profit": 471.90}
+{"side": "open", "price": 89226.00, "step": 7665}
+{"side": "close", "price": 89400.00, "step": 7666, "profit": 173.90}
+{"side": "open", "price": 89779.00, "step": 7667}
+{"side": "close", "price": 89512.00, "step": 7673, "profit": -267.10}
+{"side": "open", "price": 89395.00, "step": 7674}
+{"side": "close", "price": 91193.00, "step": 7678, "profit": 1797.90}
+{"side": "open", "price": 91023.00, "step": 7679}
+{"side": "close", "price": 90999.00, "step": 7680, "profit": -24.10}
+{"side": "open", "price": 91267.00, "step": 7683}
+{"side": "close", "price": 91243.00, "step": 7684, "profit": -24.10}
+{"side": "open", "price": 91380.00, "step": 7688}
+{"side": "close", "price": 91241.00, "step": 7689, "profit": -139.10}
+{"side": "open", "price": 91155.00, "step": 7691}
+{"side": "close", "price": 90731.00, "step": 7693, "profit": -424.10}
+{"side": "open", "price": 90482.00, "step": 7695}
+{"side": "close", "price": 90612.00, "step": 7696, "profit": 129.90}
+{"side": "open", "price": 90926.00, "step": 7697}
+{"side": "close", "price": 91079.00, "step": 7699, "profit": 152.90}
+{"side": "open", "price": 90978.00, "step": 7712}
+{"side": "close", "price": 91309.00, "step": 7713, "profit": 330.90}
+{"side": "open", "price": 90726.00, "step": 7715}
+{"side": "close", "price": 91080.00, "step": 7716, "profit": 353.90}
+{"side": "open", "price": 90493.00, "step": 7717}
+{"side": "close", "price": 90295.00, "step": 7719, "profit": -198.10}
+{"side": "open", "price": 89987.00, "step": 7722}
+{"side": "close", "price": 90101.00, "step": 7723, "profit": 113.90}
+{"side": "open", "price": 89184.00, "step": 7725}
+{"side": "close", "price": 89843.00, "step": 7727, "profit": 658.90}
+{"side": "open", "price": 89911.00, "step": 7728}
+{"side": "close", "price": 90748.00, "step": 7729, "profit": 836.90}
+{"side": "open", "price": 90508.00, "step": 7730}
+{"side": "close", "price": 90667.00, "step": 7731, "profit": 158.90}
+{"side": "open", "price": 90659.00, "step": 7733}
+{"side": "close", "price": 91795.00, "step": 7737, "profit": 1135.90}
+{"side": "open", "price": 91832.00, "step": 7738}
+{"side": "close", "price": 91327.00, "step": 7749, "profit": -505.10}
+{"side": "open", "price": 90535.00, "step": 7751}
+{"side": "close", "price": 91073.00, "step": 7752, "profit": 537.90}
+{"side": "open", "price": 90769.00, "step": 7753}
+{"side": "close", "price": 91232.00, "step": 7754, "profit": 462.90}
+{"side": "open", "price": 91470.00, "step": 7755}
+{"side": "close", "price": 91536.00, "step": 7756, "profit": 65.90}
+{"side": "open", "price": 91910.00, "step": 7757}
+{"side": "close", "price": 92008.00, "step": 7758, "profit": 97.90}
+{"side": "open", "price": 91672.00, "step": 7759}
+{"side": "close", "price": 91775.00, "step": 7761, "profit": 102.90}
+{"side": "open", "price": 91777.00, "step": 7762}
+{"side": "close", "price": 91708.00, "step": 7763, "profit": -69.10}
+{"side": "open", "price": 92508.00, "step": 7764}
+{"side": "close", "price": 92247.00, "step": 7775, "profit": -261.10}
+{"side": "open", "price": 91887.00, "step": 7777}
+{"side": "close", "price": 91676.00, "step": 7778, "profit": -211.10}
+{"side": "open", "price": 92095.00, "step": 7780}
+{"side": "close", "price": 92468.00, "step": 7781, "profit": 372.90}
+{"side": "open", "price": 92349.00, "step": 7782}
+{"side": "close", "price": 92794.00, "step": 7783, "profit": 444.90}
+{"side": "open", "price": 93152.00, "step": 7784}
+{"side": "close", "price": 93058.00, "step": 7785, "profit": -94.10}
+{"side": "open", "price": 93384.00, "step": 7787}
+{"side": "close", "price": 93521.00, "step": 7788, "profit": 136.90}
+{"side": "open", "price": 94338.00, "step": 7789}
+{"side": "close", "price": 93959.00, "step": 7795, "profit": -379.10}
+{"side": "open", "price": 94260.00, "step": 7796}
+{"side": "close", "price": 94371.00, "step": 7797, "profit": 110.90}
+{"side": "open", "price": 94630.00, "step": 7800}
+{"side": "close", "price": 94347.00, "step": 7802, "profit": -283.10}
+{"side": "open", "price": 95596.00, "step": 7803}
+{"side": "close", "price": 96755.00, "step": 7807, "profit": 1158.90}
+{"side": "open", "price": 97799.00, "step": 7811}
+{"side": "close", "price": 97423.00, "step": 7813, "profit": -376.10}
+{"side": "open", "price": 96975.00, "step": 7814}
+{"side": "close", "price": 97063.00, "step": 7816, "profit": 87.90}
+{"side": "open", "price": 98197.00, "step": 7818}
+{"side": "close", "price": 98315.00, "step": 7822, "profit": 117.90}
+{"side": "open", "price": 98670.00, "step": 7827}
+{"side": "close", "price": 98619.00, "step": 7828, "profit": -51.10}
+{"side": "open", "price": 98868.00, "step": 7830}
+{"side": "close", "price": 98649.00, "step": 7832, "profit": -219.10}
+{"side": "open", "price": 98268.00, "step": 7834}
+{"side": "close", "price": 98753.00, "step": 7835, "profit": 484.90}
+{"side": "open", "price": 97648.00, "step": 7837}
+{"side": "close", "price": 98524.00, "step": 7839, "profit": 875.90}
+{"side": "open", "price": 98706.00, "step": 7841}
+{"side": "close", "price": 98140.00, "step": 7852, "profit": -566.10}
+{"side": "open", "price": 98308.00, "step": 7853}
+{"side": "close", "price": 97538.00, "step": 7871, "profit": -770.10}
+{"side": "open", "price": 98006.00, "step": 7873}
+{"side": "close", "price": 98157.00, "step": 7874, "profit": 150.90}
+{"side": "open", "price": 98000.00, "step": 7875}
+{"side": "close", "price": 97972.00, "step": 7876, "profit": -28.10}
+{"side": "open", "price": 98069.00, "step": 7877}
+{"side": "close", "price": 98140.00, "step": 7878, "profit": 70.90}
+{"side": "open", "price": 98189.00, "step": 7879}
+{"side": "close", "price": 97852.00, "step": 7880, "profit": -337.10}
+{"side": "open", "price": 97745.00, "step": 7881}
+{"side": "close", "price": 97558.00, "step": 7882, "profit": -187.10}
+{"side": "open", "price": 96822.00, "step": 7884}
+{"side": "close", "price": 96982.00, "step": 7886, "profit": 159.90}
+{"side": "open", "price": 95815.00, "step": 7887}
+{"side": "close", "price": 96283.00, "step": 7888, "profit": 467.90}
+{"side": "open", "price": 95731.00, "step": 7889}
+{"side": "close", "price": 96439.00, "step": 7890, "profit": 707.90}
+{"side": "open", "price": 96258.00, "step": 7891}
+{"side": "close", "price": 96717.00, "step": 7892, "profit": 458.90}
+{"side": "open", "price": 97898.00, "step": 7894}
+{"side": "close", "price": 97828.00, "step": 7895, "profit": -70.10}
+{"side": "open", "price": 97644.00, "step": 7896}
+{"side": "close", "price": 97155.00, "step": 7897, "profit": -489.10}
+{"side": "open", "price": 97948.00, "step": 7901}
+{"side": "close", "price": 97961.00, "step": 7902, "profit": 12.90}
+{"side": "open", "price": 97911.00, "step": 7903}
+{"side": "close", "price": 98079.00, "step": 7904, "profit": 167.90}
+{"side": "open", "price": 98347.00, "step": 7905}
+{"side": "close", "price": 97791.00, "step": 7908, "profit": -556.10}
+{"side": "open", "price": 95267.00, "step": 7910}
+{"side": "close", "price": 95169.00, "step": 7914, "profit": -98.10}
+{"side": "open", "price": 94820.00, "step": 7915}
+{"side": "close", "price": 95025.00, "step": 7916, "profit": 204.90}
+{"side": "open", "price": 93833.00, "step": 7917}
+{"side": "close", "price": 94479.00, "step": 7918, "profit": 645.90}
+{"side": "open", "price": 94720.00, "step": 7922}
+{"side": "close", "price": 94614.00, "step": 7923, "profit": -106.10}
+{"side": "open", "price": 93227.00, "step": 7928}
+{"side": "close", "price": 93636.00, "step": 7929, "profit": 408.90}
+{"side": "open", "price": 92378.00, "step": 7930}
+{"side": "close", "price": 92270.00, "step": 7932, "profit": -108.10}
+{"side": "open", "price": 92369.00, "step": 7933}
+{"side": "close", "price": 92907.00, "step": 7935, "profit": 537.90}
+{"side": "open", "price": 91801.00, "step": 7939}
+{"side": "close", "price": 91766.00, "step": 7941, "profit": -35.10}
+{"side": "open", "price": 92891.00, "step": 7945}
+{"side": "close", "price": 93070.00, "step": 7946, "profit": 178.90}
+{"side": "open", "price": 95711.00, "step": 7959}
+{"side": "close", "price": 95796.00, "step": 7960, "profit": 84.90}
+{"side": "open", "price": 96526.00, "step": 7964}
+{"side": "close", "price": 96313.00, "step": 7965, "profit": -213.10}
+{"side": "open", "price": 97094.00, "step": 8004}
+{"side": "close", "price": 97299.00, "step": 8005, "profit": 204.90}
+{"side": "open", "price": 98115.00, "step": 8006}
+{"side": "close", "price": 97266.00, "step": 8010, "profit": -849.10}
+{"side": "open", "price": 97455.00, "step": 8012}
+{"side": "close", "price": 97507.00, "step": 8013, "profit": 51.90}
+{"side": "open", "price": 96521.00, "step": 8017}
+{"side": "close", "price": 96710.00, "step": 8018, "profit": 188.90}
+{"side": "open", "price": 96709.00, "step": 8022}
+{"side": "close", "price": 96900.00, "step": 8023, "profit": 190.90}
+{"side": "open", "price": 96223.50, "step": 8026}
+{"side": "close", "price": 96359.00, "step": 8027, "profit": 135.40}
+{"side": "open", "price": 96505.00, "step": 8030}
+{"side": "close", "price": 96705.00, "step": 8031, "profit": 199.90}
+{"side": "open", "price": 95860.00, "step": 8042}
+{"side": "close", "price": 96450.00, "step": 8043, "profit": 589.90}
+{"side": "open", "price": 96622.00, "step": 8067}
+{"side": "close", "price": 96817.00, "step": 8068, "profit": 194.90}
+{"side": "open", "price": 95156.00, "step": 8072}
+{"side": "close", "price": 95629.00, "step": 8073, "profit": 472.90}
+{"side": "open", "price": 94821.00, "step": 8081}
+{"side": "close", "price": 95926.00, "step": 8083, "profit": 1104.90}
+{"side": "open", "price": 95702.00, "step": 8089}
+{"side": "close", "price": 96155.00, "step": 8090, "profit": 452.90}
+{"side": "open", "price": 94888.00, "step": 8098}
+{"side": "close", "price": 94955.00, "step": 8100, "profit": 66.90}
+{"side": "open", "price": 93964.00, "step": 8101}
+{"side": "close", "price": 95987.00, "step": 8105, "profit": 2022.90}
+{"side": "open", "price": 98778.00, "step": 8132}
+{"side": "close", "price": 98282.00, "step": 8134, "profit": -496.10}
+{"side": "open", "price": 101220.00, "step": 8138}
+{"side": "close", "price": 102700.00, "step": 8145, "profit": 1479.90}
+{"side": "open", "price": 101360.00, "step": 8151}
+{"side": "close", "price": 101140.00, "step": 8152, "profit": -220.10}
+{"side": "open", "price": 99111.00, "step": 8156}
+{"side": "close", "price": 97528.00, "step": 8162, "profit": -1583.10}
+{"side": "open", "price": 100930.00, "step": 8177}
+{"side": "close", "price": 101450.00, "step": 8179, "profit": 519.90}
+{"side": "open", "price": 101400.00, "step": 8180}
+{"side": "close", "price": 100520.00, "step": 8182, "profit": -880.10}
+{"side": "open", "price": 99206.00, "step": 8235}
+{"side": "close", "price": 99500.00, "step": 8236, "profit": 293.90}
+{"side": "open", "price": 97910.00, "step": 8247}
+{"side": "close", "price": 97957.00, "step": 8248, "profit": 46.90}
+{"side": "open", "price": 96350.00, "step": 8252}
+{"side": "close", "price": 97410.00, "step": 8255, "profit": 1059.90}
+{"side": "open", "price": 95724.00, "step": 8271}
+{"side": "close", "price": 95151.00, "step": 8274, "profit": -573.10}
+{"side": "open", "price": 98412.00, "step": 8291}
+{"side": "close", "price": 98380.00, "step": 8292, "profit": -32.10}
+{"side": "open", "price": 98844.00, "step": 8293}
+{"side": "close", "price": 99611.00, "step": 8294, "profit": 766.90}
+{"side": "open", "price": 100420.00, "step": 8295}
+{"side": "close", "price": 100420.00, "step": 8298, "profit": -0.10}
+{"side": "open", "price": 101130.00, "step": 8299}
+{"side": "close", "price": 101460.00, "step": 8301, "profit": 329.90}
+{"side": "open", "price": 101680.00, "step": 8319}
+{"side": "close", "price": 101460.00, "step": 8321, "profit": -220.10}
+{"side": "open", "price": 99423.00, "step": 8323}
+{"side": "close", "price": 99930.00, "step": 8324, "profit": 506.90}
+{"side": "open", "price": 102090.00, "step": 8353}
+{"side": "close", "price": 102040.00, "step": 8355, "profit": -50.10}
+{"side": "open", "price": 101805.00, "step": 8358}
+{"side": "close", "price": 101750.00, "step": 8359, "profit": -55.10}
+{"side": "open", "price": 101470.00, "step": 8361}
+{"side": "close", "price": 101470.00, "step": 8362, "profit": -0.10}
+{"side": "open", "price": 101200.00, "step": 8364}
+{"side": "close", "price": 101390.00, "step": 8366, "profit": 189.90}
+{"side": "open", "price": 101550.00, "step": 8368}
+{"side": "close", "price": 100930.00, "step": 8369, "profit": -620.10}
+{"side": "open", "price": 100680.00, "step": 8372}
+{"side": "close", "price": 101020.00, "step": 8373, "profit": 339.90}
+{"side": "open", "price": 102280.00, "step": 8380}
+{"side": "close", "price": 102070.00, "step": 8381, "profit": -210.10}
+{"side": "open", "price": 102840.00, "step": 8388}
+{"side": "close", "price": 102760.00, "step": 8389, "profit": -80.10}
+{"side": "open", "price": 103120.00, "step": 8394}
+{"side": "close", "price": 103180.00, "step": 8395, "profit": 59.90}
+{"side": "open", "price": 102820.00, "step": 8397}
+{"side": "close", "price": 104600.00, "step": 8404, "profit": 1779.90}
+{"side": "open", "price": 104950.00, "step": 8405}
+{"side": "close", "price": 104880.00, "step": 8407, "profit": -70.10}
+{"side": "open", "price": 104410.00, "step": 8408}
+{"side": "close", "price": 104520.00, "step": 8409, "profit": 109.90}
+{"side": "open", "price": 104540.00, "step": 8410}
+{"side": "close", "price": 103480.00, "step": 8412, "profit": -1060.10}
+{"side": "open", "price": 103760.00, "step": 8413}
+{"side": "close", "price": 105920.00, "step": 8421, "profit": 2159.90}
+{"side": "open", "price": 106730.00, "step": 8427}
+{"side": "close", "price": 106380.00, "step": 8428, "profit": -350.10}
+{"side": "open", "price": 108050.00, "step": 8438}
+{"side": "close", "price": 107350.00, "step": 8441, "profit": -700.10}
+{"side": "open", "price": 100840.00, "step": 8468}
+{"side": "close", "price": 99801.00, "step": 8473, "profit": -1039.10}
+{"side": "open", "price": 100500.00, "step": 8474}
+{"side": "close", "price": 101230.00, "step": 8475, "profit": 729.90}
+{"side": "open", "price": 100930.00, "step": 8486}
+{"side": "close", "price": 100760.00, "step": 8488, "profit": -170.10}
+{"side": "open", "price": 98889.00, "step": 8489}
+{"side": "close", "price": 98385.00, "step": 8494, "profit": -504.10}
+{"side": "open", "price": 97230.00, "step": 8496}
+{"side": "close", "price": 97065.00, "step": 8499, "profit": -165.10}
+{"side": "open", "price": 97210.00, "step": 8502}
+{"side": "close", "price": 97091.00, "step": 8514, "profit": -119.10}
+{"side": "open", "price": 96649.00, "step": 8517}
+{"side": "close", "price": 97500.00, "step": 8518, "profit": 850.90}
+{"side": "open", "price": 98689.00, "step": 8525}
+{"side": "close", "price": 99027.00, "step": 8527, "profit": 337.90}
+{"side": "open", "price": 96965.00, "step": 8541}
+{"side": "close", "price": 97141.00, "step": 8542, "profit": 175.90}
+{"side": "open", "price": 97073.00, "step": 8554}
+{"side": "close", "price": 97171.00, "step": 8555, "profit": 97.90}
+{"side": "open", "price": 95337.00, "step": 8558}
+{"side": "close", "price": 95769.00, "step": 8560, "profit": 431.90}
+{"side": "open", "price": 94958.00, "step": 8563}
+{"side": "close", "price": 95571.00, "step": 8566, "profit": 612.90}
+{"side": "open", "price": 94448.00, "step": 8569}
+{"side": "close", "price": 96016.00, "step": 8571, "profit": 1567.90}
+{"side": "open", "price": 94419.00, "step": 8582}
+{"side": "close", "price": 94090.00, "step": 8589, "profit": -329.10}
+{"side": "open", "price": 94918.00, "step": 8591}
+{"side": "close", "price": 94575.00, "step": 8592, "profit": -343.10}
+{"side": "open", "price": 96150.00, "step": 8605}
+{"side": "close", "price": 97580.00, "step": 8606, "profit": 1429.90}
+{"side": "open", "price": 98357.00, "step": 8607}
+{"side": "close", "price": 98652.00, "step": 8608, "profit": 294.90}
+{"side": "open", "price": 98254.00, "step": 8628}
+{"side": "close", "price": 98532.50, "step": 8629, "profit": 278.40}
+{"side": "open", "price": 95946.50, "step": 8648}
+{"side": "close", "price": 95546.00, "step": 8649, "profit": -400.60}
+{"side": "open", "price": 94441.00, "step": 8681}
+{"side": "close", "price": 94739.00, "step": 8682, "profit": 297.90}
+{"side": "open", "price": 94421.00, "step": 8687}
+{"side": "close", "price": 94543.50, "step": 8688, "profit": 122.40}
+{"side": "open", "price": 94591.00, "step": 8703}
+{"side": "close", "price": 95038.00, "step": 8704, "profit": 446.90}
+{"side": "open", "price": 92085.00, "step": 8750}
+{"side": "close", "price": 94717.00, "step": 8754, "profit": 2631.90}
+{"side": "open", "price": 97183.00, "step": 8846}
+{"side": "close", "price": 97921.00, "step": 8848, "profit": 737.90}
+{"side": "open", "price": 98099.00, "step": 8849}
+{"side": "close", "price": 98600.00, "step": 8850, "profit": 500.90}
+{"side": "open", "price": 98643.00, "step": 8851}
+{"side": "close", "price": 98411.00, "step": 8852, "profit": -232.10}
+{"side": "open", "price": 97758.00, "step": 8865}
+{"side": "close", "price": 97879.00, "step": 8866, "profit": 120.90}
+{"side": "open", "price": 98044.00, "step": 8869}
+{"side": "close", "price": 98091.00, "step": 8870, "profit": 46.90}
+{"side": "open", "price": 98157.00, "step": 8881}
+{"side": "close", "price": 98240.00, "step": 8882, "profit": 82.90}
+{"side": "open", "price": 97942.00, "step": 8894}
+{"side": "close", "price": 98090.00, "step": 8895, "profit": 147.90}
+{"side": "open", "price": 98297.50, "step": 8900}
+{"side": "close", "price": 98567.00, "step": 8901, "profit": 269.40}
+{"side": "open", "price": 98869.00, "step": 8906}
+{"side": "close", "price": 99102.00, "step": 8907, "profit": 232.90}
+{"side": "open", "price": 99663.00, "step": 8909}
+{"side": "close", "price": 99560.00, "step": 8910, "profit": -103.10}
+{"side": "open", "price": 100720.00, "step": 8918}
+{"side": "close", "price": 101890.00, "step": 8921, "profit": 1169.90}
+{"side": "open", "price": 97997.00, "step": 8943}
+{"side": "close", "price": 96796.00, "step": 8946, "profit": -1201.10}
+{"side": "open", "price": 95212.00, "step": 8963}
+{"side": "close", "price": 95007.00, "step": 8964, "profit": -205.10}
+{"side": "open", "price": 95599.00, "step": 8967}
+{"side": "close", "price": 94095.00, "step": 8972, "profit": -1504.10}
+{"side": "open", "price": 92140.00, "step": 8989}
+{"side": "close", "price": 94380.50, "step": 8992, "profit": 2240.40}
+{"side": "open", "price": 92058.00, "step": 8996}
+{"side": "close", "price": 92626.00, "step": 8998, "profit": 567.90}
+{"side": "open", "price": 93689.00, "step": 9013}
+{"side": "close", "price": 94242.00, "step": 9014, "profit": 552.90}
+{"side": "open", "price": 93015.00, "step": 9081}
+{"side": "close", "price": 91816.00, "step": 9082, "profit": -1199.10}
+{"side": "open", "price": 91062.00, "step": 9083}
+{"side": "close", "price": 92153.00, "step": 9089, "profit": 1090.90}
+{"side": "open", "price": 92521.00, "step": 9091}
+{"side": "close", "price": 93725.00, "step": 9092, "profit": 1203.90}
+{"side": "open", "price": 94391.50, "step": 9093}
+{"side": "close", "price": 94505.00, "step": 9094, "profit": 113.40}
+{"side": "open", "price": 96830.00, "step": 9118}
+{"side": "close", "price": 96715.00, "step": 9119, "profit": -115.10}
+{"side": "open", "price": 97522.00, "step": 9121}
+{"side": "close", "price": 96995.00, "step": 9122, "profit": -527.10}
+{"side": "open", "price": 97440.00, "step": 9127}
+{"side": "close", "price": 97362.00, "step": 9128, "profit": -78.10}
+{"side": "open", "price": 99047.00, "step": 9133}
+{"side": "close", "price": 99103.00, "step": 9136, "profit": 55.90}
+{"side": "open", "price": 99462.00, "step": 9138}
+{"side": "close", "price": 99748.00, "step": 9142, "profit": 285.90}
+{"side": "open", "price": 99861.00, "step": 9144}
+{"side": "close", "price": 100070.00, "step": 9145, "profit": 208.90}
+{"side": "open", "price": 99457.00, "step": 9147}
+{"side": "close", "price": 99531.00, "step": 9148, "profit": 73.90}
+{"side": "open", "price": 99720.00, "step": 9151}
+{"side": "close", "price": 98874.00, "step": 9152, "profit": -846.10}
+{"side": "open", "price": 99126.00, "step": 9155}
+{"side": "close", "price": 99349.00, "step": 9156, "profit": 222.90}
+{"side": "open", "price": 97602.00, "step": 9158}
+{"side": "close", "price": 99861.00, "step": 9161, "profit": 2258.90}
+{"side": "open", "price": 100310.00, "step": 9164}
+{"side": "close", "price": 99857.00, "step": 9166, "profit": -453.10}
+{"side": "open", "price": 101670.00, "step": 9169}
+{"side": "close", "price": 100980.00, "step": 9171, "profit": -690.10}
+{"side": "open", "price": 101260.00, "step": 9173}
+{"side": "close", "price": 101330.00, "step": 9174, "profit": 69.90}
+{"side": "open", "price": 101410.00, "step": 9175}
+{"side": "close", "price": 101810.00, "step": 9177, "profit": 399.90}
+{"side": "open", "price": 102260.00, "step": 9178}
+{"side": "close", "price": 102220.00, "step": 9179, "profit": -40.10}
+{"side": "open", "price": 102730.00, "step": 9180}
+{"side": "close", "price": 104770.00, "step": 9186, "profit": 2039.90}
+{"side": "open", "price": 105760.00, "step": 9187}
+{"side": "close", "price": 104540.00, "step": 9189, "profit": -1220.10}
+{"side": "open", "price": 104040.00, "step": 9191}
+{"side": "close", "price": 104610.00, "step": 9192, "profit": 569.90}
+{"side": "open", "price": 103510.00, "step": 9195}
+{"side": "close", "price": 103490.00, "step": 9196, "profit": -20.10}
+{"side": "open", "price": 103410.00, "step": 9198}
+{"side": "close", "price": 102730.00, "step": 9199, "profit": -680.10}
+{"side": "open", "price": 103170.00, "step": 9200}
+{"side": "close", "price": 103085.00, "step": 9201, "profit": -85.10}
+{"side": "open", "price": 104300.00, "step": 9205}
+{"side": "close", "price": 103970.00, "step": 9206, "profit": -330.10}
+{"side": "open", "price": 104560.00, "step": 9207}
+{"side": "close", "price": 103270.00, "step": 9208, "profit": -1290.10}
+{"side": "open", "price": 104170.00, "step": 9210}
+{"side": "close", "price": 104423.33, "step": 9211, "profit": 253.23}
+{"side": "open", "price": 105490.00, "step": 9222}
+{"side": "close", "price": 105120.00, "step": 9223, "profit": -370.10}
+{"side": "open", "price": 104370.00, "step": 9224}
+{"side": "close", "price": 105230.00, "step": 9225, "profit": 859.90}
+{"side": "open", "price": 104290.00, "step": 9227}
+{"side": "close", "price": 104860.00, "step": 9228, "profit": 569.90}
+{"side": "open", "price": 104900.00, "step": 9229}
+{"side": "close", "price": 104870.00, "step": 9231, "profit": -30.10}
+{"side": "open", "price": 105030.00, "step": 9233}
+{"side": "close", "price": 104980.00, "step": 9234, "profit": -50.10}
+{"side": "open", "price": 106260.00, "step": 9236}
+{"side": "close", "price": 101830.00, "step": 9243, "profit": -4430.10}
+{"side": "open", "price": 102210.00, "step": 9244}
+{"side": "close", "price": 102260.00, "step": 9245, "profit": 49.90}
+{"side": "open", "price": 107410.00, "step": 9246}
+{"side": "close", "price": 107900.00, "step": 9250, "profit": 489.90}
+{"side": "open", "price": 106860.00, "step": 9252}
+{"side": "close", "price": 107910.00, "step": 9254, "profit": 1049.90}
+{"side": "open", "price": 104930.00, "step": 9255}
+{"side": "close", "price": 103640.00, "step": 9260, "profit": -1290.10}
+{"side": "open", "price": 103570.00, "step": 9262}
+{"side": "close", "price": 102510.00, "step": 9266, "profit": -1060.10}
+{"side": "open", "price": 102930.00, "step": 9267}
+{"side": "close", "price": 102280.00, "step": 9268, "profit": -650.10}
+{"side": "open", "price": 101970.00, "step": 9271}
+{"side": "close", "price": 102390.00, "step": 9272, "profit": 419.90}
+{"side": "open", "price": 103800.00, "step": 9275}
+{"side": "close", "price": 104530.00, "step": 9276, "profit": 729.90}
+{"side": "open", "price": 103270.00, "step": 9278}
+{"side": "close", "price": 103950.00, "step": 9279, "profit": 679.90}
+{"side": "open", "price": 104970.00, "step": 9280}
+{"side": "close", "price": 107030.00, "step": 9283, "profit": 2059.90}
+{"side": "open", "price": 105690.00, "step": 9293}
+{"side": "close", "price": 105380.00, "step": 9294, "profit": -310.10}
+{"side": "open", "price": 104020.00, "step": 9301}
+{"side": "close", "price": 104290.00, "step": 9302, "profit": 269.90}
+{"side": "open", "price": 103790.00, "step": 9304}
+{"side": "close", "price": 104400.00, "step": 9305, "profit": 609.90}
+{"side": "open", "price": 103850.00, "step": 9310}
+{"side": "close", "price": 103680.00, "step": 9311, "profit": -170.10}
+{"side": "open", "price": 103280.00, "step": 9312}
+{"side": "close", "price": 102320.00, "step": 9315, "profit": -960.10}
+{"side": "open", "price": 101900.00, "step": 9316}
+{"side": "close", "price": 102170.00, "step": 9318, "profit": 269.90}
+{"side": "open", "price": 101620.00, "step": 9322}
+{"side": "close", "price": 101925.00, "step": 9323, "profit": 304.90}
+{"side": "open", "price": 105200.00, "step": 9326}
+{"side": "close", "price": 105520.00, "step": 9330, "profit": 319.90}
+{"side": "open", "price": 103830.00, "step": 9331}
+{"side": "close", "price": 103930.00, "step": 9335, "profit": 99.90}
+{"side": "open", "price": 103020.00, "step": 9338}
+{"side": "close", "price": 103925.00, "step": 9339, "profit": 904.90}
+{"side": "open", "price": 104980.00, "step": 9342}
+{"side": "close", "price": 105010.00, "step": 9343, "profit": 29.90}
+{"side": "open", "price": 105470.00, "step": 9348}
+{"side": "close", "price": 105100.00, "step": 9349, "profit": -370.10}
+{"side": "open", "price": 102660.00, "step": 9407}
+{"side": "close", "price": 100965.00, "step": 9410, "profit": -1695.10}
+{"side": "open", "price": 100510.00, "step": 9412}
+{"side": "close", "price": 99412.00, "step": 9417, "profit": -1098.10}
+{"side": "open", "price": 98382.00, "step": 9418}
+{"side": "close", "price": 98827.00, "step": 9419, "profit": 444.90}
+{"side": "open", "price": 100620.00, "step": 9420}
+{"side": "close", "price": 100580.00, "step": 9421, "profit": -40.10}
+{"side": "open", "price": 102040.00, "step": 9422}
+{"side": "close", "price": 101190.00, "step": 9423, "profit": -850.10}
+{"side": "open", "price": 99816.00, "step": 9424}
+{"side": "close", "price": 99269.00, "step": 9425, "profit": -547.10}
+{"side": "open", "price": 99293.00, "step": 9426}
+{"side": "close", "price": 101620.00, "step": 9428, "profit": 2326.90}
+{"side": "open", "price": 101605.00, "step": 9429}
+{"side": "close", "price": 101790.00, "step": 9430, "profit": 184.90}
+{"side": "open", "price": 103050.00, "step": 9436}
+{"side": "close", "price": 103150.00, "step": 9437, "profit": 99.90}
+{"side": "open", "price": 100410.00, "step": 9453}
+{"side": "close", "price": 101340.00, "step": 9454, "profit": 929.90}
+{"side": "open", "price": 101820.00, "step": 9469}
+{"side": "close", "price": 101970.00, "step": 9470, "profit": 149.90}
+{"side": "open", "price": 103670.00, "step": 9475}
+{"side": "close", "price": 104300.00, "step": 9476, "profit": 629.90}
+{"side": "open", "price": 105590.00, "step": 9484}
+{"side": "close", "price": 105410.00, "step": 9485, "profit": -180.10}
+{"side": "open", "price": 105180.00, "step": 9487}
+{"side": "close", "price": 105150.00, "step": 9488, "profit": -30.10}
+{"side": "open", "price": 104200.00, "step": 9513}
+{"side": "close", "price": 104295.00, "step": 9514, "profit": 94.90}
+{"side": "open", "price": 105430.00, "step": 9519}
+{"side": "close", "price": 105090.00, "step": 9520, "profit": -340.10}
+{"side": "open", "price": 102710.00, "step": 9522}
+{"side": "close", "price": 102400.00, "step": 9523, "profit": -310.10}
+{"side": "open", "price": 102270.00, "step": 9525}
+{"side": "close", "price": 102320.00, "step": 9526, "profit": 49.90}
+{"side": "open", "price": 98813.00, "step": 9563}
+{"side": "close", "price": 98191.00, "step": 9564, "profit": -622.10}
+{"side": "open", "price": 99429.00, "step": 9567}
+{"side": "close", "price": 97600.00, "step": 9575, "profit": -1829.10}
+{"side": "open", "price": 96452.00, "step": 9576}
+{"side": "close", "price": 94292.00, "step": 9581, "profit": -2160.10}
+{"side": "open", "price": 94737.00, "step": 9588}
+{"side": "close", "price": 99879.00, "step": 9594, "profit": 5141.90}
+{"side": "open", "price": 101900.00, "step": 9595}
+{"side": "close", "price": 101110.00, "step": 9596, "profit": -790.10}
+{"side": "open", "price": 98672.00, "step": 9620}
+{"side": "close", "price": 97781.00, "step": 9623, "profit": -891.10}
+{"side": "open", "price": 97367.00, "step": 9633}
+{"side": "close", "price": 97752.00, "step": 9634, "profit": 384.90}
+{"side": "open", "price": 98202.00, "step": 9635}
+{"side": "close", "price": 98013.00, "step": 9636, "profit": -189.10}
+{"side": "open", "price": 97359.00, "step": 9663}
+{"side": "close", "price": 96884.00, "step": 9669, "profit": -475.10}
+{"side": "open", "price": 95765.00, "step": 9692}
+{"side": "close", "price": 96069.00, "step": 9693, "profit": 303.90}
+{"side": "open", "price": 96234.00, "step": 9738}
+{"side": "close", "price": 96097.00, "step": 9739, "profit": -137.10}
+{"side": "open", "price": 95383.00, "step": 9741}
+{"side": "close", "price": 96876.00, "step": 9744, "profit": 1492.90}
+{"side": "open", "price": 96484.00, "step": 9784}
+{"side": "close", "price": 95450.00, "step": 9788, "profit": -1034.10}
+{"side": "open", "price": 95737.00, "step": 9794}
+{"side": "close", "price": 95431.00, "step": 9795, "profit": -306.10}
+{"side": "open", "price": 95131.00, "step": 9805}
+{"side": "close", "price": 95969.00, "step": 9807, "profit": 837.90}
+{"side": "open", "price": 97965.00, "step": 9814}
+{"side": "close", "price": 97893.00, "step": 9816, "profit": -72.10}
+{"side": "open", "price": 97475.00, "step": 9818}
+{"side": "close", "price": 96898.00, "step": 9820, "profit": -577.10}
+{"side": "open", "price": 96016.00, "step": 9824}
+{"side": "close", "price": 96323.00, "step": 9825, "profit": 306.90}
+{"side": "open", "price": 96200.00, "step": 9829}
+{"side": "close", "price": 95907.00, "step": 9830, "profit": -293.10}
+{"side": "open", "price": 96097.00, "step": 9831}
+{"side": "close", "price": 96140.00, "step": 9834, "profit": 42.90}
+{"side": "open", "price": 95796.00, "step": 9835}
+{"side": "close", "price": 96394.00, "step": 9836, "profit": 597.90}
+{"side": "open", "price": 96635.00, "step": 9837}
+{"side": "close", "price": 96536.00, "step": 9838, "profit": -99.10}
+{"side": "open", "price": 96925.00, "step": 9840}
+{"side": "close", "price": 96687.00, "step": 9841, "profit": -238.10}
+{"side": "open", "price": 96719.00, "step": 9842}
+{"side": "close", "price": 97266.00, "step": 9843, "profit": 546.90}
+{"side": "open", "price": 96825.00, "step": 9845}
+{"side": "close", "price": 96996.00, "step": 9846, "profit": 170.90}
+{"side": "open", "price": 96736.00, "step": 9852}
+{"side": "close", "price": 96937.50, "step": 9853, "profit": 201.40}
+{"side": "open", "price": 97059.00, "step": 9855}
+{"side": "close", "price": 97761.00, "step": 9856, "profit": 701.90}
+{"side": "open", "price": 98513.00, "step": 9857}
+{"side": "close", "price": 97207.00, "step": 9860, "profit": -1306.10}
+{"side": "open", "price": 96386.00, "step": 9917}
+{"side": "close", "price": 96531.00, "step": 9918, "profit": 144.90}
+{"side": "open", "price": 96939.00, "step": 9926}
+{"side": "close", "price": 95783.00, "step": 9927, "profit": -1156.10}
+{"side": "open", "price": 95485.00, "step": 9928}
+{"side": "close", "price": 95644.00, "step": 9929, "profit": 158.90}
+{"side": "open", "price": 95714.00, "step": 9931}
+{"side": "close", "price": 96189.00, "step": 9932, "profit": 474.90}
+{"side": "open", "price": 96584.00, "step": 9933}
+{"side": "close", "price": 96047.00, "step": 9934, "profit": -537.10}
+{"side": "open", "price": 95955.00, "step": 9935}
+{"side": "close", "price": 95796.00, "step": 9936, "profit": -159.10}
+{"side": "open", "price": 96466.00, "step": 9937}
+{"side": "close", "price": 96252.00, "step": 9938, "profit": -214.10}
+{"side": "open", "price": 96252.00, "step": 9940}
+{"side": "close", "price": 95797.00, "step": 9941, "profit": -455.10}
+{"side": "open", "price": 95537.00, "step": 9942}
+{"side": "close", "price": 95649.00, "step": 9943, "profit": 111.90}
+{"side": "open", "price": 95433.00, "step": 9944}
+{"side": "close", "price": 95934.00, "step": 9946, "profit": 500.90}
+{"side": "open", "price": 95820.00, "step": 9947}
+{"side": "close", "price": 96390.00, "step": 9948, "profit": 569.90}
+{"side": "open", "price": 96407.00, "step": 9949}
+{"side": "close", "price": 95711.00, "step": 9950, "profit": -696.10}
+{"side": "open", "price": 95710.00, "step": 9951}
+{"side": "close", "price": 95219.00, "step": 9957, "profit": -491.10}
+{"side": "open", "price": 96488.38, "step": 9970}
+{"side": "close", "price": 96600.50, "step": 9971, "profit": 112.03}
+{"side": "open", "price": 96488.00, "step": 9973}
+{"side": "close", "price": 95945.00, "step": 9974, "profit": -543.10}
+{"side": "open", "price": 96108.00, "step": 9975}
+{"side": "close", "price": 96500.00, "step": 9976, "profit": 391.90}
+{"side": "open", "price": 96615.00, "step": 9977}
+{"side": "close", "price": 95864.00, "step": 9978, "profit": -751.10}
+{"side": "open", "price": 96434.00, "step": 9979}
+{"side": "close", "price": 96381.00, "step": 9980, "profit": -53.10}
+{"side": "open", "price": 96471.00, "step": 10062}
+{"side": "close", "price": 96664.00, "step": 10063, "profit": 192.90}
+{"side": "open", "price": 95775.00, "step": 10073}
+{"side": "close", "price": 95856.00, "step": 10074, "profit": 80.90}
+{"side": "open", "price": 96450.00, "step": 10079}
+{"side": "close", "price": 96438.00, "step": 10080, "profit": -12.10}
+{"side": "open", "price": 95453.00, "step": 10084}
+{"side": "close", "price": 95904.00, "step": 10085, "profit": 450.90}
+{"side": "open", "price": 95813.00, "step": 10090}
+{"side": "close", "price": 96020.00, "step": 10091, "profit": 206.90}
+{"side": "open", "price": 94891.00, "step": 10094}
+{"side": "close", "price": 94502.00, "step": 10095, "profit": -389.10}
+{"side": "open", "price": 94171.00, "step": 10101}
+{"side": "close", "price": 92707.00, "step": 10106, "profit": -1464.10}
+{"side": "open", "price": 89763.00, "step": 10111}

@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import click
 from getpass import getpass
+import json 
 
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
@@ -23,21 +24,25 @@ class TradingEnv(gym.Env):
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
         self.current_step = 0
-        
+        self.lambda_drawdown = 0.0  # Penalty for maximum drawdown. Start with no penalty first
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = spaces.Discrete(3)
         
         # Observation space: each row of data plus current position flag.
         num_features = self.data.shape[1]
-        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
-        
+        #self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
+        self.observation_space = spaces.Box(low=-1000000.0, high=1000000.0, shape=(num_features + 1,), dtype=np.float32)
+        self.max_profit = 0.0
         self.position = 0  # 0: not in a trade, 1: in a trade.
         self.entry_price = 0.0  # Price at which trade is opened.
+        self.trade_start_step = 0  # Step at which trade is opened.
         
     def reset(self):
-        self.current_step = 0
         self.position = 0
         self.entry_price = 0.0
+        self.max_profit = 0.0
+        self.trade_start_step = 0
+        self.current_step = 0
         return self._get_observation()
     
     def _get_observation(self):
@@ -56,20 +61,50 @@ class TradingEnv(gym.Env):
         #print(f"Step: {self.current_step:9,}")
         if action == 1:  # Open trade.
             if self.position == 0:
-                print(f"Opening trade at price: {current_price:9,.2f}, step: {self.current_step}")
+                log_message = {
+                    'side': 'open',
+                    'current_price': current_price,
+                    'step': self.current_step
+                }
+                print(json.dumps(log_message))
                 self.position = 1
                 self.entry_price = current_price
+                self.trade_start_step = self.current_step
+                self.max_profit = 0.0
         elif action == 2:  # Close trade.
             if self.position == 1:
-                profit = current_price - self.entry_price - self.trading_cost
-                print(f"Closing trade at price: {current_price:9,.2f}, step: {self.current_step}. Profit: {profit:9,.2f}")
-                reward = profit
+                trade_duration = self.current_step - self.trade_start_step + 1
+                profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
+                self.max_profit = max(self.max_profit, profit)
+                drawdown_penalty = self.lambda_drawdown * (self.max_profit - (current_price - self.entry_price))
+
+                if profit < 0:
+                    reward = profit
+                else:
+                    # Final drawdown penalty based on maximum drawdown experienced:
+                    reward = (profit / trade_duration) - drawdown_penalty
+                log_message = {
+                    'side': 'close',
+                    'current_price': current_price,
+                    'step': self.current_step,
+                    'profit': profit,
+                    'reward': reward,
+                    'max_profit': self.max_profit,
+                    'trade_duration': trade_duration,
+                    'drawdown_penalty': drawdown_penalty
+                }
+                print(json.dumps(log_message))
                 self.position = 0
                 self.entry_price = 0.0
+                self.max_profit = 0.0
+        elif self.position == 1:
+            # If trade is still open, update nax_profit based on unrealized profit
+            unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
+            self.max_profit = max(self.max_profit, unrealized_profit)
         # Action 0 (Hold) gives no reward (or could include a small time penalty).
-        
         self.current_step += 1
         if self.current_step >= len(self.data) - 1:
+            print("Done:", self.current_step, len(self.data))
             done = True
         
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
@@ -126,7 +161,7 @@ def main(timesteps: int, iteration: int):
 
     # Setup Eval environment similar to training
     eval_env = TradingEnv(df, trading_cost=0.1)
-    eval_env = Monitor(eval_env)
+    #eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     # Configure the evaluation callback.
@@ -134,7 +169,7 @@ def main(timesteps: int, iteration: int):
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=10000,  # Evaluate every 10,000 steps (adjust as needed)
+        eval_freq=100000,  # Evaluate every 100,000 steps (adjust as needed)
         n_eval_episodes=5,
         deterministic=True,
     )
