@@ -174,7 +174,7 @@ def main(timesteps: int, iteration: int):
         "MlpLstmPolicy", 
         train_env, 
         verbose=1, 
-        target_kl=0.05,
+        target_kl=0.5,
         tensorboard_log=logdir
     )
 
