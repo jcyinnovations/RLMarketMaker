@@ -19,7 +19,7 @@ from rl_lstm_trader import TradingEnv
 #################################################################
 
 @click.command()
-@click.option('--iteration', default=4, type=int, show_default=True, help='Current Iteration')
+@click.option('--iteration', default=5, type=int, show_default=True, help='Current Iteration')
 #@click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 def main(iteration: int):
     #iteration = 3
@@ -58,7 +58,6 @@ def main(iteration: int):
     print("Run evals...")
     rounds = 0
     while True:
-        print(f"Round: {rounds}")
         # Pass hidden state and episode_start flag to predict.
         action, recurrent_states = model.predict(
             obs, 
@@ -72,7 +71,7 @@ def main(iteration: int):
         # After the first step, episode_start becomes False.
         episode_start = np.array([False])
         rounds += 1
-        if rounds > 10000 and done:
+        if done:
             break
 
     print(f"\nTotal reward from evaluation:", sum(rewards))

@@ -25,9 +25,9 @@ class TradingEnv(gym.Env):
         self.trading_cost = trading_cost
         self.current_step = 0
         self.lambda_drawdown = 0.0  # Penalty for maximum drawdown. Start with no penalty first
+        self.target_duration = 8  # Maximum trade duration in hours.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = spaces.Discrete(3)
-        
         # Observation space: each row of data plus current position flag.
         num_features = self.data.shape[1]
         #self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
@@ -77,12 +77,8 @@ class TradingEnv(gym.Env):
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
                 drawdown_penalty = self.lambda_drawdown * (self.max_profit - (current_price - self.entry_price))
-
-                if profit < 0:
-                    reward = profit
-                else:
-                    # Final drawdown penalty based on maximum drawdown experienced:
-                    reward = (profit / trade_duration) - drawdown_penalty
+                # Final drawdown penalty based on maximum drawdown experienced:
+                reward = (profit * self.time_penalty(trade_duration) ) - drawdown_penalty
                 log_message = {
                     'side': 'close',
                     'current_price': current_price,
@@ -110,6 +106,13 @@ class TradingEnv(gym.Env):
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, {}
     
+    def time_penalty(self, current_duration):
+        # Shape the discount to keep trades shorted than 24 hours
+        discount = 1.0
+        if current_duration > self.target_duration:
+            discount = self.target_duration/current_duration
+        return discount
+
     def render(self, mode='human'):
         print(f"Step: {self.current_step}, Position: {self.position}")
 
