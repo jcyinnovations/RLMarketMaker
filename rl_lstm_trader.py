@@ -1,8 +1,9 @@
 import pandas as pd
-import gym
 import os 
 from datetime import datetime, timedelta, timezone
-from gym import spaces
+#import gym
+#from gym import spaces
+import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
 import click
@@ -19,17 +20,18 @@ from stable_baselines3.common.monitor import Monitor
 
 # Step 2. Define the custom Gym trading environment.
 class TradingEnv(gym.Env):
-    def __init__(self, data, trading_cost=0.0):
+    def __init__(self, data, trading_cost=0.0, render_mode='human'):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
         self.lambda_drawdown = 0.0  # Penalty for maximum drawdown. Start with no penalty first
         self.target_duration = 24  # Maximum trade duration in hours.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
-        self.action_space = spaces.Discrete(3)
+        self.action_space = gym.spaces.Discrete(3)
         # Observation space: each row of data plus current position flag.
         num_features = self.data.shape[1]
-        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
+        self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
+        self.num_envs = 16
         #self.observation_space = spaces.Box(low=-1000000.0, high=1000000.0, shape=(num_features + 1,), dtype=np.float32)
         self.position = 0  # 0: not in a trade, 1: in a trade.
         self.entry_price = 0.0  # Price at which trade is opened.
@@ -38,23 +40,27 @@ class TradingEnv(gym.Env):
         self.trade_start_step = 0  # Step at which trade is opened.
         self.current_step = 0
         
-    def reset(self):
+    def reset(self, seed=None, options=None):
+        if seed is not None:
+            self.seed = seed
         self.position = 0
         self.entry_price = 0.0
         self.prev_price = 0.0
         self.max_profit = 0.0
         self.trade_start_step = 0
         self.current_step = 0
-        return self._get_observation()
+        return self._get_observation(), {}
     
     def _get_observation(self):
         # Combine current row's features with the position indicator.
         state = self.data.iloc[self.current_step].values
+        print(f"State: {state} ||")
         return np.append(state, self.position)
     
     def step(self, action):
         reward = 0.0
         done = False
+        truncated = False
         
         # Get current price from the DataFrame.
         current_price = self.data.iloc[self.current_step]['price']
@@ -72,15 +78,28 @@ class TradingEnv(gym.Env):
                 self.max_profit = max(self.max_profit, unrealized_profit)
                 # Now calculate the hold reward (discounted profit/loss of current step)
                 step_profit = 100 * (current_price - self.prev_price)/self.prev_price
-                reward = step_profit * self.time_penalty(trade_duration) 
+                time_penalty = self.time_penalty(trade_duration)
+                # Holding gets penalized over long periods of time
+                reward = step_profit * time_penalty + ((1-time_penalty) * -0.1)
                 self.prev_price = current_price
+                log_message = {
+                    'side': 'hold',
+                    'current_price': current_price,
+                    'step': self.current_step,
+                    'profit': step_profit,
+                    'reward': reward,
+                    'max_profit': self.max_profit,
+                    'time_penalty': time_penalty
+                }
+                print(json.dumps(log_message))
         elif action == 1:  # Open trade.
             if self.position == 0:
                 reward = 0.0001
                 log_message = {
                     'side': 'open',
                     'current_price': current_price,
-                    'step': self.current_step
+                    'step': self.current_step,
+                    'reward': reward
                 }
                 print(json.dumps(log_message))
                 self.position = 1
@@ -95,7 +114,8 @@ class TradingEnv(gym.Env):
                 self.max_profit = max(self.max_profit, profit)
                 drawdown_penalty = self.lambda_drawdown * (self.max_profit - (current_price - self.entry_price))
                 # Final drawdown penalty based on maximum drawdown experienced:
-                reward = (profit * self.time_penalty(trade_duration) ) - drawdown_penalty
+                time_penalty = self.time_penalty(trade_duration)
+                reward = (profit * time_penalty ) - drawdown_penalty
                 log_message = {
                     'side': 'close',
                     'current_price': current_price,
@@ -104,27 +124,34 @@ class TradingEnv(gym.Env):
                     'reward': reward,
                     'max_profit': self.max_profit,
                     'trade_duration': trade_duration,
-                    'drawdown_penalty': drawdown_penalty
+                    'drawdown_penalty': drawdown_penalty,
+                    'time_penalty': time_penalty
                 }
                 print(json.dumps(log_message))
                 self.position = 0
                 self.entry_price = 0.0
                 self.max_profit = 0.0
                 self.prev_price = 0.0
+                done = True
 
         self.current_step += 1
-        if self.current_step >= len(self.data) - 1:
+        if done or self.current_step >= len(self.data) - 1:
             print("Done:", self.current_step, len(self.data))
+            # Episode ends due to end of data
+            if self.current_step >= len(self.data) - 1:
+                truncated = True
+            # Set new starting point for the next episode.
+            self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
             done = True
         
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
-        return next_state, reward, done, {}
+        return next_state, reward, done, truncated, {}
     
     def time_penalty(self, current_duration):
         # Shape the discount to keep trades shorted than 24 hours
         discount = 1.0
-        if current_duration > self.target_duration:
-            discount = self.target_duration/current_duration
+        #if current_duration > self.target_duration:
+        discount = self.target_duration/current_duration
         return discount
 
     def render(self, mode='human'):
@@ -165,7 +192,7 @@ def main(timesteps: int, iteration: int):
 
     # Step 3. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
     train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1)])
-    train_env = VecNormalize(train_env, norm_obs=True, norm_reward=False, clip_obs=10.)
+    train_env = VecNormalize(train_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     initial_obs = train_env.reset()
     print("\nInitial observation:", initial_obs)
     # Step 4. Create and train the Recurrent PPO model using an LSTM-based policy.
@@ -173,13 +200,14 @@ def main(timesteps: int, iteration: int):
         "MlpLstmPolicy", 
         train_env, 
         verbose=1, 
-        tensorboard_log=logdir
+        tensorboard_log=logdir,
+        gamma=0.999
     )
     # target_kl=0.5,
 
     # Setup Eval environment similar to training
     eval_env = TradingEnv(df, trading_cost=0.1)
-    #eval_env = Monitor(eval_env)
+    eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     # Configure the evaluation callback.
@@ -187,7 +215,7 @@ def main(timesteps: int, iteration: int):
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=25000,  # Evaluate every 25,000 steps (adjust as needed)
+        eval_freq=100000,  # Evaluate every 100,000 steps (adjust as needed)
         n_eval_episodes=5,
         deterministic=True,
     )
