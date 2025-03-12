@@ -23,20 +23,20 @@ class TradingEnv(gym.Env):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
-        self.current_step = 0
         self.lambda_drawdown = 0.0  # Penalty for maximum drawdown. Start with no penalty first
-        self.target_duration = 8  # Maximum trade duration in hours.
+        self.target_duration = 24  # Maximum trade duration in hours.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = spaces.Discrete(3)
         # Observation space: each row of data plus current position flag.
         num_features = self.data.shape[1]
-        #self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
-        self.observation_space = spaces.Box(low=-1000000.0, high=1000000.0, shape=(num_features + 1,), dtype=np.float32)
-        self.max_profit = 0.0
+        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
+        #self.observation_space = spaces.Box(low=-1000000.0, high=1000000.0, shape=(num_features + 1,), dtype=np.float32)
         self.position = 0  # 0: not in a trade, 1: in a trade.
         self.entry_price = 0.0  # Price at which trade is opened.
         self.prev_price = 0.0  # Previous price for calculating hold returns
+        self.max_profit = 0.0
         self.trade_start_step = 0  # Step at which trade is opened.
+        self.current_step = 0
         
     def reset(self):
         self.position = 0
@@ -58,7 +58,6 @@ class TradingEnv(gym.Env):
         
         # Get current price from the DataFrame.
         current_price = self.data.iloc[self.current_step]['price']
-        
         # Process the action.
         #print(f"Step: {self.current_step:9,}")
         if action == 0:  # Hold position.
@@ -174,9 +173,9 @@ def main(timesteps: int, iteration: int):
         "MlpLstmPolicy", 
         train_env, 
         verbose=1, 
-        target_kl=0.5,
         tensorboard_log=logdir
     )
+    # target_kl=0.5,
 
     # Setup Eval environment similar to training
     eval_env = TradingEnv(df, trading_cost=0.1)
