@@ -10,4 +10,5 @@ data_v1/
 logs/
 models/
 *.ipynb
-
+binance/
+binance-2017_2025.csv

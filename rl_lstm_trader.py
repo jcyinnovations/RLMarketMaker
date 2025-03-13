@@ -12,7 +12,7 @@ import json
 
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
-from stable_baselines3.common.callbacks import EvalCallback
+from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.monitor import Monitor
 
 # Ensure your DataFrame contains a 'price' column for calculating trade profit.
@@ -97,10 +97,8 @@ class TradingEnv(gym.Env):
                 print(json.dumps(log_message))
             else:
                 # No current trade so check if we're in uptrend to penalize holding
-                if step_profit > 0:
-                    reward = -0.001
-                else:
-                    reward = 0.001
+                if step_profit < 0:
+                    reward = 0.0001
         elif action == 1:  # Open trade.
             if self.position == 0:
                 reward = 0.0001
@@ -237,6 +235,13 @@ def main(timesteps: int, iteration: int, discount_factor: float):
         n_eval_episodes=5,
         deterministic=True,
     )
+    # Configure a Checkpoint callback to save the model frequently since
+    # Evalcallback only saves the best model based on the mean reward.
+    checkpoint_callback = CheckpointCallback(
+        save_freq=10000, 
+        save_path=f"{models_dir}/checkpoints/",
+        name_prefix="rppo_trading_model"
+    )
 
     start = datetime.now(timezone.utc)
     print("######################")
@@ -245,7 +250,7 @@ def main(timesteps: int, iteration: int, discount_factor: float):
     print("######################")
     model.learn(
         total_timesteps=timesteps, 
-        callback=eval_callback
+        callback=[eval_callback, checkpoint_callback]
     )
     model.save(f"{models_dir}/rppo_trading_model")
     # Save the VecNormalize statistics for the recurrent model.
