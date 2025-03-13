@@ -72,8 +72,13 @@ def main(iteration: int):
         episode_start = np.array([False])
         rounds += 1
         if done:
+            recurrent_states = None  # reset hidden states when an episode ends
+            obs = env_real.reset()
+            episode_start = np.array([True])
+            print("Done. Rounds:", rounds)
+        if rounds > 10000:
             break
-
+    print(f"Rounds: {rounds}")
     print(f"\nTotal reward from evaluation:", sum(rewards))
     print("########################")
     print("# Evaluation complete. #")

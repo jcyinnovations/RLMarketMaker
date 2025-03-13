@@ -48,13 +48,14 @@ class TradingEnv(gym.Env):
         self.prev_price = 0.0
         self.max_profit = 0.0
         self.trade_start_step = 0
-        self.current_step = 0
+        #self.current_step = 0
+        self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
         return self._get_observation(), {}
     
     def _get_observation(self):
         # Combine current row's features with the position indicator.
         state = self.data.iloc[self.current_step].values
-        print(f"State: {state} ||")
+        #print(f"State: {state} ||")
         return np.append(state, self.position)
     
     def step(self, action):
@@ -135,13 +136,13 @@ class TradingEnv(gym.Env):
                 done = True
 
         self.current_step += 1
-        if done or self.current_step >= len(self.data) - 1:
-            print("Done:", self.current_step, len(self.data))
-            # Episode ends due to end of data
-            if self.current_step >= len(self.data) - 1:
-                truncated = True
-            # Set new starting point for the next episode.
+        if self.current_step >= len(self.data) - 1:
             self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
+            #print("Done:", self.current_step, len(self.data))
+            # Episode ends due to end of data
+            #if self.current_step >= len(self.data) - 1:
+            #    truncated = True
+            # Set new starting point for the next episode.
             done = True
         
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
@@ -150,8 +151,8 @@ class TradingEnv(gym.Env):
     def time_penalty(self, current_duration):
         # Shape the discount to keep trades shorted than 24 hours
         discount = 1.0
-        #if current_duration > self.target_duration:
-        discount = self.target_duration/current_duration
+        if current_duration > self.target_duration:
+            discount = self.target_duration/current_duration
         return discount
 
     def render(self, mode='human'):
@@ -165,7 +166,8 @@ class TradingEnv(gym.Env):
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
-def main(timesteps: int, iteration: int):
+@click.option('--discount_factor', default=0.999, type=float, show_default=True, help='Discount Factor')
+def main(timesteps: int, iteration: int, discount_factor: float):
     #iteration = 3
     #total_timesteps = 2000000
     iteration_name = f"iteration-{iteration}"
@@ -201,7 +203,7 @@ def main(timesteps: int, iteration: int):
         train_env, 
         verbose=1, 
         tensorboard_log=logdir,
-        gamma=0.999
+        gamma=discount_factor
     )
     # target_kl=0.5,
 
@@ -209,13 +211,20 @@ def main(timesteps: int, iteration: int):
     eval_env = TradingEnv(df, trading_cost=0.1)
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
-    eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=True, clip_obs=10.)
+    eval_env = VecNormalize(
+        eval_env, 
+        norm_obs=True, 
+        norm_reward=False,
+        training=False, 
+        clip_obs=10., 
+        gamma=discount_factor
+    )
     # Configure the evaluation callback.
     eval_callback = EvalCallback(
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=100000,  # Evaluate every 100,000 steps (adjust as needed)
+        eval_freq=25000,  # Evaluate every N steps (adjust as needed)
         n_eval_episodes=5,
         deterministic=True,
     )
