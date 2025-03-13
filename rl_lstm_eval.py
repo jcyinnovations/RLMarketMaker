@@ -33,7 +33,7 @@ def main(iteration: int):
     df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
 
     # Assume real_world_data is your new DataFrame with real-world signals.
-    env_real = TradingEnv(df, trading_cost=0.1)
+    env_real = TradingEnv(df, trading_cost=0.1, render_mode='human')
     env_real = DummyVecEnv([lambda: env_real])
     # Load the normalization parameters saved during training.
     env_real = VecNormalize.load(f"{models_dir}/vec_normalize_env_rnn.pkl", env_real)

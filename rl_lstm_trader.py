@@ -59,30 +59,29 @@ class TradingEnv(gym.Env):
         return np.append(state, self.position)
     
     def step(self, action):
-        reward = 0.0
+        reward = -0.0001  # Default reward for not taking any action.
         done = False
         truncated = False
         
         # Get current price from the DataFrame.
         current_price = self.data.iloc[self.current_step]['price']
         # Process the action.
-        #print(f"Step: {self.current_step:9,}")
+        #print(f"----->Step: {self.current_step:9,}, Action: {action}")
         if action == 0:  # Hold position.
             # Action 0 (Hold) gives:
             # - a small time penalty if not in a trade
             # - a small reward if in a trade based on current return
             reward = -0.0001
+            # Now calculate the hold reward (discounted profit/loss of current step)
+            step_profit = 100 * (current_price - self.prev_price)/self.prev_price
             if self.position == 1:
                 # If trade is still open, update nax_profit based on unrealized profit
                 trade_duration = self.current_step - self.trade_start_step + 1
                 unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, unrealized_profit)
-                # Now calculate the hold reward (discounted profit/loss of current step)
-                step_profit = 100 * (current_price - self.prev_price)/self.prev_price
                 time_penalty = self.time_penalty(trade_duration)
                 # Holding gets penalized over long periods of time
                 reward = step_profit * time_penalty + ((1-time_penalty) * -0.1)
-                self.prev_price = current_price
                 log_message = {
                     'side': 'hold',
                     'current_price': current_price,
@@ -93,6 +92,12 @@ class TradingEnv(gym.Env):
                     'time_penalty': time_penalty
                 }
                 print(json.dumps(log_message))
+            else:
+                # No current trade so check if we're in uptrend to penalize holding
+                if step_profit > 0:
+                    reward = -0.001
+                else:
+                    reward = 0.001
         elif action == 1:  # Open trade.
             if self.position == 0:
                 reward = 0.0001
@@ -105,7 +110,6 @@ class TradingEnv(gym.Env):
                 print(json.dumps(log_message))
                 self.position = 1
                 self.entry_price = current_price
-                self.prev_price = current_price
                 self.trade_start_step = self.current_step
                 self.max_profit = 0.0
         elif action == 2:  # Close trade.
@@ -129,12 +133,13 @@ class TradingEnv(gym.Env):
                     'time_penalty': time_penalty
                 }
                 print(json.dumps(log_message))
-                self.position = 0
-                self.entry_price = 0.0
-                self.max_profit = 0.0
-                self.prev_price = 0.0
                 done = True
+                #self.position = 0
+                #self.entry_price = 0.0
+                #self.max_profit = 0.0
+                #self.prev_price = 0.0
 
+        self.prev_price = current_price
         self.current_step += 1
         if self.current_step >= len(self.data) - 1:
             self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
@@ -203,7 +208,8 @@ def main(timesteps: int, iteration: int, discount_factor: float):
         train_env, 
         verbose=1, 
         tensorboard_log=logdir,
-        gamma=discount_factor
+        gamma=discount_factor,
+        learning_rate=0.0001,
     )
     # target_kl=0.5,
 
