@@ -73,7 +73,10 @@ class TradingEnv(gym.Env):
             # - a small reward if in a trade based on current return
             reward = -0.0001
             # Now calculate the hold reward (discounted profit/loss of current step)
-            step_profit = 100 * (current_price - self.prev_price)/self.prev_price
+            if self.prev_price == 0.0:
+                step_profit = 0.0
+            else:
+                step_profit = 100 * (current_price - self.prev_price)/self.prev_price
             if self.position == 1:
                 # If trade is still open, update nax_profit based on unrealized profit
                 trade_duration = self.current_step - self.trade_start_step + 1
