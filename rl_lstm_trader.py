@@ -224,14 +224,15 @@ def main(timesteps: int, iteration: int, discount_factor: float):
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=25000,  # Evaluate every N steps (adjust as needed)
+        eval_freq=25000, 
         n_eval_episodes=5,
         deterministic=True,
     )
 
+    start = datetime.now(timezone.utc)
     print("######################")
     print("#   Training Start.  #")
-    print(f"# {datetime.now(timezone.utc)} #")
+    print(f"# {start} #")
     print("######################")
     model.learn(
         total_timesteps=timesteps, 
@@ -241,9 +242,10 @@ def main(timesteps: int, iteration: int, discount_factor: float):
     # Save the VecNormalize statistics for the recurrent model.
     train_env.save(f"{models_dir}/vec_normalize_env_rnn.pkl")
 
+    end = datetime.now(timezone.utc)
     print("######################")
     print("# Training complete. #")
-    print(f"# {datetime.now(timezone.utc)} #")
+    print(f"# {end} #")
     print("######################")
 
     # Step 5. Evaluate the trained agent.
@@ -252,28 +254,6 @@ def main(timesteps: int, iteration: int, discount_factor: float):
     recurrent_states = None  # initialize hidden states as None
     episode_start = np.array([True])  # marks the beginning of an episode
     rewards = []
-    '''
-    while True:
-        # Pass hidden state and episode_start flag to predict.
-        action, recurrent_states = model.predict(
-            obs, 
-            state=recurrent_states, 
-            episode_start=episode_start, 
-            deterministic=True
-        )
-        obs, reward, done, _ = train_env.step(action)
-        rewards.append(reward)
-        train_env.render()
-        # After the first step, episode_start becomes False.
-        episode_start = np.array([False])
-        if done:
-            break
-
-    print(f"\nTotal reward from evaluation: {sum(rewards)}")
-    print("########################")
-    print("# Evaluation complete. #")
-    print("########################")
-    '''
     train_env.close()
     eval_env.close()
 
