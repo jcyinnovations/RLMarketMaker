@@ -172,8 +172,10 @@ class TradingEnv(gym.Env):
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
-@click.option('--discount_factor', default=0.999, type=float, show_default=True, help='Discount Factor')
-def main(timesteps: int, iteration: int, discount_factor: float):
+@click.option('--discount_factor', default=0.999, type=float, show_default=True, help='Discount Factor') 
+@click.option('--eval_frequency', default=100000, type=float, show_default=True, help='Frequency of evaluations') 
+@click.option('--checkpoint_frequency', default=10000, type=int, show_default=True, help='Frequency of checkpoints') 
+def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int):
     #iteration = 3
     #total_timesteps = 2000000
     iteration_name = f"iteration-{iteration}"
@@ -231,14 +233,14 @@ def main(timesteps: int, iteration: int, discount_factor: float):
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
-        eval_freq=25000, 
+        eval_freq=eval_frequency, 
         n_eval_episodes=5,
         deterministic=True,
     )
     # Configure a Checkpoint callback to save the model frequently since
     # Evalcallback only saves the best model based on the mean reward.
     checkpoint_callback = CheckpointCallback(
-        save_freq=10000, 
+        save_freq=checkpoint_frequency, 
         save_path=f"{models_dir}/checkpoints/",
         name_prefix="rppo_trading_model"
     )
