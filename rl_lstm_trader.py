@@ -182,7 +182,7 @@ class TradingEnv(gym.Env):
 
     def time_penalty(self, current_duration):
         # Shape the discount to keep trades shorted than 24 hours
-        discount = math.exp((current_duration-1)/-16)
+        discount = 10 * math.exp((current_duration-1)/-16)
         #if current_duration > self.target_duration:
         #    discount = 1/current_duration
         return discount
