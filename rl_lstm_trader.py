@@ -139,7 +139,7 @@ class TradingEnv(gym.Env):
                 trade_duration = self.current_step - self.trade_start_step + 1
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
-                drawdown_penalty = self.lambda_drawdown * (self.max_profit - (current_price - self.entry_price))
+                drawdown_penalty = min(0, self.lambda_drawdown * (self.max_profit - (current_price - self.entry_price)))
                 # Final drawdown penalty based on maximum drawdown experienced:
                 time_penalty = self.time_penalty(trade_duration)
                 reward = (profit * time_penalty ) - drawdown_penalty
