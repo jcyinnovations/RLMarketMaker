@@ -45,7 +45,7 @@ class TradingEnv(gym.Env):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
-        self.lambda_drawdown = 0.0  # Penalty for maximum drawdown. Start with no penalty first
+        self.lambda_drawdown = 0.75  # Penalty weighting for maximum drawdown.
         self.target_duration = 24  # Maximum trade duration in hours.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = gym.spaces.Discrete(3)
