@@ -20,8 +20,9 @@ from rl_lstm_trader import TradingEnv
 
 @click.command()
 @click.option('--iteration', default=5, type=int, show_default=True, help='Current Iteration')
-#@click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
-def main(iteration: int):
+@click.option('--checkpoint', default=1000000, type=int, show_default=True, help='Target Checkpoint for Evaluation') 
+def main(iteration: int, checkpoint: int):
+    print("Evaluation for Iteration:", iteration, " Checkpoint:", checkpoint)
     #iteration = 3
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
@@ -46,7 +47,8 @@ def main(iteration: int):
 
     print("Loading Model...")
     #model = RecurrentPPO.load(f"{models_dir}/rppo_trading_model")
-    model = RecurrentPPO.load(f"{models_dir}/best_model")
+    #model = RecurrentPPO.load(f"{models_dir}/best_model")
+    model = RecurrentPPO.load(f"{models_dir}/checkpoints/rppo_trading_model_{checkpoint}_steps")
 
     # Step 5. Evaluate the trained agent.
     obs = env_real.reset()

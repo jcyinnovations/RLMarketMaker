@@ -13,7 +13,28 @@ import json
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
+from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
+
+# Callback to capture new, per-step reward metric
+class RewardPerStepCallback(BaseCallback):
+    def __init__(self, verbose=0):
+        super(RewardPerStepCallback, self).__init__(verbose)
+
+    def _on_step(self) -> bool:
+        # The Monitor wrapper adds an "episode" key in the info dict at the end of an episode.
+        infos = self.locals.get("infos", [])
+        for info in infos:
+            if "episode" in info:
+                episode_reward = info["episode"]["r"]
+                episode_length = info["episode"]["l"]
+                reward_per_step = episode_reward / episode_length if episode_length > 0 else 0
+                # Log the metric (for example, to TensorBoard)
+                self.logger.record("rollout/reward_per_step", reward_per_step)
+                if self.verbose:
+                    print("Episode reward per step:", reward_per_step)
+        return True
+
 
 # Ensure your DataFrame contains a 'price' column for calculating trade profit.
 # If necessary, adjust the column name in the environment code below.
@@ -245,6 +266,9 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         name_prefix="rppo_trading_model"
     )
 
+    # Reward per step callback
+    rewards_per_step_callback = RewardPerStepCallback(verbose=1)
+
     start = datetime.now(timezone.utc)
     print("######################")
     print("#   Training Start.  #")
@@ -252,7 +276,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     print("######################")
     model.learn(
         total_timesteps=timesteps, 
-        callback=[eval_callback, checkpoint_callback]
+        callback=[eval_callback, checkpoint_callback, rewards_per_step_callback]
     )
     model.save(f"{models_dir}/rppo_trading_model")
     # Save the VecNormalize statistics for the recurrent model.
