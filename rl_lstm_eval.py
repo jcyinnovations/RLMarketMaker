@@ -9,10 +9,10 @@ import os
 import click
 from datetime import datetime, timedelta, timezone
 from rl_lstm_trader import TradingEnv
+import json 
 
 # Ensure your DataFrame contains a 'price' column for calculating trade profit.
 # If necessary, adjust the column name in the environment code below.
-
 
 #################################################################
 #  LSTM-based Policy for Trading with Stable Baselines 3 (SB3)
@@ -43,9 +43,9 @@ def main(iteration: int, checkpoint: int):
     env_real.norm_reward = False
 
     initial_obs = env_real.reset()
-    print("\nInitial observation:", initial_obs)
+    #print("\nInitial observation:", initial_obs)
 
-    print("Loading Model...")
+    #print("Loading Model...")
     #model = RecurrentPPO.load(f"{models_dir}/rppo_trading_model")
     #model = RecurrentPPO.load(f"{models_dir}/best_model")
     model = RecurrentPPO.load(f"{models_dir}/checkpoints/rppo_trading_model_{checkpoint}_steps")
@@ -57,7 +57,8 @@ def main(iteration: int, checkpoint: int):
     recurrent_states = None  # initialize hidden states as None
     episode_start = np.array([True])  # marks the beginning of an episode
     rewards = []
-    print("Run evals...")
+    episode_rewards = []
+    #print("Run evals...")
     rounds = 0
     while True:
         # Pass hidden state and episode_start flag to predict.
@@ -68,23 +69,28 @@ def main(iteration: int, checkpoint: int):
             deterministic=True
         )
         obs, reward, done, _ = env_real.step(action)
-        rewards.append(reward)
+        rewards.append(reward[0])
+        episode_rewards.append(reward[0])
         env_real.render()
         # After the first step, episode_start becomes False.
         episode_start = np.array([False])
         rounds += 1
         if done:
+            print({"rewards": episode_rewards})
             recurrent_states = None  # reset hidden states when an episode ends
             obs = env_real.reset()
             episode_start = np.array([True])
-            print("Done. Rounds:", rounds)
+            episode_rewards = []
+            #print("Done. Rounds:", rounds)
         if rounds > 10000:
             break
+    '''
     print(f"Rounds: {rounds}")
     print(f"\nTotal reward from evaluation:", sum(rewards))
     print("########################")
     print("# Evaluation complete. #")
-    print("########################")
+    print("########################")'
+    '''
     env_real.close()
 
 if __name__ == "__main__":

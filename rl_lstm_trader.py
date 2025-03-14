@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import click
 from getpass import getpass
 import json 
+import math 
 
 from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
@@ -92,7 +93,7 @@ class TradingEnv(gym.Env):
             # Action 0 (Hold) gives:
             # - a small time penalty if not in a trade
             # - a small reward if in a trade based on current return
-            reward = -0.0001
+            #reward = -0.0001
             # Now calculate the hold reward (discounted profit/loss of current step)
             if self.prev_price == 0.0:
                 step_profit = 0.0
@@ -134,6 +135,9 @@ class TradingEnv(gym.Env):
                 self.entry_price = current_price
                 self.trade_start_step = self.current_step
                 self.max_profit = 0.0
+            else:
+                # Penalize opening a trade while already in a trade
+                reward = -0.9
         elif action == 2:  # Close trade.
             if self.position == 1:
                 trade_duration = self.current_step - self.trade_start_step + 1
@@ -175,11 +179,12 @@ class TradingEnv(gym.Env):
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, truncated, {}
     
+
     def time_penalty(self, current_duration):
         # Shape the discount to keep trades shorted than 24 hours
-        discount = 1.0
-        if current_duration > self.target_duration:
-            discount = self.target_duration/current_duration
+        discount = math.exp((current_duration-1)/-16)
+        #if current_duration > self.target_duration:
+        #    discount = 1/current_duration
         return discount
 
     def render(self, mode='human'):
