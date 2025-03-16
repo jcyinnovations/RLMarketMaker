@@ -182,7 +182,7 @@ class TradingEnv(gym.Env):
 
     def time_penalty(self, current_duration):
         # Shape the discount to keep trades shorted than 24 hours
-        discount = 10 * math.exp((current_duration-1)/-16)
+        discount = math.exp((current_duration-1)/-16) #10 *
         #if current_duration > self.target_duration:
         #    discount = 1/current_duration
         return discount
@@ -227,7 +227,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
 
     # Step 3. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
-    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1)])
+    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1) for _ in range(32)])
     train_env = VecNormalize(train_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     initial_obs = train_env.reset()
     print("\nInitial observation:", initial_obs)
