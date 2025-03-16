@@ -104,9 +104,7 @@ class TradingEnv(gym.Env):
                 trade_duration = self.current_step - self.trade_start_step + 1
                 unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, unrealized_profit)
-                time_penalty = self.time_penalty(trade_duration)
-                # Holding gets penalized over long periods of time
-                reward = step_profit * time_penalty + ((1-time_penalty) * -0.1)
+                reward = step_profit
                 log_message = {
                     'side': 'hold',
                     'current_price': current_price,
@@ -114,7 +112,6 @@ class TradingEnv(gym.Env):
                     'profit': step_profit,
                     'reward': reward,
                     'max_profit': self.max_profit,
-                    'time_penalty': time_penalty
                 }
                 print(json.dumps(log_message))
             else:
@@ -137,16 +134,14 @@ class TradingEnv(gym.Env):
                 self.max_profit = 0.0
             else:
                 # Penalize opening a trade while already in a trade
-                reward = -0.9
+                reward = -0.001
         elif action == 2:  # Close trade.
             if self.position == 1:
                 trade_duration = self.current_step - self.trade_start_step + 1
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
-                drawdown_penalty = 0 #min(0, self.lambda_drawdown * (self.max_profit - profit))
-                # Final drawdown penalty based on maximum drawdown experienced:
-                time_penalty = self.time_penalty(trade_duration)
-                reward = (profit * time_penalty ) - drawdown_penalty
+                
+                reward = profit
                 log_message = {
                     'side': 'close',
                     'current_price': current_price,
@@ -155,8 +150,6 @@ class TradingEnv(gym.Env):
                     'reward': reward,
                     'max_profit': self.max_profit,
                     'trade_duration': trade_duration,
-                    'drawdown_penalty': drawdown_penalty,
-                    'time_penalty': time_penalty
                 }
                 print(json.dumps(log_message))
                 done = True
@@ -178,14 +171,6 @@ class TradingEnv(gym.Env):
         
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, truncated, {}
-    
-
-    def time_penalty(self, current_duration):
-        # Shape the discount to keep trades shorted than 24 hours
-        discount = math.exp((current_duration-1)/-16) #10 *
-        #if current_duration > self.target_duration:
-        #    discount = 1/current_duration
-        return discount
 
     def render(self, mode='human'):
         print(f"Step: {self.current_step}, Position: {self.position}")
@@ -198,7 +183,7 @@ class TradingEnv(gym.Env):
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
-@click.option('--discount_factor', default=0.999, type=float, show_default=True, help='Discount Factor') 
+@click.option('--discount_factor', default=0.99, type=float, show_default=True, help='Discount Factor') 
 @click.option('--eval_frequency', default=100000, type=float, show_default=True, help='Frequency of evaluations') 
 @click.option('--checkpoint_frequency', default=10000, type=int, show_default=True, help='Frequency of checkpoints') 
 def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int):
