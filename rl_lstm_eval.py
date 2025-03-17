@@ -76,7 +76,7 @@ def main(iteration: int, checkpoint: int):
         episode_start = np.array([False])
         rounds += 1
         if done:
-            print({"rewards": episode_rewards})
+            print("\{\"rewards\": episode_rewards\}")
             recurrent_states = None  # reset hidden states when an episode ends
             obs = env_real.reset()
             episode_start = np.array([True])
