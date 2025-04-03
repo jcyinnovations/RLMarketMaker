@@ -63,6 +63,8 @@ class TradingEnv(gym.Env):
         self.current_step = 0
         
     def reset(self, seed=None, options=None):
+        # Reset the environment to an initial state.
+        super().reset(seed=seed)
         if seed is not None:
             self.seed = seed
         self.position = 0
@@ -86,7 +88,7 @@ class TradingEnv(gym.Env):
         truncated = False
         
         # Get current price from the DataFrame.
-        current_price = self.data.iloc[self.current_step]['price']
+        current_price = self.data.iloc[self.current_step]['c']
         # Process the action.
         #print(f"----->Step: {self.current_step:9,}, Action: {action}")
         if action == 0:  # Hold position.
@@ -183,7 +185,7 @@ class TradingEnv(gym.Env):
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
-@click.option('--discount_factor', default=0.99, type=float, show_default=True, help='Discount Factor') 
+@click.option('--discount_factor', default=0.95, type=float, show_default=True, help='Discount Factor') 
 @click.option('--eval_frequency', default=100000, type=float, show_default=True, help='Frequency of evaluations') 
 @click.option('--checkpoint_frequency', default=10000, type=int, show_default=True, help='Frequency of checkpoints') 
 def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int):
@@ -200,7 +202,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         os.makedirs(logdir)
 
     # Step 1. Load your pickled DataFrame.
-    data_path = './signals_df_2024_v40_iteration1_epoch206-TO_20250225-2-LONG.p'
+    data_path = './signal_with_market_data.p'
     df = pd.read_pickle(data_path)
 
     # Quick inspection of the data.
@@ -209,10 +211,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     print("\nDataFrame columns:", df.columns.tolist())
 
     # Remove columns not necessary for inference
-    df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
+    #df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
 
     # Step 3. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
-    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1) for _ in range(32)])
+    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1) for _ in range(128)])
     train_env = VecNormalize(train_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     initial_obs = train_env.reset()
     print("\nInitial observation:", initial_obs)
@@ -224,6 +226,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         tensorboard_log=logdir,
         gamma=discount_factor,
         learning_rate=0.0001,
+        n_steps=512,
     )
     # target_kl=0.5,
 

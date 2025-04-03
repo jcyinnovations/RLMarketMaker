@@ -26,12 +26,11 @@ def main(iteration: int, checkpoint: int):
     #iteration = 3
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
-
     # Step 1. Load your pickled DataFrame.
-    data_path = './signals_df_2024_v40_iteration1_epoch206-TO_20250225-2-LONG.p'
+    data_path = './signal_with_market_data.p'
     df = pd.read_pickle(data_path)
     # Remove columns not necessary for inference
-    df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
+    #df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
 
     # Assume real_world_data is your new DataFrame with real-world signals.
     env_real = TradingEnv(df, trading_cost=0.1, render_mode='human')
@@ -76,13 +75,15 @@ def main(iteration: int, checkpoint: int):
         episode_start = np.array([False])
         rounds += 1
         if done:
-            print("\{\"rewards\": episode_rewards\}")
+            episode_rewards = [x.item() for x in episode_rewards]
+            log_rewards = {"rewards": episode_rewards}
+            print(json.dumps(log_rewards))
             recurrent_states = None  # reset hidden states when an episode ends
-            obs = env_real.reset()
+            #obs = env_real.reset()
             episode_start = np.array([True])
             episode_rewards = []
             #print("Done. Rounds:", rounds)
-        if rounds > 10000:
+        if rounds > 125000:
             break
     '''
     print(f"Rounds: {rounds}")
