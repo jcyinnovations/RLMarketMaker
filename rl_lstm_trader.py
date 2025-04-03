@@ -227,7 +227,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         gamma=discount_factor,
         learning_rate=0.0001,
         n_steps=128,
-        lstm_hidden_size=256,
+        lstm_hidden_size=512,
         n_lstm_layers=1,
         recurrent_seq_length=32,  # History length        
     )
