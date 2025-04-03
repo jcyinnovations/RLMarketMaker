@@ -226,10 +226,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         tensorboard_log=logdir,
         gamma=discount_factor,
         learning_rate=0.0001,
-        n_steps=128,
-        lstm_hidden_size=512,
+        n_steps=64,
+        lstm_hidden_size=256,
         n_lstm_layers=1,
-        recurrent_seq_length=32,  # History length        
+        recurrent_seq_length=8,          
     )
     # target_kl=0.5,
 
