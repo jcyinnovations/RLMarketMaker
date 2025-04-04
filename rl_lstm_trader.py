@@ -1,9 +1,12 @@
 import pandas as pd
 import os 
 from datetime import datetime, timedelta, timezone
-#import gym
-#from gym import spaces
+
+import torch as th
+import torch.nn as nn
 import gymnasium as gym
+from gymnasium import spaces
+
 import numpy as np
 import matplotlib.pyplot as plt
 import click
@@ -11,14 +14,44 @@ from getpass import getpass
 import json 
 import math 
 
-from sb3_contrib import RecurrentPPO  # Requires sb3_contrib package
+from sb3_contrib import RecurrentPPO  
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
+
+
+class TimeSeriesCNNExtractor(BaseFeaturesExtractor):
+    '''
+    Custom feature extractor for time series data using a CNN.
+    '''
+    def __init__(self, observation_space: spaces.Box, features_dim: int = 64):
+        super().__init__(observation_space, features_dim)
+        n_features, seq_len = observation_space.shape  # (12, L)
+
+        self.cnn = nn.Sequential(
+            nn.Conv1d(in_channels=n_features, out_channels=32, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv1d(32, 64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.AdaptiveAvgPool1d(1),  # Reduce time dim to 1
+            nn.Flatten()
+        )
+
+        self._features_dim = 64  # Output size of last layer
+
+    def forward(self, observations: th.Tensor) -> th.Tensor:
+        # observations shape: (batch, 12, L)
+        return self.cnn(observations)
+
 
 # Callback to capture new, per-step reward metric
 class RewardPerStepCallback(BaseCallback):
+    '''
+    Custom callback to log the reward per step at the end of each episode.
+    This is useful for tracking the performance of the agent over time.
+    '''
     def __init__(self, verbose=0):
         super(RewardPerStepCallback, self).__init__(verbose)
 
@@ -42,26 +75,31 @@ class RewardPerStepCallback(BaseCallback):
 
 # Step 2. Define the custom Gym trading environment.
 class TradingEnv(gym.Env):
-    def __init__(self, data, trading_cost=0.0, render_mode='human'):
+    '''
+    Custom trading environment for reinforcement learning.
+    '''
+
+    def __init__(self, data, trading_cost=0.0, max_duration=None, env_name="TRAIN", render_mode='human'):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
         self.lambda_drawdown = 0.75  # Penalty weighting for maximum drawdown.
-        self.target_duration = 24  # Maximum trade duration in hours.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = gym.spaces.Discrete(3)
         # Observation space: each row of data plus current position flag.
-        num_features = self.data.shape[1]
-        self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(num_features + 1,), dtype=np.float32)
-        self.num_envs = 16
-        #self.observation_space = spaces.Box(low=-1000000.0, high=1000000.0, shape=(num_features + 1,), dtype=np.float32)
+        num_features = self.data.shape[1] + 1 # Data columns plus position flag
+        self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(num_features,), dtype=np.float32)
+        #self.num_envs = 16
         self.position = 0  # 0: not in a trade, 1: in a trade.
         self.entry_price = 0.0  # Price at which trade is opened.
         self.prev_price = 0.0  # Previous price for calculating hold returns
         self.max_profit = 0.0
         self.trade_start_step = 0  # Step at which trade is opened.
         self.current_step = 0
-        
+        # Time limit for the environment during learning.
+        self.max_duration = max_duration
+        self.env_name = env_name
+
     def reset(self, seed=None, options=None):
         # Reset the environment to an initial state.
         super().reset(seed=seed)
@@ -72,8 +110,10 @@ class TradingEnv(gym.Env):
         self.prev_price = 0.0
         self.max_profit = 0.0
         self.trade_start_step = 0
+        self.current_duration = 0
         #self.current_step = 0
-        self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
+        hold_back = self.max_duration if self.max_duration else 0
+        self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
         return self._get_observation(), {}
     
     def _get_observation(self):
@@ -162,17 +202,21 @@ class TradingEnv(gym.Env):
 
         self.prev_price = current_price
         self.current_step += 1
+        self.current_duration += 1
+
         if self.current_step >= len(self.data) - 1:
-            self.current_step = np.random.randint(0, len(self.data) - self.target_duration)
-            #print("Done:", self.current_step, len(self.data))
-            # Episode ends due to end of data
-            #if self.current_step >= len(self.data) - 1:
-            #    truncated = True
-            # Set new starting point for the next episode.
-            done = True
-        
+            print(f"---------->{self.env_name}-TRUNCATED: STEP {self.current_step}, {self.current_duration}, {self.max_duration}")
+            truncated = True
+        elif self.max_duration is not None and self.current_duration >= self.max_duration:
+            print(f"---------->{self.env_name}-TRUNCATED: DURATION {self.current_duration}")
+            truncated = True
+            
+        if done:
+            print(f"---------->{self.env_name}-DONE: {action}. {self.current_duration}")
+
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, truncated, {}
+
 
     def render(self, mode='human'):
         print(f"Step: {self.current_step}, Position: {self.position}")
@@ -181,20 +225,20 @@ class TradingEnv(gym.Env):
 #################################################################
 #  LSTM-based Policy for Trading with Stable Baselines 3 (SB3)
 #################################################################
-
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
 @click.option('--discount_factor', default=0.95, type=float, show_default=True, help='Discount Factor') 
 @click.option('--eval_frequency', default=100000, type=float, show_default=True, help='Frequency of evaluations') 
 @click.option('--checkpoint_frequency', default=10000, type=int, show_default=True, help='Frequency of checkpoints') 
-def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int):
+@click.option('--parallel_envs', default=64, type=int, show_default=True, help='Number of parallel environments') 
+def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int, parallel_envs: int):
     #iteration = 3
     #total_timesteps = 2000000
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-
+    max_duration = 256
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -205,20 +249,12 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     data_path = './signal_with_market_data.p'
     df = pd.read_pickle(data_path)
 
-    # Quick inspection of the data.
-    print("DataFrame head:")
-    print(df.head())
-    print("\nDataFrame columns:", df.columns.tolist())
-
-    # Remove columns not necessary for inference
-    #df.drop(columns=['date', 'ground_truth', 'pnl'], inplace=True)
-
-    # Step 3. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
-    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1) for _ in range(64)])
+    # Step 2. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
+    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1, max_duration=max_duration) for _ in range(parallel_envs)])
     train_env = VecNormalize(train_env, norm_obs=True, norm_reward=True, clip_obs=10.)
     initial_obs = train_env.reset()
-    print("\nInitial observation:", initial_obs)
-    # Step 4. Create and train the Recurrent PPO model using an LSTM-based policy.
+    
+    # Step 3. Create and train the Recurrent PPO model using an LSTM-based policy.
     model = RecurrentPPO(
         "MlpLstmPolicy", 
         train_env, 
@@ -227,14 +263,17 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         gamma=discount_factor,
         learning_rate=0.0001,
         n_steps=64,
-        lstm_hidden_size=256,
-        n_lstm_layers=1,
-        recurrent_seq_length=8,          
+        policy_kwargs=dict(
+            #net_arch=dict(vf=[128,64], pi=[]),
+            lstm_hidden_size=256,
+            n_lstm_layers=1,
+            enable_critic_lstm=True,
+        ),
     )
     # target_kl=0.5,
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=0.1)
+    eval_env = TradingEnv(df, trading_cost=0.1, env_name="EVAL")
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
