@@ -205,14 +205,14 @@ class TradingEnv(gym.Env):
         self.current_duration += 1
 
         if self.current_step >= len(self.data) - 1:
-            print(f"---------->{self.env_name}-TRUNCATED: STEP {self.current_step}, {self.current_duration}, {self.max_duration}")
+            #print(f"---------->{self.env_name}-TRUNCATED: STEP {self.current_step}, {self.current_duration}, {self.max_duration}")
             truncated = True
         elif self.max_duration is not None and self.current_duration >= self.max_duration:
-            print(f"---------->{self.env_name}-TRUNCATED: DURATION {self.current_duration}")
+            #print(f"---------->{self.env_name}-TRUNCATED: DURATION {self.current_duration}")
             truncated = True
             
-        if done:
-            print(f"---------->{self.env_name}-DONE: {action}. {self.current_duration}")
+        #if done:
+        #    print(f"---------->{self.env_name}-DONE: {action}. {self.current_duration}")
 
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, truncated, {}
