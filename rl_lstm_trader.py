@@ -120,7 +120,7 @@ class TradingEnv(gym.Env):
         # Combine current row's features with the position indicator.
         state = self.data.iloc[self.current_step].values
         #print(f"State: {state} ||")
-        return np.append(state, self.position)
+        return np.append(state, self.position).astype(np.float32)
     
     def step(self, action):
         reward = -0.0001  # Default reward for not taking any action.
