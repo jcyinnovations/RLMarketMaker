@@ -238,7 +238,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-    max_duration = 256
+    max_duration = 576  # Max duration for each episode (in steps)
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -261,11 +261,11 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         verbose=1, 
         tensorboard_log=logdir,
         gamma=discount_factor,
-        learning_rate=0.0001,
-        n_steps=64,
+        learning_rate=0.0002,
+        n_steps=768,
         policy_kwargs=dict(
-            #net_arch=dict(vf=[128,64], pi=[]),
-            lstm_hidden_size=256,
+            net_arch=dict(vf=[512,128,64], pi=[512,128,64]),
+            lstm_hidden_size=512,
             n_lstm_layers=1,
             enable_critic_lstm=True,
         ),
