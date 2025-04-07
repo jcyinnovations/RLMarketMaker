@@ -228,17 +228,15 @@ class TradingEnv(gym.Env):
 @click.command()
 @click.option('--timesteps', default=500000, type=int, show_default=True, help='Run-length in number of timesteps')
 @click.option('--iteration', default=3, type=int, show_default=True, help='Current Iteration')
-@click.option('--discount_factor', default=0.95, type=float, show_default=True, help='Discount Factor') 
+@click.option('--discount_factor', default=0.99, type=float, show_default=True, help='Discount Factor') 
 @click.option('--eval_frequency', default=100000, type=float, show_default=True, help='Frequency of evaluations') 
 @click.option('--checkpoint_frequency', default=10000, type=int, show_default=True, help='Frequency of checkpoints') 
 @click.option('--parallel_envs', default=64, type=int, show_default=True, help='Number of parallel environments') 
 def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency: int, checkpoint_frequency: int, parallel_envs: int):
-    #iteration = 3
-    #total_timesteps = 2000000
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-    max_duration = 576  # Max duration for each episode (in steps)
+    max_duration = 1024  # Max duration for each episode (in steps)
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -261,10 +259,11 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         verbose=1, 
         tensorboard_log=logdir,
         gamma=discount_factor,
-        learning_rate=0.0002,
-        n_steps=768,
+        learning_rate=0.0003,
+        clip_range=0.2,
+        n_steps=1024,
         policy_kwargs=dict(
-            net_arch=dict(vf=[512,128,64], pi=[512,128,64]),
+            net_arch=dict(vf=[512,128,32], pi=[512,128,32]),
             lstm_hidden_size=512,
             n_lstm_layers=1,
             enable_critic_lstm=True,
