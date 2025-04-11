@@ -12,3 +12,5 @@ models/
 *.ipynb
 binance/
 binance-2017_2025.csv
+download/
+tmp/
