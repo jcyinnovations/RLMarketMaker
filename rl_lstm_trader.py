@@ -249,9 +249,21 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
 
     # Step 2. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
     train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1, max_duration=max_duration) for _ in range(parallel_envs)])
-    train_env = VecNormalize(train_env, norm_obs=True, norm_reward=True, clip_obs=10.)
+    train_env = VecNormalize(
+        train_env, 
+        norm_obs=True, 
+        norm_reward=True, 
+        clip_obs=1.
+    )
     initial_obs = train_env.reset()
     
+    # Learning Rate
+    def linear_schedule(initial_lr: float):
+        def schedule(progress_remaining: float):
+            return initial_lr * progress_remaining
+        return schedule
+
+
     # Step 3. Create and train the Recurrent PPO model using an LSTM-based policy.
     model = RecurrentPPO(
         "MlpLstmPolicy", 
@@ -259,7 +271,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         verbose=1, 
         tensorboard_log=logdir,
         gamma=discount_factor,
-        learning_rate=0.0003,
+        learning_rate=linear_schedule(0.0003),
         clip_range=0.2,
         n_steps=1024,
         policy_kwargs=dict(
@@ -269,7 +281,6 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
             enable_critic_lstm=True,
         ),
     )
-    # target_kl=0.5,
 
     # Setup Eval environment similar to training
     eval_env = TradingEnv(df, trading_cost=0.1, env_name="EVAL")
@@ -280,8 +291,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         norm_obs=True, 
         norm_reward=False,
         training=False, 
-        clip_obs=10., 
-        gamma=discount_factor
+        clip_obs=1., 
     )
     # Configure the evaluation callback.
     eval_callback = EvalCallback(
@@ -317,10 +327,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     train_env.save(f"{models_dir}/vec_normalize_env_rnn.pkl")
 
     end = datetime.now(timezone.utc)
-    print("######################")
-    print("# Training complete. #")
+    print( "######################")
+    print( "# Training complete. #")
     print(f"# {end} #")
-    print("######################")
+    print( "######################")
 
     # Step 5. Evaluate the trained agent.
     obs = train_env.reset()
