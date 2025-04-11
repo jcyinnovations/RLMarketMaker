@@ -314,10 +314,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     rewards_per_step_callback = RewardPerStepCallback(verbose=1)
 
     start = datetime.now(timezone.utc)
-    print("######################")
-    print("#   Training Start.  #")
+    print("#####################################")
+    print("########   Training Start.  #########")
     print(f"# {start} #")
-    print("######################")
+    print("#####################################")
     model.learn(
         total_timesteps=timesteps, 
         callback=[eval_callback, checkpoint_callback, rewards_per_step_callback]
@@ -327,10 +327,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     train_env.save(f"{models_dir}/vec_normalize_env_rnn.pkl")
 
     end = datetime.now(timezone.utc)
-    print( "######################")
-    print( "# Training complete. #")
+    print( "#####################################")
+    print( "######## Training complete. #########")
     print(f"# {end} #")
-    print( "######################")
+    print( "#####################################")
 
     # Step 5. Evaluate the trained agent.
     obs = train_env.reset()
