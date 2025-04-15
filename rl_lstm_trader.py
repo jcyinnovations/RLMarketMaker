@@ -117,7 +117,10 @@ class TradingEnv(gym.Env):
         self.current_duration = 0
         #self.current_step = 0
         hold_back = self.max_duration if self.max_duration else 0
-        self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
+        # Randomized starting point for next epoch
+        #self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
+        # Continue from last step for next epoch
+        self.current_step += 1
         return self._get_observation(), {}
     
     def _get_observation(self):
