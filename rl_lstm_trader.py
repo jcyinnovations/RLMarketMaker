@@ -106,8 +106,12 @@ class TradingEnv(gym.Env):
         if seed is not None:
             self.seed = seed
         self.position = 0
+        self.trade_duration = 0
         self.entry_price = 0.0
+        self.entry_sma1 = 0.0
         self.prev_price = 0.0
+        self.prev_sma1 = 0.0
+        self.prev_sma4 = 0.0
         self.max_profit = 0.0
         self.trade_start_step = 0
         self.current_duration = 0
@@ -117,90 +121,113 @@ class TradingEnv(gym.Env):
         return self._get_observation(), {}
     
     def _get_observation(self):
-        # Combine current row's features with the position indicator.
+        '''
+        Combine current row's features with the position indicator.
+        '''
         state = self.data.iloc[self.current_step].values
         #print(f"State: {state} ||")
         return np.append(state, self.position).astype(np.float32)
     
     def step(self, action):
-        reward = -0.0001  # Default reward for not taking any action.
+        '''
+        Execute one time step within the environment.
+        '''
+        reward = -0.001  # Default reward for not taking any action.
         done = False
         truncated = False
-        
         # Get current price from the DataFrame.
         current_price = self.data.iloc[self.current_step]['c']
+        current_sma1 = self.data.iloc[self.current_step]['s1']
+        current_sma4 = self.data.iloc[self.current_step]['s4']
+        # Only applies after reset
+        if self.prev_price == 0.0:
+            if self.current_step > 0:
+                self.prev_price = self.data.iloc[self.current_step - 1]['c']
+                self.prev_sma1 = self.data.iloc[self.current_step - 1]['s1']
+                self.prev_sma4 = self.data.iloc[self.current_step - 1]['s4']
+            else:
+                self.prev_price = current_price
+                self.prev_sma1 = current_sma1
+                self.prev_sma4 = current_sma4
+        # Calculate the step profit and rate of change.
+        step_profit      = 100 * (current_price - self.prev_price)/self.prev_price
+        step_profit_sma1 = 100 * (current_sma1 - self.prev_sma1)/self.prev_sma1
+        step_profit_sma4 = 100 * (current_sma4 - self.prev_sma4)/self.prev_sma4
+        unrealized_profit_rate_of_change = 0.0
+
         # Process the action.
         #print(f"----->Step: {self.current_step:9,}, Action: {action}")
         if action == 0:  # Hold position.
             # Action 0 (Hold) gives:
             # - a small time penalty if not in a trade
             # - a small reward if in a trade based on current return
-            #reward = -0.0001
             # Now calculate the hold reward (discounted profit/loss of current step)
-            if self.prev_price == 0.0:
-                step_profit = 0.0
-            else:
-                step_profit = 100 * (current_price - self.prev_price)/self.prev_price
             if self.position == 1:
                 # If trade is still open, update nax_profit based on unrealized profit
                 trade_duration = self.current_step - self.trade_start_step + 1
                 unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
+                unrealized_profit_sma1 = 100 * (current_sma1 - self.entry_sma1 - self.trading_cost)/self.entry_sma1
                 self.max_profit = max(self.max_profit, unrealized_profit)
-                reward = step_profit
-                log_message = {
-                    'side': 'hold',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'profit': step_profit,
-                    'reward': reward,
-                    'max_profit': self.max_profit,
-                }
-                print(json.dumps(log_message))
+                self.trade_duration = trade_duration
+                reward = step_profit_sma1 + unrealized_profit_sma1 + unrealized_profit_rate_of_change
             else:
                 # No current trade so check if we're in uptrend to penalize holding
-                if step_profit < 0:
+                if step_profit_sma1 < 0:
                     reward = 0.0001
+                else:
+                    reward = -0.0001
+            log_message = {
+                'side': 'hold',
+                'current_price': current_price,
+                'step': self.current_step,
+                'profit': step_profit,
+                'reward': reward,
+                'max_profit': self.max_profit,
+            }
+            print(json.dumps(log_message))
         elif action == 1:  # Open trade.
             if self.position == 0:
-                reward = 0.0001
-                log_message = {
-                    'side': 'open',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'reward': reward
-                }
-                print(json.dumps(log_message))
                 self.position = 1
                 self.entry_price = current_price
+                self.entry_sma1 = current_sma1
                 self.trade_start_step = self.current_step
                 self.max_profit = 0.0
+                self.trade_duration = 0
+                reward = 0.001
             else:
                 # Penalize opening a trade while already in a trade
-                reward = -0.001
+                reward = -1.0
+            log_message = {
+                'side': 'open',
+                'current_price': current_price,
+                'step': self.current_step,
+                'reward': reward
+            }
+            print(json.dumps(log_message))
         elif action == 2:  # Close trade.
             if self.position == 1:
                 trade_duration = self.current_step - self.trade_start_step + 1
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
-                
+                self.trade_duration = trade_duration
                 reward = profit
-                log_message = {
-                    'side': 'close',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'profit': profit,
-                    'reward': reward,
-                    'max_profit': self.max_profit,
-                    'trade_duration': trade_duration,
-                }
-                print(json.dumps(log_message))
                 done = True
-                #self.position = 0
-                #self.entry_price = 0.0
-                #self.max_profit = 0.0
-                #self.prev_price = 0.0
+            else:
+                reward = -1.0
+            log_message = {
+                'side': 'close',
+                'current_price': current_price,
+                'step': self.current_step,
+                'profit': profit,
+                'reward': reward,
+                'max_profit': self.max_profit,
+                'trade_duration': trade_duration,
+            }
+            print(json.dumps(log_message))
 
         self.prev_price = current_price
+        self.prev_sma1 = current_sma1
+        self.prev_sma4 = current_sma4
         self.current_step += 1
         self.current_duration += 1
 
@@ -237,6 +264,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
     max_duration = 1024  # Max duration for each episode (in steps)
+    trading_cost = 0.0  # Trading cost (e.g., commission, slippage)
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -248,7 +276,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     df = pd.read_pickle(data_path)
 
     # Step 2. Instantiate the environment, wrapped with DummyVecEnv, then VecNormalize
-    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=0.1, max_duration=max_duration) for _ in range(parallel_envs)])
+    train_env = DummyVecEnv([lambda: TradingEnv(df, trading_cost=trading_cost, max_duration=max_duration) for _ in range(parallel_envs)])
     train_env = VecNormalize(
         train_env, 
         norm_obs=True, 
@@ -275,7 +303,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         clip_range=0.2,
         n_steps=1024,
         policy_kwargs=dict(
-            net_arch=dict(vf=[512,128,32], pi=[512,128,32]),
+            net_arch=dict(vf=[256,16], pi=[256,16]),
             lstm_hidden_size=512,
             n_lstm_layers=1,
             enable_critic_lstm=True,
@@ -283,7 +311,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     )
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=0.1, env_name="EVAL")
+    eval_env = TradingEnv(df, trading_cost=trading_cost, env_name="EVAL")
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
