@@ -214,6 +214,8 @@ class TradingEnv(gym.Env):
                 done = True
             else:
                 reward = -1.0
+                profit = 0.0
+                trade_duration = 0
             log_message = {
                 'side': 'close',
                 'current_price': current_price,
