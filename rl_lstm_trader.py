@@ -215,7 +215,7 @@ class TradingEnv(gym.Env):
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
                 self.trade_duration = trade_duration
-                reward = 1 + profit if profit > 0 else profit - 1
+                reward = profit
                 done = True
             else:
                 reward = -0.001
