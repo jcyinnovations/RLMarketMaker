@@ -79,7 +79,7 @@ class TradingEnv(gym.Env):
     Custom trading environment for reinforcement learning.
     '''
 
-    def __init__(self, data, trading_cost=0.0, max_duration=None, env_name="TRAIN", render_mode='human'):
+    def __init__(self, data, trading_cost=0.0, max_duration=None, env_name="TRAIN", render_mode=''):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
@@ -181,15 +181,16 @@ class TradingEnv(gym.Env):
                     reward = 0.0001
                 else:
                     reward = -0.001
-            log_message = {
-                'side': 'hold',
-                'current_price': current_price,
-                'step': self.current_step,
-                'profit': step_profit,
-                'reward': reward,
-                'max_profit': self.max_profit,
-            }
-            print(json.dumps(log_message))
+            if self.render_mode == "human":
+                log_message = {
+                    'side': 'hold',
+                    'current_price': current_price,
+                    'step': self.current_step,
+                    'profit': step_profit,
+                    'reward': reward,
+                    'max_profit': self.max_profit,
+                }
+                print(json.dumps(log_message))
         elif action == 1:  # Open trade.
             if self.position == 0:
                 self.position = 1
@@ -202,13 +203,14 @@ class TradingEnv(gym.Env):
             else:
                 # Penalize opening a trade while already in a trade
                 reward = -0.001
-            log_message = {
-                'side': 'open',
-                'current_price': current_price,
-                'step': self.current_step,
-                'reward': reward
-            }
-            print(json.dumps(log_message))
+            if self.render_mode == "human":
+                log_message = {
+                    'side': 'open',
+                    'current_price': current_price,
+                    'step': self.current_step,
+                    'reward': reward
+                }
+                print(json.dumps(log_message))
         elif action == 2:  # Close trade.
             if self.position == 1:
                 trade_duration = self.current_step - self.trade_start_step + 1
@@ -221,16 +223,17 @@ class TradingEnv(gym.Env):
                 reward = -0.001
                 profit = 0.0
                 trade_duration = 0
-            log_message = {
-                'side': 'close',
-                'current_price': current_price,
-                'step': self.current_step,
-                'profit': profit,
-                'reward': reward,
-                'max_profit': self.max_profit,
-                'trade_duration': trade_duration,
-            }
-            print(json.dumps(log_message))
+            if self.render_mode == "human":
+                log_message = {
+                    'side': 'close',
+                    'current_price': current_price,
+                    'step': self.current_step,
+                    'profit': profit,
+                    'reward': reward,
+                    'max_profit': self.max_profit,
+                    'trade_duration': trade_duration,
+                }
+                print(json.dumps(log_message))
 
         self.prev_price = current_price
         self.prev_sma1 = current_sma1
@@ -239,15 +242,10 @@ class TradingEnv(gym.Env):
         self.current_duration += 1
 
         if self.current_step >= len(self.data) - 1:
-            #print(f"---------->{self.env_name}-TRUNCATED: STEP {self.current_step}, {self.current_duration}, {self.max_duration}")
             truncated = True
         elif self.max_duration is not None and self.current_duration >= self.max_duration:
-            #print(f"---------->{self.env_name}-TRUNCATED: DURATION {self.current_duration}")
             truncated = True
             
-        #if done:
-        #    print(f"---------->{self.env_name}-DONE: {action}. {self.current_duration}")
-
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         return next_state, reward, done, truncated, {}
 
@@ -318,7 +316,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     )
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=trading_cost, env_name="EVAL")
+    eval_env = TradingEnv(df, trading_cost=trading_cost, env_name="EVAL", render_mode='human')
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
