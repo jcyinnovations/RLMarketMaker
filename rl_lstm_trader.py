@@ -174,13 +174,13 @@ class TradingEnv(gym.Env):
                 unrealized_profit_sma1 = 100 * (current_sma1 - self.entry_sma1 - self.trading_cost)/self.entry_sma1
                 self.max_profit = max(self.max_profit, unrealized_profit)
                 self.trade_duration = trade_duration
-                reward = step_profit_sma1 + unrealized_profit_sma1 + unrealized_profit_rate_of_change
+                reward = step_profit_sma1 if unrealized_profit_sma1 > 0 else + unrealized_profit_sma1
             else:
                 # No current trade so check if we're in uptrend to penalize holding
                 if step_profit_sma1 < 0:
                     reward = 0.0001
                 else:
-                    reward = -0.0001
+                    reward = -0.001
             log_message = {
                 'side': 'hold',
                 'current_price': current_price,
@@ -198,10 +198,10 @@ class TradingEnv(gym.Env):
                 self.trade_start_step = self.current_step
                 self.max_profit = 0.0
                 self.trade_duration = 0
-                reward = 0.001
+                reward = 0.0001
             else:
                 # Penalize opening a trade while already in a trade
-                reward = -1.0
+                reward = -0.001
             log_message = {
                 'side': 'open',
                 'current_price': current_price,
@@ -215,10 +215,10 @@ class TradingEnv(gym.Env):
                 profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
                 self.max_profit = max(self.max_profit, profit)
                 self.trade_duration = trade_duration
-                reward = profit
+                reward = 1 + profit if profit > 0 else profit - 1
                 done = True
             else:
-                reward = -1.0
+                reward = -0.001
                 profit = 0.0
                 trade_duration = 0
             log_message = {
