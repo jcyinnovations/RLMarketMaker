@@ -20,7 +20,7 @@ from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
-
+from CustomEvalCallback import CustomEvalCallback
 
 class TimeSeriesCNNExtractor(BaseFeaturesExtractor):
     '''
@@ -118,9 +118,9 @@ class TradingEnv(gym.Env):
         #self.current_step = 0
         hold_back = self.max_duration if self.max_duration else 0
         # Randomized starting point for next epoch
-        #self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
+        self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
         # Continue from last step for next epoch
-        self.current_step += 1
+        #self.current_step += 1
         if self.current_step >= len(self.data) - 1:
             self.current_step = 0
         return self._get_observation(), {}
@@ -268,7 +268,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-    max_duration = 1024  # Max duration for each episode (in steps)
+    max_duration = 288 #1024  # Max duration for each episode (in steps)
     trading_cost = 0.0  # Trading cost (e.g., commission, slippage)
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
@@ -306,9 +306,11 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         gamma=discount_factor,
         learning_rate=linear_schedule(0.0003),
         clip_range=0.2,
-        n_steps=1024,
+        n_steps=288,
+        n_epochs=100,
+        batch_size=2048,
         policy_kwargs=dict(
-            net_arch=dict(vf=[256,16], pi=[256,16]),
+            net_arch=dict(vf=[512,128,16], pi=[512,128,16]),
             lstm_hidden_size=512,
             n_lstm_layers=1,
             enable_critic_lstm=True,
@@ -327,7 +329,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         clip_obs=1., 
     )
     # Configure the evaluation callback.
-    eval_callback = EvalCallback(
+    eval_callback = CustomEvalCallback(
         eval_env,
         best_model_save_path=models_dir,
         log_path=logdir,
