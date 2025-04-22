@@ -138,6 +138,7 @@ class TradingEnv(gym.Env):
         Execute one time step within the environment.
         '''
         reward = -0.001  # Default reward for not taking any action.
+        profit = 0.0
         done = False
         truncated = False
         # Get current price from the DataFrame.
@@ -247,7 +248,8 @@ class TradingEnv(gym.Env):
             truncated = True
             
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
-        return next_state, reward, done, truncated, {}
+        info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit) if done else {}
+        return next_state, reward, done, truncated, info, done
 
 
     def render(self, mode='human'):
@@ -268,7 +270,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-    max_duration = 288 #1024  # Max duration for each episode (in steps)
+    max_duration = 1024  # Max duration for each episode (in steps)
     trading_cost = 0.0  # Trading cost (e.g., commission, slippage)
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
@@ -304,11 +306,11 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         verbose=1, 
         tensorboard_log=logdir,
         gamma=discount_factor,
-        learning_rate=linear_schedule(0.0003),
+        learning_rate=linear_schedule(0.0002),
         clip_range=0.2,
         n_steps=288,
         n_epochs=100,
-        batch_size=2048,
+        batch_size=1024,
         policy_kwargs=dict(
             net_arch=dict(vf=[512,128,16], pi=[512,128,16]),
             lstm_hidden_size=512,
