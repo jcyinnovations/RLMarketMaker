@@ -79,7 +79,7 @@ class TradingEnv(gym.Env):
     Custom trading environment for reinforcement learning.
     '''
 
-    def __init__(self, data, trading_cost=0.0, max_duration=None, env_name="TRAIN", render_mode=''):
+    def __init__(self, data, trading_cost=0.0, max_duration=None, is_eval=False, render_mode=''):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
@@ -98,7 +98,7 @@ class TradingEnv(gym.Env):
         self.current_step = 0
         # Time limit for the environment during learning.
         self.max_duration = max_duration
-        self.env_name = env_name
+        self.is_eval = is_eval
 
     def reset(self, seed=None, options=None):
         # Reset the environment to an initial state.
@@ -117,10 +117,12 @@ class TradingEnv(gym.Env):
         self.current_duration = 0
         #self.current_step = 0
         hold_back = self.max_duration if self.max_duration else 0
-        # Randomized starting point for next epoch
-        self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
-        # Continue from last step for next epoch
-        #self.current_step += 1
+        if self.is_eval:
+            # Continue from last step for next epoch
+            self.current_step += 1
+        else:
+            # Randomized starting point for next epoch
+            self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
         if self.current_step >= len(self.data) - 1:
             self.current_step = 0
         return self._get_observation(), {}
@@ -162,7 +164,6 @@ class TradingEnv(gym.Env):
         unrealized_profit_rate_of_change = 0.0
 
         # Process the action.
-        #print(f"----->Step: {self.current_step:9,}, Action: {action}")
         if action == 0:  # Hold position.
             # Action 0 (Hold) gives:
             # - a small time penalty if not in a trade
@@ -182,7 +183,7 @@ class TradingEnv(gym.Env):
                     reward = 0.0001
                 else:
                     reward = -0.001
-            if self.render_mode == "human":
+            if self.is_eval:
                 log_message = {
                     'side': 'hold',
                     'current_price': current_price,
@@ -204,7 +205,7 @@ class TradingEnv(gym.Env):
             else:
                 # Penalize opening a trade while already in a trade
                 reward = -0.001
-            if self.render_mode == "human":
+            if self.is_eval:
                 log_message = {
                     'side': 'open',
                     'current_price': current_price,
@@ -224,7 +225,7 @@ class TradingEnv(gym.Env):
                 reward = -0.001
                 profit = 0.0
                 trade_duration = 0
-            if self.render_mode == "human":
+            if self.is_eval:
                 log_message = {
                     'side': 'close',
                     'current_price': current_price,
@@ -235,6 +236,9 @@ class TradingEnv(gym.Env):
                     'trade_duration': trade_duration,
                 }
                 print(json.dumps(log_message))
+
+        if self.is_eval:
+            print(f"----->Step: {self.current_step:9,}, Step Profit: {step_profit:.2f}, Step Profit SMA1: {step_profit_sma1:.2f}, Step Profit SMA4: {step_profit_sma4:.2f}, Current Price: {current_price:.2f}, Previous Price: {self.prev_price:.2f}, Entry Price: {self.entry_price:.2f}, Entry SMA1: {self.entry_sma1:.2f}, Position: {self.position}, Trade Duration: {self.trade_duration}")
 
         self.prev_price = current_price
         self.prev_sma1 = current_sma1
@@ -249,7 +253,7 @@ class TradingEnv(gym.Env):
             
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit) if done else {}
-        return next_state, reward, done, truncated, info, done
+        return next_state, reward, done, truncated, info
 
 
     def render(self, mode='human'):
@@ -320,7 +324,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     )
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=trading_cost, env_name="EVAL", render_mode='human')
+    eval_env = TradingEnv(df, trading_cost=trading_cost, is_eval=True, render_mode='human')
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
@@ -336,7 +340,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         best_model_save_path=models_dir,
         log_path=logdir,
         eval_freq=eval_frequency, 
-        n_eval_episodes=5,
+        n_eval_episodes=200,
         deterministic=True,
     )
     # Configure a Checkpoint callback to save the model frequently since
