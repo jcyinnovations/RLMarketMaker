@@ -79,7 +79,7 @@ class TradingEnv(gym.Env):
     Custom trading environment for reinforcement learning.
     '''
 
-    def __init__(self, data, trading_cost=0.0, max_duration=None, is_eval=False, render_mode=''):
+    def __init__(self, data, trading_cost=0.0, max_duration=None, is_eval=False, render_mode='human'):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
@@ -123,8 +123,10 @@ class TradingEnv(gym.Env):
         else:
             # Randomized starting point for next epoch
             self.current_step = np.random.randint(0, len(self.data) - hold_back - 1)
+
         if self.current_step >= len(self.data) - 1:
             self.current_step = 0
+
         return self._get_observation(), {}
     
     def _get_observation(self):
@@ -248,8 +250,12 @@ class TradingEnv(gym.Env):
 
         if self.current_step >= len(self.data) - 1:
             truncated = True
-        elif self.max_duration is not None and self.current_duration >= self.max_duration:
-            truncated = True
+            done = True
+
+        if self.max_duration:
+            if self.current_duration >= self.max_duration:
+                truncated = True
+                done = True
             
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
         info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit) if done else {}
@@ -274,8 +280,10 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     iteration_name = f"iteration-{iteration}"
     models_dir = f"./models/{iteration_name}/"
     logdir = f"./logs/{iteration_name}/"
-    max_duration = 1024  # Max duration for each episode (in steps)
+    max_duration = 576  # Max duration for each episode (in steps)
     trading_cost = 0.0  # Trading cost (e.g., commission, slippage)
+    clip_obs = 1.0  # Clipping value for observations
+
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -292,7 +300,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         train_env, 
         norm_obs=True, 
         norm_reward=True, 
-        clip_obs=1.
+        clip_obs=clip_obs
     )
     initial_obs = train_env.reset()
     
@@ -310,13 +318,14 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         verbose=1, 
         tensorboard_log=logdir,
         gamma=discount_factor,
-        learning_rate=linear_schedule(0.0002),
+        learning_rate=0.0002, #linear_schedule(0.0002),
         clip_range=0.2,
-        n_steps=288,
-        n_epochs=100,
-        batch_size=1024,
+        n_steps=int(max_duration*2),
+        gae_lambda=0.98,
+        #n_epochs=128,
+        #batch_size=1024,
         policy_kwargs=dict(
-            net_arch=dict(vf=[512,128,16], pi=[512,128,16]),
+            net_arch=dict(vf=[512,128,32], pi=[512,128,32]),
             lstm_hidden_size=512,
             n_lstm_layers=1,
             enable_critic_lstm=True,
@@ -332,7 +341,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         norm_obs=True, 
         norm_reward=False,
         training=False, 
-        clip_obs=1., 
+        clip_obs=clip_obs, 
     )
     # Configure the evaluation callback.
     eval_callback = CustomEvalCallback(
