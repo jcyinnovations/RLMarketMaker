@@ -21,6 +21,7 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from CustomEvalCallback import CustomEvalCallback
+from stable_baselines3.common.utils import set_random_seed
 
 class TimeSeriesCNNExtractor(BaseFeaturesExtractor):
     '''
@@ -78,6 +79,9 @@ class TradingEnv(gym.Env):
     '''
     Custom trading environment for reinforcement learning.
     '''
+    ACTION_HOLD = 0
+    ACTION_OPEN = 1
+    ACTION_CLOSE = 2
 
     def __init__(self, data, trading_cost=0.0, max_duration=None, is_eval=False, render_mode='human'):
         super(TradingEnv, self).__init__()
@@ -141,7 +145,7 @@ class TradingEnv(gym.Env):
         '''
         Execute one time step within the environment.
         '''
-        reward = -0.001  # Default reward for not taking any action.
+        reward = -0.002  # Default reward for not taking any action.
         profit = 0.0
         done = False
         truncated = False
@@ -250,15 +254,19 @@ class TradingEnv(gym.Env):
 
         if self.current_step >= len(self.data) - 1:
             truncated = True
-            done = True
+            #done = True
 
         if self.max_duration:
             if self.current_duration >= self.max_duration:
                 truncated = True
-                done = True
+                #done = True
             
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
-        info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit) if done else {}
+        info = {}
+        if done:
+            info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit)
+        elif truncated:
+            info = dict(is_success=False, step=self.current_step, profit=profit, max_profit=self.max_profit)
         return next_state, reward, done, truncated, info
 
 
@@ -283,7 +291,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     max_duration = 576  # Max duration for each episode (in steps)
     trading_cost = 0.0  # Trading cost (e.g., commission, slippage)
     clip_obs = 1.0  # Clipping value for observations
-
+    print(f"Training Iteration: {iteration_name} with {parallel_envs} parallel environments and discount factor {discount_factor}.")
     if not os.path.exists(models_dir):
         os.makedirs(models_dir)
 
@@ -320,8 +328,8 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
         gamma=discount_factor,
         learning_rate=0.0002, #linear_schedule(0.0002),
         clip_range=0.2,
-        n_steps=int(max_duration*2),
-        gae_lambda=0.98,
+        n_steps=max_duration,
+        gae_lambda=0.90,
         #n_epochs=128,
         #batch_size=1024,
         policy_kwargs=dict(
@@ -333,7 +341,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     )
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=trading_cost, is_eval=True, render_mode='human')
+    eval_env = TradingEnv(df, trading_cost=trading_cost, is_eval=True, max_duration=1152, render_mode='human')
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
