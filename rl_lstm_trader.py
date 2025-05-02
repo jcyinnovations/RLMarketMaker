@@ -82,12 +82,13 @@ class TradingEnv(gym.Env):
     ACTION_HOLD = 0
     ACTION_OPEN = 1
     ACTION_CLOSE = 2
+    SIDE = ['hold', 'open', 'close']
 
     def __init__(self, data, trading_cost=0.0, max_duration=None, is_eval=False, render_mode='human'):
         super(TradingEnv, self).__init__()
         self.data = data.reset_index(drop=True)
         self.trading_cost = trading_cost
-        self.lambda_drawdown = 0.75  # Penalty weighting for maximum drawdown.
+        self.lambda_drawdown = 1.25  # Penalty weighting for maximum drawdown.
         # Action space: 0 = hold, 1 = open trade, 2 = close trade.
         self.action_space = gym.spaces.Discrete(3)
         # Observation space: each row of data plus current position flag.
@@ -119,7 +120,14 @@ class TradingEnv(gym.Env):
         self.max_profit = 0.0
         self.trade_start_step = 0
         self.current_duration = 0
-        #self.current_step = 0
+
+        self.unrealized_profit = 0.0
+        self.unrealized_profit_sma1 = 0.0
+
+        self.step_profit_sma1 = 0.0
+        self.step_profit_sma4 = 0.0
+        self.step_profit = 0.0
+
         hold_back = self.max_duration if self.max_duration else 0
         if self.is_eval:
             # Continue from last step for next epoch
@@ -138,18 +146,52 @@ class TradingEnv(gym.Env):
         Combine current row's features with the position indicator.
         '''
         state = self.data.iloc[self.current_step].values
-        #print(f"State: {state} ||")
         return np.append(state, self.position).astype(np.float32)
     
+    def compute_reward(self, action, trades_today=0):
+        position_open = self.position == 1
+
+        reward = -0.002
+        trading_cost = 0.0
+
+        if action == 0:  # HOLD
+            if not position_open:
+                # No current trade so check if we're in uptrend to penalize holding
+                if self.step_profit_sma1 < 0:
+                    reward = 0.0001
+                else:
+                    reward = -0.001
+            else:
+                # If in a trade, reward is based on unrealized profit
+                reward = self.unrealized_profit_sma1
+                # Penalize for holding too long
+                if self.trade_duration > 0 and self.max_profit > 0 and self.unrealized_profit_sma1>0 and self.max_profit > self.unrealized_profit_sma1:
+                    #before_reward = reward
+                    reward = reward - self.lambda_drawdown * (self.max_profit - self.unrealized_profit_sma1)
+        elif action == 1:  # OPEN
+            if not position_open:
+                reward = 0.0001
+            else:
+                # Penalize opening a trade while already in a trade
+                reward = -0.001
+        elif action == 2:  # CLOSE
+            if not position_open:
+                reward = -0.001
+            else:
+                reward = self.unrealized_profit_sma1 #* 1.25
+
+        return reward
+    
+
     def step(self, action):
         '''
         Execute one time step within the environment.
         '''
-        reward = -0.002  # Default reward for not taking any action.
-        profit = 0.0
         done = False
         truncated = False
-        # Get current price from the DataFrame.
+        ####################################
+        # UPDATE PRIOR TO CALCULATING REWARD
+        ####################################
         current_price = self.data.iloc[self.current_step]['c']
         current_sma1 = self.data.iloc[self.current_step]['s1']
         current_sma4 = self.data.iloc[self.current_step]['s4']
@@ -164,87 +206,53 @@ class TradingEnv(gym.Env):
                 self.prev_sma1 = current_sma1
                 self.prev_sma4 = current_sma4
         # Calculate the step profit and rate of change.
-        step_profit      = 100 * (current_price - self.prev_price)/self.prev_price
-        step_profit_sma1 = 100 * (current_sma1 - self.prev_sma1)/self.prev_sma1
-        step_profit_sma4 = 100 * (current_sma4 - self.prev_sma4)/self.prev_sma4
-        unrealized_profit_rate_of_change = 0.0
+        self.step_profit      = 100 * (current_price - self.prev_price)/self.prev_price
+        self.step_profit_sma1 = 100 * (current_sma1 - self.prev_sma1)/self.prev_sma1
+        self.step_profit_sma4 = 100 * (current_sma4 - self.prev_sma4)/self.prev_sma4
 
-        # Process the action.
-        if action == 0:  # Hold position.
-            # Action 0 (Hold) gives:
-            # - a small time penalty if not in a trade
-            # - a small reward if in a trade based on current return
-            # Now calculate the hold reward (discounted profit/loss of current step)
-            if self.position == 1:
-                # If trade is still open, update nax_profit based on unrealized profit
-                trade_duration = self.current_step - self.trade_start_step + 1
-                unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
-                unrealized_profit_sma1 = 100 * (current_sma1 - self.entry_sma1 - self.trading_cost)/self.entry_sma1
-                self.max_profit = max(self.max_profit, unrealized_profit)
-                self.trade_duration = trade_duration
-                reward = step_profit_sma1 if unrealized_profit_sma1 > 0 else + unrealized_profit_sma1
-            else:
-                # No current trade so check if we're in uptrend to penalize holding
-                if step_profit_sma1 < 0:
-                    reward = 0.0001
-                else:
-                    reward = -0.001
-            if self.is_eval:
-                log_message = {
-                    'side': 'hold',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'profit': step_profit,
-                    'reward': reward,
-                    'max_profit': self.max_profit,
-                }
-                print(json.dumps(log_message))
-        elif action == 1:  # Open trade.
-            if self.position == 0:
-                self.position = 1
-                self.entry_price = current_price
-                self.entry_sma1 = current_sma1
-                self.trade_start_step = self.current_step
-                self.max_profit = 0.0
-                self.trade_duration = 0
-                reward = 0.0001
-            else:
-                # Penalize opening a trade while already in a trade
-                reward = -0.001
-            if self.is_eval:
-                log_message = {
-                    'side': 'open',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'reward': reward
-                }
-                print(json.dumps(log_message))
-        elif action == 2:  # Close trade.
-            if self.position == 1:
-                trade_duration = self.current_step - self.trade_start_step + 1
-                profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
-                self.max_profit = max(self.max_profit, profit)
-                self.trade_duration = trade_duration
-                reward = profit
-                done = True
-            else:
-                reward = -0.001
-                profit = 0.0
-                trade_duration = 0
-            if self.is_eval:
-                log_message = {
-                    'side': 'close',
-                    'current_price': current_price,
-                    'step': self.current_step,
-                    'profit': profit,
-                    'reward': reward,
-                    'max_profit': self.max_profit,
-                    'trade_duration': trade_duration,
-                }
-                print(json.dumps(log_message))
+        if self.position == 1:
+            # If trade is still open, update nax_profit based on unrealized profit
+            self.trade_duration = self.current_step - self.trade_start_step + 1
+            self.unrealized_profit = 100 * (current_price - self.entry_price - self.trading_cost)/self.entry_price
+            self.unrealized_profit_sma1 = 100 * (current_sma1 - self.entry_sma1 - self.trading_cost)/self.entry_sma1
+            self.max_profit = max(self.max_profit, self.unrealized_profit)
+        else:
+            self.unrealized_profit = 0.0
+            self.unrealized_profit_sma1 = 0.0
+
+        ####################################
+        # CALCULATE REWARD
+        ####################################
+        reward = self.compute_reward(
+            action, 
+            trades_today=0
+        )
+
+        ####################################
+        # UPDATE AFTER ACTION
+        ####################################
+        if action == 1 and self.position == 0:
+            self.position = 1
+            self.entry_price = current_price
+            self.entry_sma1 = current_sma1
+            self.trade_start_step = self.current_step
+            self.max_profit = 0.0
+            self.trade_duration = 0
+            self.unrealized_profit = 0.0
+            self.unrealized_profit_sma1 = 0.0
 
         if self.is_eval:
-            print(f"----->Step: {self.current_step:9,}, Step Profit: {step_profit:.2f}, Step Profit SMA1: {step_profit_sma1:.2f}, Step Profit SMA4: {step_profit_sma4:.2f}, Current Price: {current_price:.2f}, Previous Price: {self.prev_price:.2f}, Entry Price: {self.entry_price:.2f}, Entry SMA1: {self.entry_sma1:.2f}, Position: {self.position}, Trade Duration: {self.trade_duration}")
+            log_message = {
+                'side': TradingEnv.SIDE[action],
+                'current_price': current_price,
+                'step': self.current_step,
+                'unrealized_profit': self.unrealized_profit,
+                'step_profit': self.step_profit_sma1,
+                'reward': reward,
+                'max_profit': self.max_profit,
+                'trade_duration': self.trade_duration,
+            }
+            print(json.dumps(log_message))
 
         self.prev_price = current_price
         self.prev_sma1 = current_sma1
@@ -252,23 +260,35 @@ class TradingEnv(gym.Env):
         self.current_step += 1
         self.current_duration += 1
 
+        if self.position == 1 and action == 2:
+            # Close the trade
+            done = True
+
         if self.current_step >= len(self.data) - 1:
             truncated = True
-            #done = True
 
         if self.max_duration:
             if self.current_duration >= self.max_duration:
                 truncated = True
-                #done = True
             
         next_state = self._get_observation() if not done else np.zeros(self.observation_space.shape)
+
         info = {}
         if done:
-            info = dict(is_success=profit>0, step=self.current_step, profit=profit, max_profit=self.max_profit)
+            info = dict(
+                is_success=self.unrealized_profit>0,
+                step=self.current_step,
+                profit=self.unrealized_profit,
+                max_profit=self.max_profit
+            )
         elif truncated:
-            info = dict(is_success=False, step=self.current_step, profit=profit, max_profit=self.max_profit)
+            info = dict(
+                is_success=self.unrealized_profit>0,
+                step=self.current_step,
+                profit=self.unrealized_profit,
+                max_profit=self.max_profit
+            )
         return next_state, reward, done, truncated, info
-
 
     def render(self, mode='human'):
         print(f"Step: {self.current_step}, Position: {self.position}")
