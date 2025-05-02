@@ -157,28 +157,29 @@ class TradingEnv(gym.Env):
         if action == 0:  # HOLD
             if not position_open:
                 # No current trade so check if we're in uptrend to penalize holding
-                if self.step_profit_sma1 < 0:
-                    reward = 0.0001
-                else:
-                    reward = -0.001
+                #if self.step_profit_sma1 < 0:
+                #    reward = 0.0001
+                #else:
+                #    reward = -0.001
+                reward = -0.0001
             else:
                 # If in a trade, reward is based on unrealized profit
-                reward = self.unrealized_profit_sma1
+                reward = self.step_profit_sma1 #self.unrealized_profit_sma1
                 # Penalize for holding too long
                 if self.trade_duration > 0 and self.max_profit > 0 and self.unrealized_profit_sma1>0 and self.max_profit > self.unrealized_profit_sma1:
-                    #before_reward = reward
                     reward = reward - self.lambda_drawdown * (self.max_profit - self.unrealized_profit_sma1)
         elif action == 1:  # OPEN
             if not position_open:
                 reward = 0.0001
             else:
                 # Penalize opening a trade while already in a trade
-                reward = -0.001
+                reward = -5.001
         elif action == 2:  # CLOSE
             if not position_open:
-                reward = -0.001
+                # Penalize closing a trade while not in a trade
+                reward = -5.001
             else:
-                reward = self.unrealized_profit_sma1 #* 1.25
+                reward = self.unrealized_profit_sma1 * 1.10
 
         return reward
     
@@ -288,6 +289,9 @@ class TradingEnv(gym.Env):
                 profit=self.unrealized_profit,
                 max_profit=self.max_profit
             )
+        if self.is_eval and (done or truncated):
+            print(f"|--->Episode finished after {self.current_step} steps. Profit: {self.unrealized_profit:.2f}%, Max Profit: {self.max_profit:.2f}%")
+
         return next_state, reward, done, truncated, info
 
     def render(self, mode='human'):
@@ -361,7 +365,7 @@ def main(timesteps: int, iteration: int, discount_factor: float, eval_frequency:
     )
 
     # Setup Eval environment similar to training
-    eval_env = TradingEnv(df, trading_cost=trading_cost, is_eval=True, max_duration=1152, render_mode='human')
+    eval_env = TradingEnv(df, trading_cost=trading_cost, is_eval=True, max_duration=576, render_mode='human')
     eval_env = Monitor(eval_env)
     eval_env = DummyVecEnv([lambda: eval_env])
     eval_env = VecNormalize(
